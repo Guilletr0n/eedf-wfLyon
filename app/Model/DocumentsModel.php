@@ -43,5 +43,22 @@ class DocumentsModel extends \W\Model\Model{
 			}
 		}
 	}
+	public function update_documents($args, $id){
+		/* Récupération de la photo */
+		if(isset($_FILES['docfile']) && $_FILES['docfile']['size'] !== 0 ){
+			$repertoire = 'documents/'; // le répertoire de destination de l'image
+			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo
+			$tmpName = $_FILES['docfile']['tmp_name']; // le nom provisoire
+			$args['size'] = $_FILES['docfile']['size']; // taille du fichier
+			// déplacement
+			if(move_uploaded_file($tmpName, 'assets/'.$repertoire.$fichier))
+			{
+				$args['docfile'] = $repertoire.$fichier;
+				$this->update($args,$id);
+			}
+		}else{
+			$this->update($args,$id);
+		}
+	}
 }
 ?>

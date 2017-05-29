@@ -15,10 +15,10 @@
     <div class="form-group text-center">
         <label for="id_categorie" class="control-label">Catégorie de document</label>
         <div>
-           <select id="id_categorie" name="id_categorie" class="form-control">
-              <option value="">-- Sélectionner un type de doc --</option>
-                 <option value="1" id="id_categorie">Document principal</option>
-                 <option value="2" id="id_categorie">Document de sortie</option>
+           <select id="id_categorie" name="id_categorie" class="form-control" required>
+              <option disabled selected required>-- Sélectionner un type de doc --</option>
+              <option value="1" id="id_categorie" required>Document principal</option>
+              <option value="2" id="id_categorie" required>Document de sortie</option>
             </select>
         </div>
     </div>

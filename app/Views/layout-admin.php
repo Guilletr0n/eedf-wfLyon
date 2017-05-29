@@ -16,8 +16,9 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/vendor/sb-admin-2.min.css') ?>">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/admin.css') ?>">
-	
+
 	<?= $this->section('style') ?>
 
 </head>

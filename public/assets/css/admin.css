@@ -41,13 +41,20 @@ header #sidebar ul li ul li a:hover{
 
 #zonenoire #docprincipaux a i{
 	font-size: 150px;
-	color: white;
+	color: #fff;
 }
 
 #zoneblanche #docsecondaires a i{
 	font-size: 150px;
 }
-
+#docprincipaux #btndoc,
+#docsecondaires #btndoc{
+	padding-bottom: 60px;
+}
+#zonenoire h3,
+#zoneblanche h3{
+	font-family: 'Fjalla One', sans-serif;
+}
 
 // AJOUT DOCUMENT
 

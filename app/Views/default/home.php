@@ -32,6 +32,7 @@
 	<ul>
 		<li><a href="<?= $this->url('default_gallery');  ?>">Gallerie</a></li>
 		<li><a href="<?= $this->url('admin_dashboard');  ?>">Dashboard</a></li>
+		<li><a href="<?= $this->url('document_documents');  ?>">Documents</a></li>
 		<li><a href="<?= $this->url('admin_inscription');?>">Inscription</a></li>
 		<li><a href="<?= $this->url('default_events'); ?>">Calendrier/Evénements</a></li>
 		<li><a href="<?= $this->url('admin_deconnexion');  ?>">deconnexion</a></li>
