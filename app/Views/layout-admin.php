@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/admin.css') ?>">
-	
+
 	<?= $this->section('style') ?>
 
 </head>
@@ -77,12 +77,6 @@
 							</ul>
 						</li>
 						<li><a href="<?= $this->url('userManagement_inscription');?>">Inscription</a>
-						</li>
-						<li>
-							<a href="<?= $this->url('userManagement_list');?>">Liste Adherents</a>
-						</li>
-						<li>
-							<a href="<?= $this->url('userManagement_list_admins');?>">Liste Admins</a>
 						</li>
 						<li>
 							<a href="<?= $this->url('userManagement_get_logged_user');?>">Voir connexion</a></li>
