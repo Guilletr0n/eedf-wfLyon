@@ -1,7 +1,7 @@
 <?php $this->layout('layout-user', ['title' => 'Documents']) ?>
 
 <?php $this->start('main_content') ?>
-	<div class="row" id="zonenoire">
+	<div class="row" id="zonedocs1">
 		<h3 class="text-center">Documents principaux</h3>
 		<div id="docprincipaux">
 			<?php foreach ($documents as $key => $document) {
@@ -9,14 +9,14 @@
 				<div class="col-md-6 text-center">
 					<h4><?= $document['docname'].'<br />';?> </h4>
 					<h5><?= $document['docdescription'].'<br />';?></h5>
-						<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="material-icons">cloud_download</i></a>';
+						<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?></div><?php
 				}
 			} 
 			?>
 		</div>
 	</div>
-	<div class="row" id="zoneblanche">
+	<div class="row" id="zonedocs2">
 		<h3 class="text-center">Documents secondaires</h3>
 		<div id="docsecondaires">
 			<?php foreach ($documents as $key => $document) {
@@ -24,7 +24,7 @@
 				<div class="col-md-6 text-center">
 					<h4><?= $document['docname'].'<br />';?></h4>
 					<h5><?= $document['docdescription'].'<br />';?></h5>
-					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="material-icons">cloud_download</i></a>';
+					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?></div><?php
 				}
 			} 
