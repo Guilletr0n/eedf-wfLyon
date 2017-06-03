@@ -110,7 +110,7 @@ ALTER TABLE `members` ADD CONSTRAINT `member_sections` FOREIGN KEY (`id_section`
 /**************************  Création d'information pour test **************************/
 
 /*********** Sections************/
-INSERT INTO `sections` (`id`, `rank`) VALUES (NULL, 'Animateur'), (NULL, 'Parent'), (NULL, 'Lutins'), (NULL, 'Louveteaux'), (NULL, 'Éclaireurs'), (NULL, 'Ainés');
+INSERT INTO `sections` (`id`, `rank`) VALUES (NULL, 'Responsable'), (NULL, 'Accompagnateur'), (NULL, 'Lutin'), (NULL, 'Louveteau'), (NULL, 'Éclaireur'), (NULL, 'Ainé');
 
 /*********** Users ************/
 INSERT INTO `users` (`username`, `email`, `phone`, `password`, `role`) VALUES ('nordine', 'nordine', '1', '$2y$10$iCI5Bmf5SlqF.oKuNt6feOW.OHOoC0772gmY3mVrQ46PhbgCGVg26', 'superadmin');
