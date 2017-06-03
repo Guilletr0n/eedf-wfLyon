@@ -29,7 +29,7 @@ class EventsController extends Controller{
 	public function edit_event($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$member = $this->eventsModel->find($id);
+			$events = $this->eventsModel->find($id);
 			$this->show('events/edit_event', ['events' => $events]);
 		}else{
 			$this->eventsModel->update($_POST, $id);

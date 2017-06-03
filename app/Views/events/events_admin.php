@@ -25,8 +25,8 @@
             <!-- <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"> -->
 
 				 		<?= '
-				 		<a href="'. $this->url('events_edit_event', ['id' => $events['idevent']]).'" class="btn btn-xs btn-success">Modifier</a>
-            <a href="'. $this->url('events_edit_event', ['id' => $events['idevent']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer l\'événement ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
+				 		<a href="'. $this->url('events_edit_event', ['id' => $events['id_event']]).'" class="btn btn-xs btn-success">Modifier</a>
+            <a href="'. $this->url('events_edit_event', ['id' => $events['id_event']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer l\'événement ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
 ?>
 					</div>
 				</form>
