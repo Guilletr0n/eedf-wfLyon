@@ -10,7 +10,11 @@
             <form name= "addMember" method="post" action="<?= $this->url('member_addMember')?>"  class="col-md-6 jumbotron">
                 <div class="form-group text-center">
                     <div class="form-group text-center">
-                        <label for="section" class="mr-sm-2">Id Section :</label>
+                        <label for="user" class="mr-sm-2">Id User :</label>
+                        <input type="text" id="id_user" name="id_user" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
+                    </div>
+                    <div class="form-group text-center">
+                        <label for="section" class="mr-sm-2">Section :</label>
                         <?php 
                         echo '<select class="form-control" id="id_section" name="id_section">';
                         foreach ($listsections as $id => $listsections) {
@@ -21,10 +25,6 @@
                         ?>
                     </select>
                         <!--<input type="text" id="id_section" name="id_section" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/> -->
-                    </div>
-                    <div class="form-group text-center">
-                        <label for="user" class="mr-sm-2">Id User :</label>
-                        <input type="text" id="id_user" name="id_user" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
                     </div>
                     <div class="form-group text-center">
                     <label for="nom" class="mr-sm-2">Nom</label>
@@ -39,8 +39,8 @@
                         <input type="text" id="totem" name="totem" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
                     </div>
                     <div class="form-group text-center">
-                        <label for="info" class="mr-sm-2">Info</label>
-                        <input type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
+                        <label for="info" class="mr-sm-2">Informations supplémenataires</label>
+                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
                     <div>
                     <div class="form-group text-center">
                         <label for="register" class="mr-sm-2">Register</label>
