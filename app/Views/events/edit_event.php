@@ -22,12 +22,12 @@
 
       <div class="form-group text-center">
           <label for="description" class="control-label">Description de l'événement</label>
-          <textarea id="description" class="form-control" name="description" value="<?php echo $events['description'] ?>"></textarea>
+          <textarea id="description" class="form-control" name="description"><?php echo $events['description'] ?></textarea>
       </div>
 
       <div class="form-group text-center">
-        <label for="id_participant" class="control-label text-center">Participants</label>
-        <input type="text" class="form-control" name="id_participant" id="id_participant" value="<?php echo $events['id_participant'] ?>" required>
+        <label for="id_member" class="control-label text-center">Participants</label>
+        <input type="text" class="form-control" name="id_member" id="id_member" value="<?php echo $events['id_member'] ?>" required>
       </div>
 
       <div class="form-group text-center">

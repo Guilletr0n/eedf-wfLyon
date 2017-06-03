@@ -18,15 +18,15 @@
 				        <label for="section" class="mr-sm-2">Description</label>
 				        <input type="text" id="description" name="description" class="form-control mb-2 mr-sm-2 mb-sm-0" value="<?php echo $events['description'] ?>"/>
 				        <label for="section" class="mr-sm-2">Listes des participants : </label>
-				        <input type="text" id="id_participant" name="id_participant" class="form-control mb-2 mr-sm-2 mb-sm-0" value="<?php echo $events['id_participant'] ?>"/>
+				        <input type="text" id="id_member" name="id_member" class="form-control mb-2 mr-sm-2 mb-sm-0" value="<?php echo $events['id_member'] ?>"/>
 
 				 		<!--<button type="submit" class="btn btn-primary">Supprimer</button> -->
 
             <!-- <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"> -->
 
 				 		<?= '
-				 		<a href="'. $this->url('events_edit_event', ['id' => $events['id_event']]).'" class="btn btn-xs btn-success">Modifier</a>
-            <a href="'. $this->url('events_edit_event', ['id' => $events['id_event']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer l\'événement ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
+				 		<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'" class="btn btn-xs btn-success">Modifier</a>
+            <a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer l\'événement ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
 ?>
 					</div>
 				</form>
