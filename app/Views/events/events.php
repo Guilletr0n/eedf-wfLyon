@@ -29,48 +29,31 @@
 
 
 
-<?php try
-      {
-        // On se connecte à MySQL
-        $bdd = new PDO('mysql:host=localhost;dbname=webforce3;charset=utf8', 'root', '');
-      }
-      catch(Exception $e)
-      {
-        // En cas d'erreur, on affiche un message et on arrête tout
-              die('Erreur : '.$e->getMessage());
-      }
+<?php foreach ($events as $key => $events) { ?>
 
-      // Si tout va bien, on peut continuer
-
-      // On récupère tout le contenu de la table events
-      $reponse = $bdd->query('SELECT * FROM events');
-      //var_dump($reponse);
-
-        while($donnees = $reponse->fetch()){ ?>
-                <?php if($donnees['idevent'] < 4){ ?>
+                <?php if($events['id'] < 4){ ?>
 
                         <div class="container col-md-4">
                             <p>
-                              <strong>Sortie : "</strong>  <?php echo $donnees['title']; ?><strong> "</strong><br />
-                              Durée de l'événement: du <?php echo $donnees['startdate']; ?> au <?php echo $donnees['enddate']; ?>.<br />
-                              Description :  <?php echo $donnees['description']; ?>.<br />
-                              Les participants déjà inscrits sont : <?php echo $donnees['id_participant']; ?>
+                              <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                              Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
+                              Description :  <?php echo $events['description']; ?>.<br />
+                              Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
                             </p>
                         </div>
                 <?php }else{ ?>
 
                   <div class="container col-md-4 event hidden">
                       <p>
-                        <strong>Sortie : "</strong>  <?php echo $donnees['title']; ?><strong> "</strong><br />
-                        Durée de l'événement: du <?php echo $donnees['startdate']; ?> au <?php echo $donnees['enddate']; ?>.<br />
-                        Description :  <?php echo $donnees['description']; ?>.<br />
-                        Les participants déjà inscrits sont : <?php echo $donnees['id_participant']; ?>
+                        <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                        Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
+                        Description :  <?php echo $events['description']; ?>.<br />
+                        Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
                       </p>
                   </div>
 
                <?php }
-      }
-      $reponse->closeCursor(); ?>  <!--fin de la boucle, le tableau contient toute la BDD -->
+      } ?>  <!--fin de la boucle, le tableau contient toute la BDD -->
 
 
       <input id="afficheElements" type="button" value="Afficher plus d'éléments" class="btn-info btn-md">

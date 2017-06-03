@@ -16,7 +16,7 @@ class EventsController extends Controller{
 	 * Page des événements
 	 **/
 	public function events(){
-		$this->show('events/events');
+			$this->show('events/events');
 	}
 
 	public function events_admin(){
