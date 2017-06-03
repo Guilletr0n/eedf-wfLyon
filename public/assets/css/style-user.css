@@ -128,7 +128,7 @@ header h3{
 
 section#texteintro{
   margin-top: 50px; 
-   font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 section#texteintro h4.textdesc{
   margin: 20px 0px 20px 50px;
@@ -217,8 +217,36 @@ footer a:hover{
 
 /* PARTIE DOCUMENTS */
 
-#zonedocs1 a i.fa,
-#zonedocs2 a i.fa{
+#containerdoc a i.fa{
   font-size: 100px;
-  margin-top: 70px;
+  margin-top: 50px;
+}
+#containerdoc a i.fa:hover{
+  color: #809462;
+}
+#containerdoc h3{
+  padding-top: 30px;
+  font-family: 'Lobster', cursive;
+  font-size: 26px;
+}
+#containerdoc h4{
+  margin-top: 20px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+#containerdoc h5{
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+#zonedocs2{
+  border: 2px solid grey;
+  background: #34495e;
+  margin-top: 80px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  color: #fff;
+}
+#zonedocs2 a i{
+  color: #fff;
+}
+#zonedocs1 a i{
+  color: #34495e;
 }
