@@ -4,11 +4,26 @@
 <div class="container-fluid">
 	<h3 class="text-center">Modifier l'Adhérent</h3>
 	<div class="col-md-3"></div>
+    <h1>TEST : <?php echo $listsections[1]['rank'] ?></h1>
+    <h1>TEST : <?php echo $listsections[1]['id'] ?></h1>
 	<form name= "editMember" class="col-md-6 jumbotron" action="<?= $this->url('member_editMember', ['id' => $members['id']]) ?>" method="POST" enctype="multipart/form-data">
         <div class="form-group text-center">
+            <label> Id section : <?= $members['id_section'];?></label>
+                <?php 
+                echo '<select class="form-control" id="selectSection">';
+                foreach ($listsections as $id => $listsections) {
+                    ?>
+                 <option id="id_section" <?= $members['id_section'] == $listsections['id'] ? 'selected' : ''; ?> >'.$listsections['id'].$listsections['rank'].'</option>';
+                }
+                echo '</select>';
+                ?>
+        </div>
+        <!--
+        <div class="form-group text-center">'.$listsections['rank'].'
             <label for="section" class="mr-sm-2">Id Section :</label>
 			<input type="text" id="id_section" name="id_section" class="form-control mb-2 mr-sm-2 mb-sm-0" value="<?php echo $members['id_section'] ?>"/>
         </div>
+        -->
         <div class="form-group text-center">
             <label for="section" class="mr-sm-2">Id User :</label>
 			<input type="text" id="id_user" name="id_user" class="form-control mb-2 mr-sm-2 mb-sm-0" value="<?php echo $members['id_user'] ?>"/>
