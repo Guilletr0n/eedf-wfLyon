@@ -18,7 +18,7 @@ class MemberController extends Controller {
  	public function members(){
  		//récupération de toute la table members
  		$data = $this->MembersModel->findAll();
- 		$idsection=$this->SectionsModel->find($id);
+ 		//$idsection=$this->SectionsModel->find($id);
 
  		/* TEST
  		//print_r($data[0]['id_section']);
@@ -55,6 +55,7 @@ class MemberController extends Controller {
 			$this->show('member/editMember', ['members' => $member, 'listsections' => $listsections]);
 		}else{
 			//Si la method post est utilisé on modifie les informations du membre correspondant à l'id de la table members
+			print_r($member);
 			$this->MembersModel->update($_POST, $id);
 			//on redirige vers la route member_members
 			$this->redirectToRoute('member_members');

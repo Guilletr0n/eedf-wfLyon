@@ -10,14 +10,16 @@
         <div class="form-group text-center">
             <label> Id section : <?= $members['id_section'];?></label>
                 <?php 
-                echo '<select class="form-control" id="selectSection">';
+                echo '<select class="form-control" id="id_section" name="id_section">';
                 foreach ($listsections as $id => $listsections) {
                     ?>
-                 <option id="id_section" <?= $members['id_section'] == $listsections['id'] ? 'selected' : ''; ?> >'.$listsections['id'].$listsections['rank'].'</option>';
+                 <option id="id_section" <?= $members['id_section'] == $listsections['id'] ? 'selected' : ''; ?>> <?php echo $listsections['rank'] ?></option>';
+                <?php
                 }
-                echo '</select>';
                 ?>
+                </select>
         </div>
+        <p>id_section = <?= $members['id_section'];?>
         <!--
         <div class="form-group text-center">'.$listsections['rank'].'
             <label for="section" class="mr-sm-2">Id Section :</label>
