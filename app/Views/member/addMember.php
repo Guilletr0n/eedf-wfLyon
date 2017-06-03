@@ -11,7 +11,16 @@
                 <div class="form-group text-center">
                     <div class="form-group text-center">
                         <label for="section" class="mr-sm-2">Id Section :</label>
-                        <input type="text" id="id_section" name="id_section" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
+                        <?php 
+                        echo '<select class="form-control" id="id_section" name="id_section">';
+                        foreach ($listsections as $id => $listsections) {
+                            ?>
+                            <option id="id_section" <?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?php echo $listsections['id'].' : '.$listsections['rank']?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                        <!--<input type="text" id="id_section" name="id_section" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/> -->
                     </div>
                     <div class="form-group text-center">
                         <label for="user" class="mr-sm-2">Id User :</label>

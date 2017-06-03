@@ -17,7 +17,7 @@ class MemberController extends Controller {
 
  	public function members(){
  		//récupération de toute la table members
- 		$data = $this->MembersModel->findAll();
+ 		$data = $this->MembersModel->findAll('id_section');
  		//$idsection=$this->SectionsModel->find($id);
 
  		/* TEST
@@ -55,7 +55,6 @@ class MemberController extends Controller {
 			$this->show('member/editMember', ['members' => $member, 'listsections' => $listsections]);
 		}else{
 			//Si la method post est utilisé on modifie les informations du membre correspondant à l'id de la table members
-			print_r($member);
 			$this->MembersModel->update($_POST, $id);
 			//on redirige vers la route member_members
 			$this->redirectToRoute('member_members');
@@ -63,9 +62,10 @@ class MemberController extends Controller {
 	}
 
 	public function addMember(){
-		if($_SERVER['REQUEST_METHOD'] == 'GET'){ 
+		if($_SERVER['REQUEST_METHOD'] == 'GET'){
+			$listsections = $this->SectionsModel->findAll('id');
 		//Si method GET afficher le formulaire
-	    $this->show('member/addMember');
+	    $this->show('member/addMember', ['listsections' => $listsections]);
 	}else{										 
 		//Si method POST envoyer les données à la bdd
 		$this->MembersModel->insert($_POST);
