@@ -4,29 +4,39 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\MembersModel as members;
+use \Model\SectionsModel as sections;
 
 class MemberController extends Controller {
-	private $membersModel;
+	private $MembersModel;
+	private $SectionsModel;
 
 	public function __construct(){
-		$this->membersModel = new members;
+		$this->MembersModel = new members;
+		$this->SectionsModel = new sections;
 	}
 
  	public function members(){
- 		$data = $this->membersModel->findAll();
+ 		//récupération de toute la table members
+ 		$member = $this->MembersModel->findAll('id_section');
+ 		$listsections = $this->SectionsModel->findAll('id');
+ 		//$idsection=$this->SectionsModel->find($id);
+
+ 		/* TEST
  		//print_r($data[0]['id_section']);
- 		$section['rank'] = $this->membersModel->findSection($data[0]['id_section']);
- 		print_r($section['rank']);
+ 		//$section['rank'] = $this->MembersModel->findSection($data[0]['id_section']);
+ 		//print_r($section['rank']);
  		//$this->allowTo('admin'); // seulement visible par l'admin
-		$this->show('member/members', ['members' => $data]);
+		*/
+		//on redirige vers la route member_members & un tableau members contenant les informations des membres
+		$this->show('member/members', ['members' => $member, 'listsections' => $listsections]);
 	}
 
 /*
 	public function showMembers(){
 		if(is_numeric($id)){
-			$member = $this->membersModel->find($id);
+			$member = $this->MembersModel->find($id);
 		}else{
-			$member = $this->membersModel->search($id);
+			$member = $this->MembersModel->search($id);
 			//$member = $member[0];
 		}
 		$this->show('member_showMembers', ['members' => $member]);
@@ -35,29 +45,39 @@ class MemberController extends Controller {
 	public function editMember($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$member = $this->membersModel->find($id);
-			$this->show('member/editMember', ['members' => $member]);
+			//récupération des informations du membre correspondant à l'id dans la table members
+			$member = $this->MembersModel->find($id);
+			//récupération de la liste des sections existantes
+			$listsections = $this->SectionsModel->findAll('id');
+			//print_r($listsections[0]['rank']);
+			//print_r($listsections[0]['id']);
+			//Envoie de 2 tableau members=table members & listsections = liste des sections existantes
+			$this->show('member/editMember', ['members' => $member, 'listsections' => $listsections]);
 		}else{
-			$this->membersModel->update($_POST, $id);
+			//Si la method post est utilisé on modifie les informations du membre correspondant à l'id de la table members
+			$this->MembersModel->update($_POST, $id);
+			//on redirige vers la route member_members
 			$this->redirectToRoute('member_members');
 		}
 	}
 
 	public function addMember(){
-		if($_SERVER['REQUEST_METHOD'] == 'GET'){ 
+		if($_SERVER['REQUEST_METHOD'] == 'GET'){
+			$listsections = $this->SectionsModel->findAll('id');
 		//Si method GET afficher le formulaire
-	    $this->show('member/addMember');
+	    $this->show('member/addMember', ['listsections' => $listsections]);
 	}else{										 
 		//Si method POST envoyer les données à la bdd
-		$this->membersModel->insert($_POST);
+		$this->MembersModel->insert($_POST);
+		//on redirige vers la route member_addMembers
 		$this->redirectToRoute('member_addMember');
-		//$this->show('participant/addMember');
 	  }
 	}
 
 	public function deleteMembers($id){
-		$member = $this->membersModel->find($id);
-		$this->membersModel->delete($id);
+		// on efface le membre correspondant à l'id de la table members
+		$this->MembersModel->delete($id);
+		//on redirige vers la route member_addMembers
 		$this->redirectToRoute('member_members');
 	}
 }

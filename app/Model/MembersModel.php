@@ -9,7 +9,6 @@ class MembersModel extends \W\Model\Model{
         if (!is_numeric($id)){
             return false;
         }
-
         $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $this->primaryKey .'  = (SELECT MIN(id) FROM ' . $this->table . ' WHERE id > :id ) LIMIT 1';
         $sth = $this->dbh->prepare($sql);
         $sth->bindValue(':id', $id);
@@ -21,23 +20,8 @@ class MembersModel extends \W\Model\Model{
             $sth->execute();
             $result = $sth->fetch();
         }
-
         return $result;
    	}
-	
-
-	public function findSection($id_section){
-        if (!is_numeric($id_section)){
-            return false;
-        }
-
-        $sql = 'SELECT `rank` FROM `sections WHERE ' . $this->primaryKey .'  = :id )';
-        $sth = $this->dbh->prepare($sql);
-        $sth->bindValue(':id', $id_section);
-        $sth->execute();
-        $result = $sth->fetch();
-        return $result;
-   		}
-	}
+}
 
  ?>
