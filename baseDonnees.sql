@@ -94,8 +94,8 @@ ALTER TABLE `members` ADD INDEX(`id_section`);
 ALTER TABLE `members` ADD INDEX(`id_user`);
 ALTER TABLE `listmembers` ADD INDEX(`id_member`);
 ALTER TABLE `listmembers` ADD INDEX(`id_event`);
-ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
-ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `documents` ADD INDEX(`id_categorie`);
 
 /******************** Création des contraintes  ********************/
 /*******************************************************************/
