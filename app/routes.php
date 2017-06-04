@@ -55,4 +55,5 @@
     ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
 		['GET', '/documents', 'Default#documents', 'default_documents'],
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
+		['GET', '/events', 'Default#events', 'default_events'],
 	);

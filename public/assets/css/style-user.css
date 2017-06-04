@@ -189,7 +189,6 @@ section#carousel h3{
 }
 
 
-
 /* footer */
 
 footer{
@@ -212,4 +211,14 @@ footer a:hover{
   color:  #000;
   text-decoration: none;
   font-size: 15px
+}
+
+
+
+/* PARTIE DOCUMENTS */
+
+#zonedocs1 a i.fa,
+#zonedocs2 a i.fa{
+  font-size: 100px;
+  margin-top: 70px;
 }
