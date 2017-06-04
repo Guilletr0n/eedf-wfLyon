@@ -32,8 +32,7 @@ class DocumentsModel extends \W\Model\Model{
 		/* Récupération de la photo */
 		if(isset($_FILES['docfile'])){
 			$repertoire = 'documents/'; // le répertoire de destination de l'image
-			$args['docfilename'] = $_FILES['docfile']['name']; // le nom de la photo
-			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo slugifié
+			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo
 			$tmpName = $_FILES['docfile']['tmp_name']; // le nom provisoire
 			$args['size'] = $_FILES['docfile']['size']; // taille du fichier
 			// déplacement
