@@ -122,11 +122,17 @@
 	<?= $this->section('script') ?>
 
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script>
 		$(function(){
 		    $(".vignets").addClass("load");
 		    $(".vignets2").addClass("load");
 		});
+	</script>
+	<script type="text/javascript">
+		window.sr = ScrollReveal({ duration: 3100 });
+		sr.reveal('.foo', 2000);
+		sr.reveal('.bar', 1500);
 	</script>
 	
 </body>
