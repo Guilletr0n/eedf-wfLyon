@@ -6,13 +6,13 @@
   <form class="col-md-7 jumbotron" action="<?= $this->url('photo_edit_photos', ['id' => $photos['id']]) ?>" method="POST" enctype="multipart/form-data" id="modifdocform">
     <!-- Options pour modifier l'album -->
      <div class="form-group text-center">
-        <label for="id_categorie" class="control-label">Choisir l'album à modifier :</label>
+        <label for="id_gallery" class="control-label">Choisir l'album à modifier :</label>
         <div>
-           <select id="id_categorie" name="id_categorie" class="form-control">
+           <select id="id_gallery" name="id_gallery" class="form-control">
               <option disabled>-- Albums --</option>
-                 <option value="1" id="id_categorie" ['id_categorie'] == 1 ? 'selected' : ''; ?>Patinoire 2016</option>
-                 <option value="2" id="id_categorie" ['id_categorie'] == 2 ? 'selected' : ''; ?>Album 2</option>
-                 <option value="2" id="id_categorie" ['id_categorie'] == 2 ? 'selected' : ''; ?>Album 3</option>
+                 <option value="1" id="id_gallery" ['id_gallery'] == 1 ? 'selected' : ''; ?>Patinoire 2016</option>
+                 <option value="2" id="id_gallery" ['id_gallery'] == 2 ? 'selected' : ''; ?>Album 2</option>
+                 <option value="2" id="id_gallery" ['id_gallery'] == 2 ? 'selected' : ''; ?>Album 3</option>
             </select>
         </div>
     </div>

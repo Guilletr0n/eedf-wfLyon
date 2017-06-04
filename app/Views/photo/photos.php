@@ -1,4 +1,4 @@
-<?php $this->layout('layout-admin', ['title' => 'photos']) ?>
+<?php $this->layout('layout-admin', ['title' => 'Photos']) ?>
 
 <!-- Photo section -->
 <?php $this->start('main_content') ?>

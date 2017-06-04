@@ -14,9 +14,10 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/vendor/sb-admin-2.min.css') ?>">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/admin.css') ?>">
-
+	
 	<?= $this->section('style') ?>
 
 </head>
@@ -60,18 +61,26 @@
 							</ul>
 						</li>
 						<li>
-							<a href="<?= $this->url('admin_dashboard'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Photos</a>
+							<a href="<?= $this->url('photo_photos'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Photos</a>
 							<ul>
 								<li>
-									<a href="<?= $this->url('document_add_documents'); ?>">Ajout Photos <i class="fa fa-plus-circle fa-lg"></i></a>
+									<a href="<?= $this->url('photo_add_photos'); ?>">Ajout Photos <i class="fa fa-plus-circle fa-lg"></i></a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="<?= $this->url('events_events_admin'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Evenements</a>
+							<a href="<?= $this->url('admin_dashboard'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Evenements</a>
 							<ul>
 								<li>
-									<a href="<?= $this->url('events_add_event'); ?>">Ajout Evenement <i class="fa fa-plus-circle fa-lg"></i></a>
+									<a href="<?= $this->url('document_add_documents'); ?>">Ajout Evenement <i class="fa fa-plus-circle fa-lg"></i></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="<?= $this->url('member_members'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i>Adhérents</a>
+							<ul>
+								<li>
+									<a href="<?= $this->url('member_addMember'); ?>">Ajout Adhérent <i class="fa fa-plus-circle fa-lg"></i></a>
 								</li>
 							</ul>
 						</li>

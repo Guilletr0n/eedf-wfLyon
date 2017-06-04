@@ -23,13 +23,13 @@ class PhotoController extends Controller {
   public function addPhotos(){
     // Test code for add
     //$this->allowTo('admin'); // seulement visible par l'admin
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('photo/add_photos');
     }else{                                     
       $this->photosModel->add_photos($_POST);
+		  //$this->photosModel->insert($_POST); // insert dans bdd
       $this->redirectToRoute('photo_photos');
     }
-
 
   }
 }
