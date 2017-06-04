@@ -9,11 +9,11 @@
 				<div class="col-md-6 text-center">
 					<h4><?= $photo['photoname'].'<br />';?> </h4>
 					<h5><?= $photo['photodescription'].'<br />';?></h5>
-						<?= '<a href="'. $this->assetUrl($photo['photofile']).'" target="_blank"><i class="material-icons">cloud_download</i></a>
+						<?= '<a href="'. $this->assetUrl($photo['photofile']).'" target="_blank"> </a>
 						<br />
 						<div id=btnphoto>
 						<a href="'. $this->url('photo_edit_photos', ['id' => $photo['id']]).'" class="btn btn-xs btn-success">Modifier</a>
-						<a href="photos"  onclick="return confirm(\'Voulez-vous vraiment supprimer le photo ?\');" class="btn btn-xs btn-danger">Supprimer</a>
+						<a href="photos"  onclick="return confirm(\'Voulez-vous vraiment supprimer la photo ?\');" class="btn btn-xs btn-danger">Supprimer</a>
 						</div>';
 					?></div><?php
 				}
