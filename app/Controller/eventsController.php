@@ -16,7 +16,7 @@ class EventsController extends Controller{
 	 * Page des événements
 	 **/
 	public function events(){
-		$this->show('events/events');
+			$this->show('events/events');
 	}
 
 	public function events_admin(){
@@ -29,11 +29,11 @@ class EventsController extends Controller{
 	public function edit_event($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$member = $this->eventsModel->find($id);
+			$events = $this->eventsModel->find($id);
 			$this->show('events/edit_event', ['events' => $events]);
 		}else{
 			$this->eventsModel->update($_POST, $id);
-			$this->redirectToRoute('events_edit_event');
+			$this->redirectToRoute('events_events_admin');
 		}
 	}
 
