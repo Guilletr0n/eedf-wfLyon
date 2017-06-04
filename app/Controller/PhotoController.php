@@ -55,7 +55,7 @@ class PhotoController extends Controller {
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$photo = $this->photosModel->find($id);
-			$this->show('photo/edit_documents', ['photos' => $photo]);
+			$this->show('photo/edit_photos', ['photos' => $photo]);
 		}else{
 			$this->photosModel->update_photos($_POST, $id);
 			$this->redirectToRoute('photo_photos');
