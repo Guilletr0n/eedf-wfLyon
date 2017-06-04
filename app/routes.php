@@ -51,6 +51,7 @@
 		['GET|POST', '/admin/photos', 'photo#showPhotos', 'photo_photos'],
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
 		['GET|POST', '/admin/edit-photos', 'photo#editPhotos', 'photo_edit_photos'],
+		['GET|POST', '/admin/delete-photos', 'photo#deletePhotos', 'photo_delete_photos'],
 
     ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
 		['GET', '/documents', 'Default#documents', 'default_documents'],
