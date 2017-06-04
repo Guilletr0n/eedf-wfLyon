@@ -29,7 +29,7 @@ class DocumentsModel extends \W\Model\Model{
 	}
 	public function add_documents($args){
 		
-		/* Récupération de la photo */
+		/* Récupération du document */
 		if(isset($_FILES['docfile'])){
 			$repertoire = 'documents/'; // le répertoire de destination de l'image
 			$args['docfilename'] = $_FILES['docfile']['name']; // le nom de la photo
@@ -45,7 +45,7 @@ class DocumentsModel extends \W\Model\Model{
 		}
 	}
 	public function update_documents($args, $id){
-		/* Récupération de la photo */
+		/* Récupération du document */
 		if(isset($_FILES['docfile']) && $_FILES['docfile']['size'] !== 0 ){
 			$repertoire = 'documents/'; // le répertoire de destination de l'image
 			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo
