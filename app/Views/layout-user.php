@@ -129,6 +129,7 @@
 		    $(".vignets2").addClass("load");
 		});
 	</script>
+	<!-- apparition texte progressive -->
 	<script type="text/javascript">
 		window.sr = ScrollReveal({ duration: 3100 });
 		sr.reveal('.foo', 2000);
