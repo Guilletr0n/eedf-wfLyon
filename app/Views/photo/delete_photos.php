@@ -1,12 +1,12 @@
-<?php $this->layout('layout-admin', ['title'=>'Ajouter les Photos']); ?>
+<?php $this->layout('layout-admin', ['title'=>'Supprimer les Photos']); ?>
 
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
-<h3 id="titrephoto" class="text-center">Ajouter les Photos</h3>
-<div id="formulairephoto">
+<h3 id="titresupphoto" class="text-center">Supprimer les Photos</h3>
+<div id="formulairesupphoto">
 
-  <form class="col-md-6 jumbotron" action="<?= $this->url('photo_add_photos') ?>" method="post" enctype="multipart/form-data" id="ajoutphotoform">
-      <div class="form-group text-center" id="formphoto2">
+  <form class="col-md-6 jumbotron" action="<?= $this->url('photo_delete_photos') ?>" method="post" enctype="multipart/form-data" id="supphotoform">
+      <div class="form-group text-center" id="formsupphoto2">
           <label for="photoname" class="control-label text-center">Titre de la photo</label>
           <input type="text" class="form-control" name="photoname" id="photoname" value="" required>
     </div>
@@ -24,7 +24,7 @@
             </select>
         </div>
     </div>
-    <!-- Ajout photo -->
+    <!-- Supprime photo -->
     <div class="form-group text-center">
           <label for="photofile" class="control-label">Photo</label>
           <input type="file" name="photofile" class="form-control" id="photofile" required>
@@ -33,7 +33,7 @@
     <div class="form-group text-center">
           <div class="">
               <input type="hidden" name="date" value="<?= date('Y-m-d h:i:s'); ?>">
-              <button type="submit" class="btn btn-success" id="btnaddphoto">Ajouter</button>
+              <button type="submit" class="btn btn-danger" id="btnsupphoto">Supprimer</button>
         </div>
   </div>
   </form>
