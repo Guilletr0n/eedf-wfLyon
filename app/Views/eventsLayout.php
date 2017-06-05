@@ -55,7 +55,7 @@
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
 								</li>
 								<li>
-									<a href="<?= $this->url('default_events') ?>" id="evenement">Evénements</a>
+									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
 										<li>

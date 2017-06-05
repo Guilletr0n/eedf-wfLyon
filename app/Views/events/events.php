@@ -5,19 +5,18 @@
 <?php $this->stop('style') ?>
 
 <?php $this->start('main_content') ?>
-    	<div class="container">
-          <h2>Calendrier des événements</h2>
-      </div>
-      <div class="container">
+
+    	<h2 class="text-center">Calendrier des événements</h2>
+      <div class="container text-center">
           <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=2&amp;hl=fr&amp;bgcolor=%23FFFFFF&amp;src=eg295kbq80r81gn67nn6srj4eg%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FParis" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-      <div class="container">
-          <h2>Prochains Evénements</h2>
-      </div>
-      <div class="container">
+
+      <h2 class="text-center">Prochains Evénements</h2>
+      <div class="container text-center">
           <input id="afficheElements" type="button" value="Afficher plus d'éléments" class="btn-info btn-md">
       </div>
 
+      <div class="container">
 <?php foreach ($events as $key => $events) { ?>
 
                 <?php if($events['id'] < 4){ ?>
@@ -43,7 +42,7 @@
 
                <?php }
       } ?>  <!--fin de la boucle, le tableau contient toute la BDD -->
-
+      </div>
 
 
 
