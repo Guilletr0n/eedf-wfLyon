@@ -14,6 +14,7 @@ class EventsController extends Controller
 
 	public function __construct(){
 		$this->eventsModel = new events;
+		$this->galleryModel = new gallery;
 	}
 
 	/**
@@ -25,14 +26,19 @@ class EventsController extends Controller
 		$this->show('events/events', ['events' => $data]);
 	}
 
-
+	/**
+	 * Page des événements sur interface admin
+	 */
 	public function events_admin(){
 		$data = $this->eventsModel->findAll();
-		//print_r($data[0]['id_section']);
-		//$this->allowTo('admin'); // seulement visible par l'admin
-		$this->show('events/events_admin', ['events' => $data]);
+		//$data2 = $this->galleryModel->findAll();
+
+		$this->show('events/events_admin', ['events' => $data]);  // , 'gallery' => $data2
 	}
 
+	/**
+	 * Fonctions admin
+	 */
 	public function edit_event($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
