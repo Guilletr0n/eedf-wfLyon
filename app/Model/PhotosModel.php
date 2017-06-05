@@ -29,7 +29,7 @@ class PhotosModel extends \W\Model\Model{
 	}
 
 	public function add_photos($args){
-		
+
 		/* Récupération de la photo */
 		if(isset($_FILES['photofile'])){
 			$repertoire = 'photos/'; // le répertoire de destination de l'image
