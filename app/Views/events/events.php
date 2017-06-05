@@ -35,10 +35,10 @@
 
                         <div class="container col-md-4">
                             <p>
-                              <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
-                              Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
-                              Description :  <?php echo $events['description']; ?>.<br />
-                              Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
+                              <strong>Sortie : "</strong>  <?php echo $events['title'] ?><strong> "</strong><br />
+                              Durée de l'événement: du <?php echo $events['startdate'] ?> au <?php echo $events['enddate'] ?>.<br />
+                              Description :  <?php echo $events['description'] ?>.<br />
+                              Les participants déjà inscrits sont : <?php echo $events['id_member'] ?>
                             </p>
                         </div>
                 <?php }else{ ?>
