@@ -17,10 +17,10 @@
 	 	<aside class="col-md-4">
 		 	<div id="branches">
 				<ul><h3>Dans notre groupe, il existe deux branches :</h3>
-		 			<li><h4>Les lutins/louveteaux (6-11 ans) :</h4>
+		 			<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>"> Les lutins/louveteaux (6-11 ans) :</h4>
 					<p>Les années lutins/louveteaux sont celles des premiers départs sans les parents, l'apprentissage de la vie en collectivité et de la découverte du monde qui nous entoure.</p></li>
 		 
-					<li><h4>Les éclaireurs/éclaireuses (11-15 ans) :</h4>
+					<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>"> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
 					<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
 				</ul>
 			</div>
@@ -50,11 +50,11 @@
 <div class="bar" id="valeurs">
 	<div id="textegauche">
 		<ul><h3 class="lobster">Nos valeurs</h3>
-			<li>En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
-			<li>En s’éduquant réciproquement les uns par les autres, en éduquant en commun les filles et les garçons, c’est l’affirmation de la coéducation.</li>
-			<li>En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
-			<li>En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
-			<li>En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
+			<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
+			<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En s’éduquant réciproquement les uns par les autres, en éduquant en commun les filles et les garçons, c’est l’affirmation de la coéducation.</li>
+			<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
+			<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
+			<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 		</div>
 	</div>
 </div>
