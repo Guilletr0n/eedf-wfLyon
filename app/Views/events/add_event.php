@@ -33,6 +33,11 @@
       </div>
 
       <div class="form-group text-center">
+        <label for="galleryname" class="control-label text-center">Nom de la gallerie associée</label>
+        <input type="text" class="form-control" name="galleryname" id="galleryname"required>
+      </div>
+
+      <div class="form-group text-center">
           <div class="">
               <button type="submit" class="btn btn-success" id="AddEvent">Ajouter</button>
           </div>
