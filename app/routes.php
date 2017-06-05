@@ -53,8 +53,9 @@
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
 		['GET|POST', '/admin/edit-photos', 'photo#editPhotos', 'photo_edit_photos'],
     
-    ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
+    	['GET', '/accueil', 'Default#accueil', 'default_accueil'],
 		['GET', '/documents', 'Default#documents', 'default_documents'],
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
 		['GET', '/events', 'Default#events', 'default_events'],
+		['GET', '/contact2', 'Default#contact2', 'default_contact2'],
 	);

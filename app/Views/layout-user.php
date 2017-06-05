@@ -14,9 +14,6 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 
@@ -41,7 +38,10 @@
 <!-- NAVBAR-->	
 		<div class="container" id="nav">
 			<div class="col-md-12">
-				<nav class="navbar navbar-default">
+			<?php
+    $filename = basename($_SERVER["SCRIPT_FILENAME"], '.php');
+?>
+				<nav class="navbar navbar-default" id="nav">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -56,11 +56,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li class="active">
+								<li>
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
 								</li>
 								<li>
-									<a href="<?= $this->url('default_events') ?>" id="evenement">Evénements</a>
+									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
 										<li>
@@ -81,10 +81,10 @@
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li>
-									<a href="<?= $this->url('default_contact') ?>">S'inscrire</a>
+									<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
 								</li>
 								<li>
-									<a href="<?= $this->url('default_contact') ?>">Se connecter</a>
+									<a href="<?= $this->url('login') ?>">Se connecter</a>
 
 								</li>
 								
@@ -111,7 +111,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<a href="">Nous contacter</a> 
+					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a> 
 				</div>
 				
 			</div>
@@ -120,15 +120,34 @@
 
 	<?= $this->section('script') ?>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script>
+		/* Rendre la navbar active */
+		
+//      (function() {
+//     var nav = document.getElementById('nav'),
+//         anchor = nav.getElementsByTagName('a'),
+//         current = window.location.pathname.split('/')[1];
+//         for (var i = 0; i < anchor.length; i++) {
+//         if(anchor[i].href == current) {
+//             anchor[i].className = "active";
+//         }
+//     }
+// })();
+
+
+
+		/* apparition titre progressive */
 		$(function(){
 		    $(".vignets").addClass("load");
 		    $(".vignets2").addClass("load");
 		});
 	</script>
+
 	<!-- apparition texte progressive -->
 	<script type="text/javascript">
 		window.sr = ScrollReveal({ duration: 3100 });
