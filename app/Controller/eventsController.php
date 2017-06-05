@@ -10,6 +10,7 @@ use \Model\galleryModel as gallery;
 class EventsController extends Controller
 {
 	private $eventsModel;
+	private $galleryModel;
 
 	public function __construct(){
 		$this->eventsModel = new events;
