@@ -28,8 +28,8 @@
       </div>
 
       <div class="form-group text-center">
-        <label for="id_participant" class="control-label text-center">Participants</label>
-        <input type="text" class="form-control" name="id_participant" id="id_participant" value="0" required>
+        <label for="id_member" class="control-label text-center">Participants</label>
+        <input type="text" class="form-control" name="id_member" id="id_member" value="0" required>
       </div>
 
       <div class="form-group text-center">

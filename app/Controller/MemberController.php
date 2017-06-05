@@ -17,7 +17,8 @@ class MemberController extends Controller {
 
  	public function members(){
  		//récupération de toute la table members
- 		$data = $this->MembersModel->findAll('id_section');
+ 		$member = $this->MembersModel->findAll('id_section');
+ 		$listsections = $this->SectionsModel->findAll('id');
  		//$idsection=$this->SectionsModel->find($id);
 
  		/* TEST
@@ -27,7 +28,7 @@ class MemberController extends Controller {
  		//$this->allowTo('admin'); // seulement visible par l'admin
 		*/
 		//on redirige vers la route member_members & un tableau members contenant les informations des membres
-		$this->show('member/members', ['members' => $data]);
+		$this->show('member/members', ['members' => $member, 'listsections' => $listsections]);
 	}
 
 /*
@@ -48,7 +49,6 @@ class MemberController extends Controller {
 			$member = $this->MembersModel->find($id);
 			//récupération de la liste des sections existantes
 			$listsections = $this->SectionsModel->findAll('id');
-			print_r($listsections);
 			//print_r($listsections[0]['rank']);
 			//print_r($listsections[0]['id']);
 			//Envoie de 2 tableau members=table members & listsections = liste des sections existantes

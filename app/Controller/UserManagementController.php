@@ -47,7 +47,7 @@ class UserManagementController extends Controller {
   public function editDetailsUser(){
     $this->currentUser->update($_POST,$_POST['id']);
     $user = $this->currentUser->find($_POST['id']);
-    $this->show('admin/manageUsers',['user'=>$user,'loggedUser'=>$this->auth->getLoggedUser()]);
+    $this->show('admin/manageUsers',['user'=>$user,'loggedUser'=>$this->auth->getLoggedUser(),'w_current_route'=>'userManagement_details_user']);
   }
   public function editDetailsUserForm($id){
     $user = $this->currentUser->find($id);
@@ -127,13 +127,12 @@ class UserManagementController extends Controller {
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('user/connexion');
     } else {
-      $user = $this->auth->isValidLoginInfo($_POST['usernameOrEmail'], $_POST['password']);
+      $user = $this->auth->isValidLoginInfo($_POST['username'], $_POST['password']);
       if($user != 0){
-        $this->auth->logerUserIn($this->currentUser->find($user));
+        $this->auth->logUserIn($this->currentUser->find($user));
         $this->redirectToRoute('default_home');
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
-        $this->redirectToRoute('login');
       }
     }
   }
@@ -154,13 +153,15 @@ class UserManagementController extends Controller {
     $_POST['password'] = $this->auth->hashPassword($_POST['password']);
     if($newAdmin = $this->adminUser->insertAdmin($_POST)){
       $this->show('admin/manageUsers', ['newAdmin'=>$newAdmin]);
+      //$this->show('dev/output',['newAdmin'=>$newAdmin]);
     }else{
+      //$this->show('dev/output',['var'=>'error']);
       $this->show('admin/manageUsers', ['error'=>'incorrect']);
     }
     if($_GET['id']){
       $result['id'] = $_GET['id'];
     }
-    // Update on the database
+    // Confirm account on the database
     $data = array('confirm'=>1);
     $this->currentUser->update($data, $_GET['id']);
     $this->show('admin/manageUsers');

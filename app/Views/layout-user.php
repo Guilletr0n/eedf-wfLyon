@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/bootstrap.css') ?>" />
 	<link rel="shortcut icon" href="img/logo2.png">
 	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
@@ -38,9 +39,6 @@
 <!-- NAVBAR-->	
 		<div class="container" id="nav">
 			<div class="col-md-12">
-			<?php
-    $filename = basename($_SERVER["SCRIPT_FILENAME"], '.php');
-?>
 				<nav class="navbar navbar-default" id="nav">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
@@ -84,7 +82,7 @@
 									<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
 								</li>
 								<li>
-									<a href="<?= $this->url('login') ?>">Se connecter</a>
+									<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
 
 								</li>
 								
@@ -127,18 +125,6 @@
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script>
 		/* Rendre la navbar active */
-		
-//      (function() {
-//     var nav = document.getElementById('nav'),
-//         anchor = nav.getElementsByTagName('a'),
-//         current = window.location.pathname.split('/')[1];
-//         for (var i = 0; i < anchor.length; i++) {
-//         if(anchor[i].href == current) {
-//             anchor[i].className = "active";
-//         }
-//     }
-// })();
-
 
 
 		/* apparition titre progressive */
