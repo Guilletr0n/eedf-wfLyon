@@ -62,7 +62,7 @@ class PhotoController extends Controller {
 		}
 	}
 
-	public function deletePhotos(){
+	public function deletePhotos($id){
 		$this->show('photo/delete_photos', ['photos' => $photo]);
 		$this->photosModel->delete($_POST, $id);
 		$this->redirectToRoute('photo_photos');
