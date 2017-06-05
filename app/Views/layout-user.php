@@ -20,7 +20,7 @@
 
 
 <body>
-	
+
 	<header>
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -36,7 +36,7 @@
 				<h3 class="vignets2">du groupe Jean Maron</h3>
 		</div>
 
-<!-- NAVBAR-->	
+<!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
 				<nav class="navbar navbar-default" id="nav">
@@ -77,16 +77,8 @@
 									<a href="<?= $this->url('default_contact') ?>">Contact</a>
 								</li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
-								</li>
-								<li>
-									<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
+							<?= $this->section('login') ?>
 
-								</li>
-								
-							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
@@ -109,9 +101,9 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a> 
+					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a>
 				</div>
-				
+
 			</div>
 		</div>
 	</footer>
@@ -140,6 +132,6 @@
 		sr.reveal('.foo', 2000);
 		sr.reveal('.bar', 1500);
 	</script>
-	
+
 </body>
 </html>

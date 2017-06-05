@@ -77,14 +77,6 @@ class UserManagementController extends Controller {
     }
   }
 
-  public function inscription_bk(){
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
-      $this->show('user/inscription');
-    }else{
-      $this->show('user/inscription',['output'=>$_POST]);
-    }
-  }
-
   public function inscription(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('user/inscription');
@@ -116,7 +108,7 @@ class UserManagementController extends Controller {
         }
         //$this->auth->logUserIn($newUser);
         $isSentEmail = $this->sendEmail($_POST['email'], $newUser['id'], $_POST['token']);
-        $this->show('user/inscription',['message'=>'ok']);
+        $this->show('default/accueil');
       } else {
         $this->show('user/inscription',['message'=>'duplicate']);
       }
@@ -130,16 +122,17 @@ class UserManagementController extends Controller {
       $user = $this->auth->isValidLoginInfo($_POST['username'], $_POST['password']);
       if($user != 0){
         $this->auth->logUserIn($this->currentUser->find($user));
-        $this->redirectToRoute('default_home');
+        $this->show('default/accueil',['user'=>$_SESSION['user']]);
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
+        //$this->show('dev/output',['user'=>$_SESSION['error']]);
       }
     }
   }
 
   public function deconnexion(){
     $this->auth->logUserOut();
-    $this->redirectToRoute('default_home');
+    $this->redirectToRoute('default_accueil');
   }
 
   public function getLoggedUser(){

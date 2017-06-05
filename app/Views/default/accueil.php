@@ -1,5 +1,22 @@
 <?php $this->layout('layout-user', ['title' => 'EEDF Annonay']) ?>
 
+<?php $this->start('login') ?>
+	<ul class="nav navbar-nav navbar-right">
+		<?php if(!isset($user)): ?>
+		<li>
+			<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
+		</li>
+		<li>
+			<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
+		</li>
+	<?php endif ?>
+	<?php if(isset($user)): ?>
+		<li><a href="#">Salut <?= $user['username'] ?></a></li>
+		<li><a href="<?= $this->url('admin_deconnexion'); ?>">Deconnexion</a></li>
+	<?php endif ?>
+</ul>
+<?php $this->stop('login') ?>
+
 <?php $this->start('main_content') ?>
 
 <!-- TEXTE INTRO -->
@@ -21,12 +38,14 @@
 			</ul>
 		</div>
 		<div class="col-sm-5" id="paperplane">
-			<img src="<?= $this->assetUrl('img/avionpapier.png') ?>" class="img-responsive">		
+			<img src="<?= $this->assetUrl('img/avionpapier.png') ?>" class="img-responsive">
 		</div>
 	</div>
 </section>
 
+
 <!-- CAROUSEL-->
+<?php if(isset($user)): ?>
 <section id="carousel">
 	<div class="container">
 
@@ -72,7 +91,7 @@
 									<h3>Patinoire - 02/05/2017</h3>
 									<p>Après-midi à la patinoire Baraban avec les ainés et les louveteaux.</p>
 								</div>
-							</a>	
+							</a>
 						</div>
 					</div>
 
@@ -92,5 +111,5 @@
 		</div>
 	</div>
 </section>
-
+<?php endif ?>
 <?php $this->stop('main_content') ?>
