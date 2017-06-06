@@ -80,14 +80,14 @@
 		$index = 0;
 			foreach($image_files as $index=>$file) {
 		$index++;
-		$thumbnail_image = $thumbs_dir.$file;
+		$thumbnail_image = '/public/'.$thumbs_dir.$file;
 		if(!file_exists($thumbnail_image)) {
 			$extension = get_file_extension($thumbnail_image);
 			if($extension) {
 				make_thumb($images_dir.$file,$thumbnail_image,$thumbs_width);
 			}
 		}
-		echo '<a href="',$images_dir.$file,'" class="photo-link smoothbox" rel="gallery"><img src="',$thumbnail_image,'" /></a>';
+		echo '<a href="'.$thumbnail_image.'" class="photo-link smoothbox" rel="gallery"><img class="img-responsive" src="'.$thumbnail_image.'" /></a>';
 		if($index % $images_per_row == 0) { echo '<div class="clear"></div>'; }
 	}
 		echo '<div class="clear"></div>';
