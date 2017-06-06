@@ -13,46 +13,55 @@ font-family: 'Arya', sans-serif;
 
 
 #pageevent h2.titresevent{
-  font-family: 'Lobster', cursive;
-  color: #DF6D14; /* citrouille */
-  text-shadow: 1px 1px 2px black;
-  font-size: 35px;
-  letter-spacing: 1.5px;
+ font-family: 'Alegreya Sans SC', sans-serif;
+ color: #DF6D14; /* citrouille */
+ text-shadow: 1px 1px 2px black;
+ font-size: 35px;
+ letter-spacing: 1.5px;
 }
 
 #pageevent .titresevent{
-    /*background : #bcdd61;  */
+   /*background : #bcdd61;  */
 }
 
 #pageevent #calendar{
-  padding-top: 0;
-  background : #bcdd61;
-  border: 2px solid #149414; /*vert sinople*/
-  border-radius: 20px;
+ /*background : #149414; /*vert sinople*/
+ /*border: 2px solid #bcdd61;
+ box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);*/
+ padding-top: 15px;
+
+}
+#pageevent #calendar iframe{
+   padding: 15px;
 }
 
 #pageevent #imageLeft{
-  background: url('../img/tente.jpg');
+ background: url('../img/tente.jpg');
 }
 
 #pageevent .event{
-  margin-top: 20px;
-  padding: 0;
-  border: 1px solid #34495e;
-  border-radius: 10px;
-  color: #34495e;
+ margin-top: 20px;
+ padding: 0;
+ border: 1px solid #34495e;
+ border-radius: 10px;
+ color: #34495e;
 }
 
 #pageevent #fondEvent{
-  /*background: url('../img/foret.jpg');*/
-  border: 2px solid #149414; /*vert sinople*/
-  border-radius: 20px;
+ /*background: url('../img/foret.jpg');*/
+ border: 2px solid #bcdd61;
+ box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
+ font-family: 'Alegreya Sans SC', sans-serif;
+ padding-bottom: 15px;
 }
 
 
 #afficheElements{
-  padding: 10 px;
-  margin-bot: 40px;
-  border: 1px solid grey;
-  border-radius: 10px;
+ padding: 10px;
+ padding-left: 15px;
+ padding-right: 15px;
+ margin-bottom: 20px;
+ border: 1px solid grey;
+ border-radius: 10px;
+ font-family: 'Alegreya Sans SC', sans-serif;.
 }
