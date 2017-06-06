@@ -29,7 +29,7 @@
 	</div>
 	<div class="row" id="zoneblanchephoto">
 		<h3 class="text-center">Galleries</h3>
-
+		<div id="photogallery">
 	
 		<!-- Beginning test gallery code -->
 		<?php
@@ -100,7 +100,7 @@
 		<!-- End test gallery code -->
 	
 	
-		
+		</div>
 	</div>
 
 	
