@@ -40,10 +40,10 @@ font-family: 'Arya', sans-serif;
 }
 
 #pageevent .event{
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px;
   margin-top: 20px;
-  padding: 0;
+  width: 30%;
+  margin: 10px;
   /*border: 2px solid #DF6D14;*/
   border-radius: 10px;
   box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
@@ -52,16 +52,12 @@ font-family: 'Arya', sans-serif;
   background-color: #FEFDF0;
 
 }
-#pageevent .event p{
-  padding: 0;
-}
 
 #pageevent #fondEvent{
  /*background: url('../img/fondEvent.jpg');*/
  /*border: 2px solid #bcdd61;*/
  /*box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);*/
  font-family: 'Alegreya Sans SC', sans-serif;
- padding: 0;
 }
 
 .titreEvent{
