@@ -5,16 +5,16 @@ namespace Controller;
 use \W\Controller\Controller;
 
 use \Model\eventsModel as events;
-use \Model\galleryModel as gallery;
+//use \Model\galleryModel as gallery;
 
 class EventsController extends Controller
 {
 	private $eventsModel;
-	private $galleryModel;
+	//private $galleryModel;
 
 	public function __construct(){
 		$this->eventsModel = new events;
-		$this->galleryModel = new gallery;
+		//$this->galleryModel = new gallery;
 	}
 
 	/**

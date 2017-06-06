@@ -49,6 +49,8 @@ CREATE TABLE `events` (
 	`startdate` DATE NOT NULL,
 	`enddate` DATE NOT NULL,
 	`description` varchar(500) NOT NULL,
+	`materiel` varchar(500) NOT NULL,
+	`activites` varchar(500) NOT NULL,
 	`id_member` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -157,4 +159,3 @@ INSERT INTO `listmembers` (`id_member`, `id_event`) VALUES
 
 
 /*********** Gallery ************/
-
