@@ -34,8 +34,8 @@
 		<!-- Beginning test gallery code -->
 		<?php
 		/** settings **/	
-		$images_dir = '/';
-		$thumbs_dir = '/';
+		$images_dir = 'assets/photos/';
+		$thumbs_dir = 'assets/photos/';
 		$thumbs_width = 100;
 		$images_per_row = 5;
 
