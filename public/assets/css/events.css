@@ -21,5 +21,6 @@ div#calendar{
   background: #bcdd61;
 }
 div.container-fluid{
-    background: red;
+    background: #34495e;
+    opacity: 0.6;
 }
