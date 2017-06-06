@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -30,6 +30,7 @@
 			</div>
 		</div>
 
+		
 <!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
