@@ -22,8 +22,10 @@
                 <?php if($events['id'] < 4){ ?>
 
                         <div class="container col-md-4 event">
-                            <p>
+                            <p class="titreEvent">
                               <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                            </p>
+                            <p>
                               <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                               <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
                               <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
@@ -34,8 +36,10 @@
                 <?php }else{ ?>
 
                   <div class="container col-md-4 event hidden">
-                      <p>
+                      <p class="titreEvent">
                         <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                      </p>
+                      <p>
                         <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                         <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
                         <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
