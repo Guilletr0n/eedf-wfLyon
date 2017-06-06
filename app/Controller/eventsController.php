@@ -3,29 +3,42 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use \Model\EventsModel as events;
 
-class EventsController extends Controller{
+use \Model\eventsModel as events;
+use \Model\galleryModel as gallery;
+
+class EventsController extends Controller
+{
 	private $eventsModel;
+	private $galleryModel;
 
 	public function __construct(){
 		$this->eventsModel = new events;
+		$this->galleryModel = new gallery;
 	}
 
 	/**
 	 * Page des événements
-	 **/
+	 */
 	public function events(){
-			$this->show('events/events');
+		$data = $this->eventsModel->findAll();
+
+		$this->show('events/events', ['events' => $data]);
 	}
 
+	/**
+	 * Page des événements sur interface admin
+	 */
 	public function events_admin(){
- 		$data = $this->eventsModel->findAll();
- 		//print_r($data[0]['id_section']);
- 		//$this->allowTo('admin'); // seulement visible par l'admin
-		$this->show('events/events_admin', ['events' => $data]);
+		$data = $this->eventsModel->findAll();
+		//$data2 = $this->galleryModel->findAll();
+
+		$this->show('events/events_admin', ['events' => $data]);  // , 'gallery' => $data2
 	}
 
+	/**
+	 * Fonctions admin
+	 */
 	public function edit_event($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -40,20 +53,28 @@ class EventsController extends Controller{
 	public function add_event(){
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 		//Si method GET afficher le formulaire
-	    $this->show('events/add_event');
+			$this->show('events/add_event');
 	}else{
 		//Si method POST envoyer les données à la bdd
-		$this->eventsModel->insert($_POST);
+		$galleryname = $_POST['galleryname'];
+		unset($_POST['galleryname']);
+		$event = $this->eventsModel->insert($_POST);
+		$gallery = [
+			'id_event' => $event['id'],
+			'galleryname' => $galleryname
+		];
+		$this->galleryModel->insert($gallery);
 		$this->redirectToRoute('events_add_event');
 
-	  }
+		}
 	}
 
-	// public function delete_event($id){
-	// 	$events = $this->eventsModel->find($id);
-	// 	$this->eventsModel->delete($id);
-	// 	$this->redirectToRoute('events_events_admin');
-	// }
+	public function delete_event($id){
+		$events = $this->eventsModel->find($id);
+		$this->eventsModel->delete($id);
+		$this->redirectToRoute('events_events_admin');
+	}
+
 
 }
 

@@ -15,15 +15,12 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 
 
 <body>
-	
+
 	<header>
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -39,10 +36,10 @@
 				<h3 class="vignets2">du groupe Jean Maron</h3>
 		</div>
 
-<!-- NAVBAR-->	
+<!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
-				<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default" id="nav">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -56,40 +53,32 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
 							<ul class="nav navbar-nav">
-								<li class="active">
+								<li class="<?php echo ($this->url('default_accueil') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
 								</li>
-								<li>
-									<a href="<?= $this->url('default_events') ?>" id="evenement">Evénements</a>
+								<li class="<?php echo ($this->url('events_events') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
+									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
-										<li>
-											<a href="<?= $this->url('default_gallery') ?>">Photos</a>
+										<li class="<?php echo ($this->url('photo_users_photos') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
+											<a href="<?= $this->url('photo_users_photos') ?>">Photos</a>
 										</li>
 									<?php
 									}
 									?>
-								<li>
+								<li class="<?php echo ($this->url('default_documents') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_documents') ?>">Documents</a>
 								</li>
-								<li>
+								<li class="<?php echo ($this->url('default_quisommesnous') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_quisommesnous') ?>">Qui sommes nous ?</a>
 								</li>
-								<li>
+								<li class="<?php echo ($this->url('default_contact') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_contact') ?>">Contact</a>
 								</li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a href="<?= $this->url('default_contact') ?>">S'inscrire</a>
-								</li>
-								<li>
-									<a href="<?= $this->url('default_contact') ?>">Se connecter</a>
-
-								</li>
-								
-							</ul>
+							<?= $this->section('login') ?>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
@@ -112,22 +101,38 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<a href="">Nous contacter</a> 
+					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a>
 				</div>
-				
+
 			</div>
 		</div>
 	</footer>
 
 	<?= $this->section('script') ?>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<script>
+		/* Rendre la navbar active */
+
+
+		/* apparition titre progressive */
 		$(function(){
 		    $(".vignets").addClass("load");
 		    $(".vignets2").addClass("load");
 		});
 	</script>
-	
+
+	<!-- apparition texte progressive -->
+	<script type="text/javascript">
+		window.sr = ScrollReveal({ duration: 3000 });
+		sr.reveal('.foo', 2000);
+		sr.reveal('.bar', 1500);
+		sr.reveal('.apr', 600);
+	</script>
+
 </body>
 </html>

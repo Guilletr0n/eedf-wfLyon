@@ -33,8 +33,7 @@ class PhotosModel extends \W\Model\Model{
 		/* Récupération de la photo */
 		if(isset($_FILES['photofile'])){
 			$repertoire = 'photos/'; // le répertoire de destination de l'image
-			$args['photofilename'] = $_FILES['photofile']['name']; // le nom de la photo
-			$fichier = $this->slugify($_FILES['photofile']['name']); // le nom de la photo slugifié
+			$fichier = $this->slugify($_FILES['photofile']['name']); // le nom de la photo
 			$tmpName = $_FILES['photofile']['tmp_name']; // le nom provisoire
 			$args['size'] = $_FILES['photofile']['size']; // taille du fichier
 			// déplacement
@@ -63,3 +62,4 @@ class PhotosModel extends \W\Model\Model{
 		}
 	}
 }
+?>
