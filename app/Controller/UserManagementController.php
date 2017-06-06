@@ -41,7 +41,6 @@ class UserManagementController extends Controller {
   }
   public function deleteUser($id){
     $this->currentUser->delete($id);
-    $this->show('admin/manageUsers');
   }
   public function detailsUser($id){
     $user = $this->currentUser->find($id);
