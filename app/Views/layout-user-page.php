@@ -17,10 +17,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 
-
-
 <body>
-
 	<header>
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -28,12 +25,6 @@
 					<img src="<?= $this->assetUrl('img/logo2.png') ?>" alt="">
 				</a>
 			</div>
-		</div>
-
-		<div class="col-md-12 text-center">
-				<h1 class="vignets">Bienvenue</h1>
-				<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs de France</h2>
-				<h3 class="vignets2">du groupe Jean Maron</h3>
 		</div>
 
 <!-- NAVBAR-->
@@ -62,8 +53,8 @@
 									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
-										<li class="<?php echo ($this->url('photo_users_photos') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-											<a href="<?= $this->url('photo_users_photos') ?>">Photos</a>
+										<li class="<?php echo ($this->url('default_gallery') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
+											<a href="<?= $this->url('default_gallery') ?>">Photos</a>
 										</li>
 									<?php
 									}

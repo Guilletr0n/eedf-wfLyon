@@ -3,6 +3,7 @@
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
 <h3 class="text-center" id="titremodifphoto">Modifier les photos</h3>
+<div class="col-md-3"></div>
 <div id="formulairemodifphoto">
   <form class="col-md-7 jumbotron" action="<?= $this->url('photo_edit_photos', ['id' => $photos['id']]) ?>" method="POST" enctype="multipart/form-data" id="modifphotoform">
       <div class="form-group text-center" id="formmodifphoto2">
@@ -37,6 +38,7 @@
   </div>
   </form>
 </div>
+<div class="col-md-2"></div>
 </div>
 <?php $this->stop('main_content') ?>
 
