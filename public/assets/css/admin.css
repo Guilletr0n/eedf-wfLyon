@@ -107,6 +107,10 @@ header ul#side-menu li a.text-uppercase{
 
 
 // PHOTOS
+.clear			{ clear:both; }
+.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:200px; float:left; }
+.photo-link:hover	{ border-color:#999; }
+
 #zonenoirephoto{}
 #zonenoirephoto{
 	background-color: #2c3e50;

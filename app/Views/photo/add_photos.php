@@ -7,20 +7,19 @@
 
   <form class="col-md-6 jumbotron" action="<?= $this->url('photo_add_photos') ?>" method="post" enctype="multipart/form-data" id="ajoutphotoform">
       <div class="form-group text-center" id="formphoto2">
-          <label for="photoname" class="control-label text-center">Titre de la photo</label>
+          <label for="photoname" class="control-label text-center">Titre</label>
           <input type="text" class="form-control" name="photoname" id="photoname" value="" required>
     </div>
     <div class="form-group text-center">
-          <label for="photodescription" class="control-label">Description de la photo</label>
+          <label for="photodescription" class="control-label">Description</label>
           <textarea id="photodescription" class="form-control" name="photodescription"></textarea>
     </div>
     <div class="form-group text-center">
-        <label for="id_gallery" class="control-label">Catégorie de gallerie</label>
+        <label for="id_gallery" class="control-label">Gallerie</label>
         <div>
            <select id="id_gallery" name="id_gallery" class="form-control" required>
               <option disabled selected required>-- Sélectionner gallerie --</option>
               <option value="1" id="id_gallery" required>Photo gallerie</option>
-              <option value="2" id="id_gallery" required>Photo gallerie</option>
             </select>
         </div>
     </div>

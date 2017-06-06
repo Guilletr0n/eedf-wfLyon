@@ -13,10 +13,15 @@ class PhotoController extends Controller {
 	}
 
 
-  public function showPhotos(){
+	public function showPhotos(){
  		$data = $this->photosModel->findAll();
  		//$this->allowTo('admin'); // seulement visible par l'admin
 		$this->show('photo/photos', ['photos' => $data]);
+	}	
+		
+	public function userPhotos(){	
+		//$this->allowTo('user'); // seulement visible par user
+		$this->show('photo/users_photos', ['photos' => $data]);
 	}
 
 	// public function ajaxGetPhoto(){
@@ -62,7 +67,7 @@ class PhotoController extends Controller {
 		}
 	}
 
-	public function deletePhotos($id){
+	public function deletePhotos(){
 		$this->show('photo/delete_photos', ['photos' => $photo]);
 		$this->photosModel->delete($_POST, $id);
 		$this->redirectToRoute('photo_photos');

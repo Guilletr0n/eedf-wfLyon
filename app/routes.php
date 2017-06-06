@@ -28,11 +28,11 @@
 		['GET','/ajouterAdmin','UserManagement#addAdminForm','userManagement_add_user_admin_form'],
 		['POST','/ajouterAdmin','UserManagement#addAdmin','userManagement_add_user_admin'],
 		['GET','/voirSession','UserManagement#getLoggedUser','userManagement_get_logged_user'],
-  	['GET|POST','/inscription','userManagement#inscription','admin_inscription'],
+  		['GET|POST','/inscription','userManagement#inscription','admin_inscription'],
 		['GET|POST','/connexion','userManagement#connexion','userManagement_connexion'],
 		['GET|POST','/deconnexion','userManagement#deconnexion','admin_deconnexion'],
 		['GET','/confirmation','userManagement#confirmation','admin_confirmation'],
-    ['POST','/login','userManagement#loginUser','userManagement_login'],
+   		['POST','/login','userManagement#loginUser','userManagement_login'],
 		['GET','/listUsers','userManagement#listUsers','guillermo_userManagement_list'],
 
 		//documents
@@ -41,19 +41,20 @@
 		['GET|POST', '/admin/modif-documents/[:id]', 'Document#edit_documents', 'document_edit_documents'],
 		['GET|POST', '/admin/delete-documents/[:id]', 'Document#delete_documents', 'document_delete_documents'],
 
-    //members
+    	//members
 		['GET', '/admin/members', 'Member#members', 'member_members'],
 		['GET|POST', '/admin/addMember', 'Member#addMember', 'member_addMember'],
 		['GET|POST', '/admin/edit_members/[:id]', 'Member#editMember', 'member_editMember'],
 		['GET|POST', '/admin/delete-members/[:id]', 'Member#deleteMembers', 'member_deleteMembers'],
 
-    		// photos
+    	// photos
 		['GET|POST', '/admin/photos', 'photo#showPhotos', 'photo_photos'],
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
-		['GET|POST', '/admin/edit-photos', 'photo#editPhotos', 'photo_edit_photos'],
-		['GET|POST', '/admin/delete-photos', 'photo#deletePhotos', 'photo_delete_photos'],
+		['GET|POST', '/admin/edit-photos/[:id]', 'photo#editPhotos', 'photo_edit_photos'],
+		['GET|POST', '/admin/delete-photos/[:id]', 'photo#deletePhotos', 'photo_delete_photos'],
+		['GET|POST', '/admin/users-photos', 'photo#userPhotos', 'photo_users_photos'],
 
-    ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
+    	['GET', '/accueil', 'Default#accueil', 'default_accueil'],
 		['GET', '/documents', 'Default#documents', 'default_documents'],
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
 		['GET', '/events', 'Default#events', 'default_events'],
