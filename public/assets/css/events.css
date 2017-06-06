@@ -26,8 +26,9 @@ font-family: 'Arya', sans-serif;
 
 #pageevent #calendar{
   /*background : #149414; /*vert sinople*/
-  border: 2px solid #bcdd61;
-  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
+  /*border: 2px solid #bcdd61;
+  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);*/
+  padding-top: 15px;
 
 }
 #pageevent #calendar iframe{
@@ -51,12 +52,13 @@ font-family: 'Arya', sans-serif;
   border: 2px solid #bcdd61;
   box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
   font-family: 'Alegreya Sans SC', sans-serif;
+  padding-bottom: 15px;
 }
 
 
 #afficheElements{
   padding: 10 px;
-  margin-bot: 40px;
+  margin-bottom: 40px;
   border: 1px solid grey;
   border-radius: 10px;
 }
