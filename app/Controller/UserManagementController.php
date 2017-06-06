@@ -8,6 +8,7 @@ use \W\Security\StringUtils;
 use \Model\AdherentModel;
 use \Model\AdminModel;
 use \Model\Globals;
+use \Model\MailServerModel as MailServer;
 
 class UserManagementController extends Controller {
 
@@ -16,6 +17,7 @@ class UserManagementController extends Controller {
   protected $utils;
   protected $mail;
   protected $adminUser;
+  protected $mailServer;
 
   public function __construct(){
     $this->currentUser = new AdherentModel;
@@ -23,6 +25,7 @@ class UserManagementController extends Controller {
     $this->mail        = new \PHPMailer();
     $this->utils       = new StringUtils;
     $this->adminUser   = new AdminModel;
+    $this->mailServer  = new MailServer;
   }
 
   public function listAdmins(){
@@ -165,6 +168,13 @@ class UserManagementController extends Controller {
     $data = array('confirm'=>1);
     $this->currentUser->update($data, $_GET['id']);
     $this->show('admin/manageUsers');
+  }
+
+  public function testEmail(){
+    $address = $this->mailServer->getAddress();
+    $user = $this->mailServer->getUser();
+    $password = $this->mailServer->getPassword();
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password]);
   }
 
 // UTILITIES

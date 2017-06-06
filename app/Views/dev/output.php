@@ -1,8 +1,9 @@
 <?php
 
 $inputs = array(
+                  $address,
                   $user,
-                  $loggedUser
+                  $password
                 );
 
 foreach ($inputs as $key => $value) {
