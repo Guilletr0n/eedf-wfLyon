@@ -14,7 +14,7 @@
           <input id="afficheElements" type="button" value="Afficher plus d'éléments" class="btn-info btn-md">
       </div>
 
-      <div class="container text-center">
+      <div class="container text-center" id="fondEvent">
 <?php foreach ($events as $key => $events) { ?>
 
                 <?php if($events['id'] < 4){ ?>
@@ -22,11 +22,11 @@
                         <div class="container col-md-4 event">
                             <p>
                               <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
-                              Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
-                              Description :  <?php echo $events['description']; ?>.<br />
-                              Matériel requis :  <?php echo $events['materiel']; ?>.<br />
-                              Activitées proposées :  <?php echo $events['activites']; ?>.<br />
-                              Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
+                              <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
+                              <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
+                              <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
+                              <strong>Activitées proposées :</strong>  <?php echo $events['activites']; ?>.<br />
+                              <strong>Les participants déjà inscrits sont :</strong> <?php echo $events['id_member']; ?>
                             </p>
                         </div>
                 <?php }else{ ?>
@@ -34,11 +34,11 @@
                   <div class="container col-md-4 event hidden">
                       <p>
                         <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
-                        Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
-                        Description :  <?php echo $events['description']; ?>.<br />
-                        Matériel requis :  <?php echo $events['materiel']; ?>.<br />
-                        Activitées proposées :  <?php echo $events['activites']; ?>.<br />
-                        Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
+                        <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
+                        <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
+                        <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
+                        <strong>Activitées proposées :</strong>  <?php echo $events['activites']; ?>.<br />
+                        <strong>Les participants déjà inscrits sont :</strong> <?php echo $events['id_member']; ?>
                       </p>
                   </div>
 
