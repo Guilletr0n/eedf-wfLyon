@@ -126,6 +126,7 @@ class UserManagementController extends Controller {
       if($user != 0){
         $this->auth->logUserIn($this->currentUser->find($user));
         $this->show('default/accueil',['user'=>$_SESSION['user']]);
+        //$this->show('dev/output');
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
         $this->show('dev/output',['user'=>$_SESSION['error']]);
