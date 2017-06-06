@@ -30,6 +30,7 @@
 			</div>
 		</div>
 
+		
 <!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
