@@ -521,29 +521,21 @@ section#evenements #prochainevent .trait{
 
 /* PAGE PHOTOS */
 
-// .clear      { clear:both; }
-// .photo-link   { padding:5px; margin:5px; border:1px solid #ccc; display:block; width:150px; float:left; }
-// .photo-link:hover { border-color:#999; }
 
-// #zonenoirephoto{}
-// #zonenoirephoto{
-//   background-color: #2c3e50;
-//   color: #fff;
-// }
+.clear      { clear:both; }
+.photo-link   { padding:5px; margin:5px; border:1px solid #ccc; display:block; width:150px; float:left; }
+.photo-link:hover { border-color:#999; }
 
-// #zonenoirephoto #photoprincipaux a i{
-//   font-size: 150px;
-//   color: #fff;
-// }
-
-// #zoneblanchephoto #photogallery a i{
-//   font-size: 150px;
-// }
-// #photoprincipaux #btnphoto,
-// #photosecondaires #btnphoto{
-//   padding-bottom: 60px;
-// }
-// #zonenoirephoto h3,
-// #zoneblanchephoto h3{
-//   font-family: 'Fjalla One', sans-serif;
-// }
+#zoneblanchephoto #photogallery a i{
+  font-size: 150px;
+  display: flex;
+  
+}
+#photoprincipaux #btnphoto,
+#photosecondaires #btnphoto{
+  padding-bottom: 60px;
+}
+#zonenoirephoto h3,
+#zoneblanchephoto h3{
+  font-family: 'Fjalla One', sans-serif;
+}

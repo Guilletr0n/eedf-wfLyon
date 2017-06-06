@@ -5,7 +5,6 @@
 <div class="container" id="zoneblanchephoto">
 	<h3 class="text-center">Galleries</h3>
 	<div id="photogallery">
-	<div class="col-md-3">
 
 		<!-- Beginning gallery code -->
 				<?php
@@ -67,7 +66,7 @@
 		// 		make_thumb($src,$thumbnail_image,$thumbs_width);
 		// 	}
 		// }
-		echo '<a href="'.$src.'" class="photo-link smoothbox" rel="gallery"><img class="img-responsive" src="'.$src.'" /></a>';
+		echo '<div class="col-md-2"><a href="'.$src.'" class="photo-link smoothbox" rel="gallery"><img class="img-responsive" src="'.$src.'" /></a></div>';
 		if($index % $images_per_row == 0) { echo '<div class="clear"></div>'; }
 	}
 		echo '<div class="clear"></div>';
@@ -80,7 +79,7 @@
 		<!-- End gallery code -->
 
 		</div>
-	</div>
+	
 </div>
 
 
