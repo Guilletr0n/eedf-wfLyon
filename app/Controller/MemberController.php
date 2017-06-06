@@ -55,6 +55,13 @@ class MemberController extends Controller {
 			$this->show('member/editMember', ['members' => $member, 'listsections' => $listsections]);
 		}else{
 			//Si la method post est utilisé on modifie les informations du membre correspondant à l'id de la table members
+			if (isset($_POST['register'])) {
+                // Checkbox is selected
+                $_POST['register']=1;
+                } else {
+                // Alternate code
+                $_POST['register']=0;
+               }
 			$this->MembersModel->update($_POST, $id);
 			//on redirige vers la route member_members
 			$this->redirectToRoute('member_members');

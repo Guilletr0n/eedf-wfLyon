@@ -1,4 +1,3 @@
-DROP DATABASE `wf3lyon`;
 CREATE DATABASE `wf3lyon` COLLATE `utf8_general_ci`;
 USE `wf3lyon`;
 

@@ -9,19 +9,24 @@
           </div>
       </div>
 
+      <div id="imageLeft"></div>
+
       <h2 class="text-center titresevent">Prochains Evénements</h2>
       <div class="container text-center">
-          <input id="afficheElements" type="button" value="Afficher plus d'éléments" class="btn-info btn-md">
+           <input id="afficheElements" type="button" value="Afficher plus d'éléments">   <!--class="btn-info btn-md" -->
       </div>
 
-      <div class="container text-center" id="fondEvent">
+      <div class="row text-left" id="fondEvent">
+      <div class="container">
 <?php foreach ($events as $key => $events) { ?>
 
                 <?php if($events['id'] < 4){ ?>
 
-                        <div class="container col-md-4 event">
-                            <p>
+                        <div class="col-md-4 event">
+                            <p class="titreEvent">
                               <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                            </p>
+                            <p>
                               <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                               <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
                               <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
@@ -31,9 +36,11 @@
                         </div>
                 <?php }else{ ?>
 
-                  <div class="container col-md-4 event hidden">
-                      <p>
+                  <div class="col-md-4 event hidden">
+                      <p class="titreEvent">
                         <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
+                      </p>
+                      <p>
                         <strong>Durée de l'événement:</strong> du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                         <strong>Description :</strong>  <?php echo $events['description']; ?>.<br />
                         <strong>Matériel requis :</strong>  <?php echo $events['materiel']; ?>.<br />
@@ -44,6 +51,7 @@
 
                <?php }
       } ?>  <!--fin de la boucle, le tableau contient toute la BDD -->
+      </div>
       </div>
 </div>
 
