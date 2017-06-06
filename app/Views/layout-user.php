@@ -62,8 +62,8 @@
 									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
-										<li class="<?php echo ($this->url('default_gallery') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-											<a href="<?= $this->url('default_gallery') ?>">Photos</a>
+										<li class="<?php echo ($this->url('photo_users_photos') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
+											<a href="<?= $this->url('photo_users_photos') ?>">Photos</a>
 										</li>
 									<?php
 									}

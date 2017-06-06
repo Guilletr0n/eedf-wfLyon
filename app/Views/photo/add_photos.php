@@ -3,8 +3,8 @@
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
 <h3 id="titrephoto" class="text-center">Ajouter les Photos</h3>
-<div id="formulairephoto">
-
+  <div class="col-md-3"></div>
+  <div id="formulairephoto">
   <form class="col-md-6 jumbotron" action="<?= $this->url('photo_add_photos') ?>" method="post" enctype="multipart/form-data" id="ajoutphotoform">
       <div class="form-group text-center" id="formphoto2">
           <label for="photoname" class="control-label text-center">Titre</label>
@@ -35,8 +35,9 @@
               <button type="submit" class="btn btn-success" id="btnaddphoto">Ajouter</button>
         </div>
   </div>
-  </form>
+  </form>  
   </div>
+  <div class="col-md-2"></div>
 </div>
 <?php $this->stop('main_content') ?>
 
