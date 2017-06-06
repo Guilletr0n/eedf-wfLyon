@@ -1,8 +1,7 @@
 <?php
-
+var_dump($user);
 $inputs = array(
                   $user,
-                  $loggedUser
                 );
 
 foreach ($inputs as $key => $value) {
