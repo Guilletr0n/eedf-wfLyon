@@ -25,7 +25,7 @@
 	</div>
 </section>
 
-<?php if(!isset($_SESSION['user'])): ?>
+<?php if($w_user != 0): ?>
 <!-- CAROUSEL-->
 
 <section id="carousel" class="bar">
