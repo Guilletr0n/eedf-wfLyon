@@ -1,18 +1,18 @@
 <?php $this->layout('layout-user', ['title' => 'Photos']) ?>
 
 <?php $this->start('main_content') ?>
-
-	<div class="row" id="zoneblanchephotousers">
-		<h3 class="text-center">Gallerie Photos</h3>
-
-		<div>
+	
+	<div class="row" id="zoneblanchephoto">
+		<h3 class="text-center">Galleries</h3>
+		<div id="photogallery">
+	
 		<!-- Beginning gallery code -->
 		<?php
 		/** settings **/	
 		$images_dir = 'assets/photos/';
 		$thumbs_dir = 'assets/photos/';
 		$thumbs_width = 100;
-		$images_per_row = 5;
+		$images_per_row = 6;
 
 		function make_thumb($src,$dest,$desired_width) {
 		/* read the source image */
@@ -55,29 +55,28 @@
 		$index = 0;
 			foreach($image_files as $index=>$file) {
 		$index++;
-		$thumbnail_image = $thumbs_dir.$file;
+		$thumbnail_image = '/public/'.$thumbs_dir.$file;
 		if(!file_exists($thumbnail_image)) {
 			$extension = get_file_extension($thumbnail_image);
 			if($extension) {
 				make_thumb($images_dir.$file,$thumbnail_image,$thumbs_width);
 			}
 		}
-		echo '<a href="',$images_dir.$file,'" class="photo-link smoothbox" rel="gallery"><img src="',$thumbnail_image,'" /></a>';
+		echo '<a href="'.$thumbnail_image.'" class="photo-link smoothbox" rel="gallery"><img class="img-responsive" src="'.$thumbnail_image.'" /></a>';
 		if($index % $images_per_row == 0) { echo '<div class="clear"></div>'; }
 	}
 		echo '<div class="clear"></div>';
 	}
 	else {
-	echo '<p>There are no images in this gallery.</p>';
+	echo '<p>No images in this gallery.</p>';
 	};
 	?>
 	
-		<!-- End test gallery code -->
+		<!-- End gallery code -->
 	
 	
-		
+		</div>
 	</div>
-</div>
 
 	
 	
