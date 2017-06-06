@@ -1,6 +1,6 @@
-DROP DATABASE `wflyon`;
-CREATE DATABASE `wflyon` COLLATE `utf8_general_ci`;
-USE `wflyon`;
+DROP DATABASE `wf3lyon`;
+CREATE DATABASE `wf3lyon` COLLATE `utf8_general_ci`;
+USE `wf3lyon`;
 
 /******************** Création des tables ********************/
 /* CREATE TABLE Crée une nouvelle table SQL  */
@@ -66,7 +66,7 @@ CREATE TABLE `gallery` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `listmembers` (
+CREATE TABLE `listemembers` (
 	`id_member` INT(4) NOT NULL,
 	`id_event` INT (4) NOT NULL
 );
@@ -92,16 +92,16 @@ ALTER TABLE `photos` ADD INDEX(`id_gallery`);
 ALTER TABLE `events` ADD INDEX(`id_member`);
 ALTER TABLE `members` ADD INDEX(`id_section`);
 ALTER TABLE `members` ADD INDEX(`id_user`);
-ALTER TABLE `listmembers` ADD INDEX(`id_member`);
-ALTER TABLE `listmembers` ADD INDEX(`id_event`);
-ALTER TABLE `documents` ADD INDEX(`id_categorie`);
-ALTER TABLE `documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `listemembers` ADD INDEX(`id_member`);
+ALTER TABLE `listemembers` ADD INDEX(`id_event`);
+ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
 
 /******************** Création des contraintes  ********************/
 /*******************************************************************/
 
-ALTER TABLE `listmembers` ADD CONSTRAINT `listmembers_member` FOREIGN KEY (`id_member`) REFERENCES `members`(`id`);
-ALTER TABLE `listmembers` ADD CONSTRAINT `listmembers_event` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
+ALTER TABLE `listemembers` ADD CONSTRAINT `listemembers_member` FOREIGN KEY (`id_member`) REFERENCES `members`(`id`);
+ALTER TABLE `listemembers` ADD CONSTRAINT `listemembers_event` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
 ALTER TABLE `gallery` ADD CONSTRAINT `gallery_events` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
 ALTER TABLE `photos` ADD CONSTRAINT `Photo_gallery` FOREIGN KEY (`id_gallery`) REFERENCES `gallery`(`id`);
 ALTER TABLE `members` ADD CONSTRAINT `member_users` FOREIGN KEY (`id_user`) REFERENCES `users`(`id`);
@@ -150,17 +150,5 @@ INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `
 
 -- --------------------------------------------------------
 
-/*********** Inscriptions Evènement  ************/
-INSERT INTO `listmembers` (`id_member`, `id_event`) VALUES
-(2, 1),
-(3, 1),
-(4, 2),
-(5, 2),
-(6, 5),
-(7, 5),
-(8, 4),
-(9, 3);
-
 
 /*********** Gallery ************/
-
