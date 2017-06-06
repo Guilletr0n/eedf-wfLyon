@@ -28,8 +28,23 @@
       </div>
 
       <div class="form-group text-center">
+          <label for="materiel" class="control-label">Matériel à emmener</label>
+          <textarea id="materiel" class="form-control" name="materiel"></textarea>
+      </div>
+
+      <div class="form-group text-center">
+          <label for="activites" class="control-label">Activitées proposées</label>
+          <textarea id="activites" class="form-control" name="activites"></textarea>
+      </div>
+
+      <div class="form-group text-center">
         <label for="id_member" class="control-label text-center">Participants</label>
         <input type="text" class="form-control" name="id_member" id="id_member" value="0" required>
+      </div>
+
+      <div class="form-group text-center">
+        <label for="galleryname" class="control-label text-center">Nom de la gallerie associée</label>
+        <input type="text" class="form-control" name="galleryname" id="galleryname"required>
       </div>
 
       <div class="form-group text-center">

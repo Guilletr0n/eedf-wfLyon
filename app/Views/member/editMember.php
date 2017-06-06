@@ -46,7 +46,7 @@
         <div>
             <div class="form-group text-center">
                 <label for="register" class="mr-sm-2">Register</label>
-                <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+                <input id="register" name="register" type="checkbox" <?= ($members['register']==1) ? 'checked' : ''; ?>>
             </div>
         <div class="form-group text-center">
             <button type="submit" class="btn btn-success">Appliquer la modification</button>

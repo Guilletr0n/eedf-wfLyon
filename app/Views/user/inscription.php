@@ -2,8 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <hgroup>
-<h1>Material Design Form</h1>
-<h3>Inscription</h3>
+<h1>Inscription</h1>
 <?php if(isset($message) && $message == 'ok'): ?>
 	<script type="text/javascript">
 		console.log('ok');
