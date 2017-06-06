@@ -52,7 +52,7 @@
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
 		['GET|POST', '/admin/edit-photos/[:id]', 'photo#editPhotos', 'photo_edit_photos'],
 		['GET|POST', '/admin/delete-photos/[:id]', 'photo#deletePhotos', 'photo_delete_photos'],
-		['GET|POST', '/admin/users-photos', 'photo#userPhotos', 'photo_users_photos'],
+		['GET|POST', '/users-photos', 'photo#userPhotos', 'photo_users_photos'],
 
 
     ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
