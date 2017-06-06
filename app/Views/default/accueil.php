@@ -27,6 +27,8 @@
 
 <?php if(!isset($_SESSION['user'])): ?>
 <!-- CAROUSEL-->
+
+<section id="carousel" class="bar">
 	<div class="container">
 		<div class="row col-md-3" id="imgscout">
 			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="" class="scoutanim">
