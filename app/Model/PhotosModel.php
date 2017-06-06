@@ -4,10 +4,11 @@ namespace Model;
 
 class PhotosModel extends \W\Model\Model{
 	public function slugify($text){
-		// replace non letter or digits by -
+		
+	// replace non letter or digits by -
 		$text = preg_replace('~[^\pL\d]+~u', '-', $text);
 
- 		// transliterate
+ 	// transliterate
 		$text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
 
   	// remove unwanted characters
@@ -33,7 +34,10 @@ class PhotosModel extends \W\Model\Model{
 		/* Récupération de la photo */
 		if(isset($_FILES['photofile'])){
 			$repertoire = 'photos/'; // le répertoire de destination de l'image
-			$fichier = $this->slugify($_FILES['photofile']['name']); // le nom de la photo
+			$fichier = preg_replace( 
+                     array("/\s+/", "/[^-\.\w]+/"), 
+                     array("_", ""), 
+                     trim($_FILES['photofile']['name'])); // le nom de la photo
 			$tmpName = $_FILES['photofile']['tmp_name']; // le nom provisoire
 			$args['size'] = $_FILES['photofile']['size']; // taille du fichier
 			// déplacement
@@ -48,7 +52,10 @@ class PhotosModel extends \W\Model\Model{
 		/* Récupération de la photo */
 		if(isset($_FILES['photofile']) && $_FILES['photofile']['size'] !== 0 ){
 			$repertoire = 'photos/'; // le répertoire de destination de l'image
-			$fichier = $this->slugify($_FILES['photofile']['name']); // le nom de la photo
+			$fichier = preg_replace( 
+                     array("/\s+/", "/[^-\.\w]+/"), 
+                     array("_", ""), 
+                     trim($_FILES['photofile']['name'])); // le nom de la photo
 			$tmpName = $_FILES['photofile']['tmp_name']; // le nom provisoire
 			$args['size'] = $_FILES['photofile']['size']; // taille du fichier
 			// déplacement
