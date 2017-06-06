@@ -49,7 +49,7 @@ CREATE TABLE `events` (
 	`startdate` DATE NOT NULL,
 	`enddate` DATE NOT NULL,
 	`description` varchar(500) NOT NULL,
-	`id_member` INT NOT NULL,
+	`id_section` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -127,12 +127,18 @@ INSERT INTO `events` (`id`, `title`, `startdate`, `enddate`, `description`, `id_
 
 /*********** Members ************/
 INSERT INTO `members` (`id`, `id_section`, `id_user`, `name`, `firstname`, `totem`, `infosup`, `register`) VALUES
-(2, 1, 1, 'Member1', 'Firstname1', 'totem1', 'infosup1', 1),
-(3, 2, 2, 'Member2', 'Firstname2', 'totem2', 'infosup2', 0),
-(4, 3, 3, 'Member3', 'Firstname3', 'totem3', 'infosup3', 1),
-(5, 4, 1, 'Member4', 'Firstname4', 'totem4', 'infosup4', 0),
-(6, 5, 2, 'Member5', 'Firstname5', 'totem5', 'infosup5', 1),
-(7, 6, 3, 'Member6', 'Firstname6', 'totem6', 'infosup6', 0);
+(1, 1, 1, 'Member1', 'Firstname1', 'totem1', 'infosup1', 1),
+(2, 2, 2, 'Member2', 'Firstname2', 'totem2', 'infosup2', 0),
+(3, 3, 3, 'Member3', 'Firstname3', 'totem3', 'infosup3', 1),
+(4, 4, 1, 'Member4', 'Firstname4', 'totem4', 'infosup4', 0),
+(5, 5, 2, 'Member5', 'Firstname5', 'totem5', 'infosup5', 1),
+(6, 6, 3, 'Member6', 'Firstname6', 'totem6', 'infosup6', 0),
+(7, 1, 1, 'Member7', 'Firstname7', 'totem7', 'infosup7', 1),
+(8, 2, 2, 'Member8', 'Firstname8', 'totem8', 'infosup8', 0),
+(9, 3, 3, 'Member9', 'Firstname9', 'totem9', 'infosup9', 1),
+(10, 4, 1, 'Member10', 'Firstname10', 'totem10', 'infosup10', 0),
+(11, 5, 2, 'Member11', 'Firstname11', 'totem11', 'infosup11', 1),
+(12, 6, 3, 'Member12', 'Firstname12', 'totem12', 'infosup12', 0);
 
 /*********** Documents ************/
 INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `size`, `id_categorie`, `docfilename`) VALUES
