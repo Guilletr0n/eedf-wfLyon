@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 
 <!-- TEXTE INTRO -->
-<section id="texteintro">
+<section id="texteintro" class="bar">
 	<div class="container">
 
 		<h4 class="textdesc">Les Éclaireuses et Éclaireurs de France s'inspirent des principes et méthodes </h4>
@@ -30,7 +30,7 @@
 <section id="carousel">
 	<div class="container">
 		<div class="row col-md-3" id="imgscout">
-			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="">
+			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="" class="scoutanim">
 		</div>
 		<div class="row col-md-7">
 			<h2>Evénements passés</h2>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="row col-md-4 text-right" id="imgscout2">
-			<img src="<?= $this->assetUrl('img/scout2.png') ?>" alt="">
+			<img src="<?= $this->assetUrl('img/scout2.png') ?>" alt="" class="scoutanim">
 		</div>
 	</div>
 </section>
