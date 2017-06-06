@@ -9,14 +9,14 @@
           </div>
       </div>
 
-      <div id="imageLeft"></div>
+      <div id="imageLeft" class="row"></div>
 
       <h2 class="text-center titresevent">Prochains Evénements</h2>
       <div class="container text-center">
            <input id="afficheElements" type="button" value="Afficher plus d'éléments">   <!--class="btn-info btn-md" -->
       </div>
 
-      <div class="container text-center" id="fondEvent">
+      <div class="row text-center" id="fondEvent">
 <?php foreach ($events as $key => $events) { ?>
 
                 <?php if($events['id'] < 4){ ?>
