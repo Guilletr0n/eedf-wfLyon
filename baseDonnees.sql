@@ -49,6 +49,9 @@ CREATE TABLE `events` (
 	`startdate` DATE NOT NULL,
 	`enddate` DATE NOT NULL,
 	`description` varchar(500) NOT NULL,
+	`materiel` varchar(500) NOT NULL,
+	`activites` varchar(500) NOT NULL,
+	`id_member` INT NOT NULL,
 	`id_section` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -151,4 +154,15 @@ INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `
 -- --------------------------------------------------------
 
 
+/*********** Inscriptions Evènement  ************/
+INSERT INTO `listmembers` (`id_member`, `id_event`) VALUES
+(2, 1),
+(3, 1),
+(4, 2),
+(5, 2),
+(6, 5),
+(7, 5),
+(8, 4),
+(9, 3);
 /*********** Gallery ************/
+

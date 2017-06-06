@@ -1,0 +1,25 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,300i,400,400i,500,700i,800|Arya:400,700|Bubbler+One|El+Messiri:400,500,600,700|Lobster|Patrick+Hand+SC|Yesteryear');
+
+/*
+font-family: 'Bubbler One', sans-serif;
+font-family: 'El Messiri', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Yesteryear', cursive;
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Arya', sans-serif;
+*/
+
+
+h2{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+div#calendar{
+
+  background: #bcdd61;
+}
+div.container-fluid{
+    background: red;
+}
