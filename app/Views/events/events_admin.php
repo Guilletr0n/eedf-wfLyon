@@ -29,7 +29,7 @@
 							<td><?= $events['materiel'] ?></td>
 							<td><?= $events['activites'] ?></td>
 							<td><?= $events['id_member'] ?></td>
-							<td><input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"></td>
+							<!-- <td><input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"></td> -->
 							<td><?= '
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'" class="btn btn-xs btn-success">Modifier</a>
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer le fichier ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
