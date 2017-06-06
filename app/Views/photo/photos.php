@@ -15,7 +15,7 @@
 						<br />
 						<div id=btnphoto>
 						<a href="'. $this->url('photo_edit_photos', ['id' => $photo['id']]).'" class="btn btn-xs btn-success">Modifier</a>
-						<a href="photos"  onclick="return confirm(\'Voulez-vous vraiment supprimer le photo ?\');" class="btn btn-xs btn-danger">Supprimer</a>
+						<a href="'. $this->url('photo_delete_photos', ['id' => $photo['id']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer le fichier ?\');" class="btn btn-xs btn-danger">Supprimer</a>
 						</div>';
 					?></div><?php
 				}
@@ -93,7 +93,7 @@
 		echo '<div class="clear"></div>';
 	}
 	else {
-	echo '<p>There are no images in this gallery.</p>';
+	echo '<p>No images in this gallery.</p>';
 	};
 	?>
 	
