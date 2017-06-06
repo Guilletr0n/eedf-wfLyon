@@ -53,6 +53,14 @@
 							<a href="<?= $this->url('default_home');?>">Accueil</a>
 						</li>
 						<li>
+							<a href="<?= $this->url('userManagement_list_admins'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Administrateurs</a>
+							<ul>
+								<li>
+									<a href="<?= $this->url('userManagement_inscription'); ?>">Inscription <i class="fa fa-plus-circle fa-lg"></i></a>
+								</li>
+							</ul>
+						</li>
+						<li>
 							<a href="<?= $this->url('document_documents'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Document</a>
 							<ul>
 								<li>
@@ -73,14 +81,6 @@
 							<ul>
 								<li>
 									<a href="<?= $this->url('events_add_event'); ?>">Ajout Evenement <i class="fa fa-plus-circle fa-lg"></i></a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="<?= $this->url('member_members'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i>Adhérents</a>
-							<ul>
-								<li>
-									<a href="<?= $this->url('member_addMember'); ?>">Ajout Adhérent <i class="fa fa-plus-circle fa-lg"></i></a>
 								</li>
 							</ul>
 						</li>
