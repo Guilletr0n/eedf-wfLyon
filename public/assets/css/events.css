@@ -44,7 +44,9 @@ font-family: 'Arya', sans-serif;
   padding: 0;
   border: 1px solid #34495e;
   border-radius: 10px;
+  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
   color: #34495e;
+
 }
 
 #pageevent #fondEvent{
@@ -57,8 +59,13 @@ font-family: 'Arya', sans-serif;
 
 
 #afficheElements{
-  padding: 10 px;
-  margin-bottom: 40px;
-  border: 1px solid grey;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
   border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  background-image:linear-gradient(60deg, #bcdd61, #149414);
 }

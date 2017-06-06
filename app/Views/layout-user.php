@@ -36,7 +36,7 @@
 				<h3 class="vignets2">du groupe Jean Maron</h3>
 		</div>
 
-<!-- NAVBAR-->	
+<!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
 				<nav class="navbar navbar-default" id="nav">
@@ -53,7 +53,7 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						
+
 							<ul class="nav navbar-nav">
 								<li class="<?php echo ($this->url('default_accueil') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
@@ -109,9 +109,9 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a> 
+					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a>
 				</div>
-				
+
 			</div>
 		</div>
 	</footer>
@@ -141,6 +141,6 @@
 		sr.reveal('.bar', 1500);
 		sr.reveal('.apr', 600);
 	</script>
-	
+
 </body>
 </html>

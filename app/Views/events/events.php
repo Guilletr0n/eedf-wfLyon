@@ -9,6 +9,8 @@
           </div>
       </div>
 
+      <div id="imageLeft"></div>
+
       <h2 class="text-center titresevent">Prochains Evénements</h2>
       <div class="container text-center">
           <input id="afficheElements" type="button" value="Afficher plus d'éléments" class="btn-info btn-md">
