@@ -24,6 +24,7 @@
 <!-- LIST ADHERENTS -->
 
 <?php if($w_current_route == 'userManagement_list_users'):?>
+
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--middle">
     <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">

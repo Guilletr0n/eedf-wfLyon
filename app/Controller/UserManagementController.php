@@ -80,14 +80,6 @@ class UserManagementController extends Controller {
     }
   }
 
-  public function inscription_bk(){
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
-      $this->show('user/inscription');
-    }else{
-      $this->show('user/inscription',['output'=>$_POST]);
-    }
-  }
-
   public function inscription(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('user/inscription');
@@ -119,7 +111,7 @@ class UserManagementController extends Controller {
         }
         //$this->auth->logUserIn($newUser);
         $isSentEmail = $this->sendEmail($_POST['email'], $newUser['id'], $_POST['token']);
-        $this->show('user/inscription',['message'=>'ok']);
+        $this->show('default/accueil');
       } else {
         $this->show('user/inscription',['message'=>'duplicate']);
       }
@@ -133,16 +125,17 @@ class UserManagementController extends Controller {
       $user = $this->auth->isValidLoginInfo($_POST['username'], $_POST['password']);
       if($user != 0){
         $this->auth->logUserIn($this->currentUser->find($user));
-        $this->redirectToRoute('default_home');
+        $this->show('default/accueil',['user'=>$_SESSION['user']]);
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
+        $this->show('dev/output',['user'=>$_SESSION['error']]);
       }
     }
   }
 
   public function deconnexion(){
     $this->auth->logUserOut();
-    $this->redirectToRoute('default_home');
+    $this->redirectToRoute('default_accueil');
   }
 
   public function getLoggedUser(){
@@ -174,12 +167,48 @@ class UserManagementController extends Controller {
     $address = $this->mailServer->getAddress();
     $user = $this->mailServer->getUser();
     $password = $this->mailServer->getPassword();
-    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password]);
+    $this->sendEmail('gonzalezdecastro.guillermo@gmail.com');
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'message'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com')]);
+
   }
 
 // UTILITIES
 
-  private function sendEmail($address,$userId,$token){
+private function sendEmail($address = '', $userId = '',$token = '', $subject = ''){
+  // set email server
+  $mailAddress = $this->mailServer->getAddress();
+  $user = $this->mailServer->getUser();
+  $password = $this->mailServer->getPassword();
+
+  $this->mail->isSMTP();
+  $this->mail->isHTML(true);
+  $this->mail->Host = $this->mailServer->getAddress();
+  $this->mail->Port = 465;
+  $this->mail->SMTPAuth = true;
+  $this->mail->SMTPSecure = 'ssl';
+  $this->mail->Username  = $this->mailServer->getUser();
+  $this->mail->Password = $this->mailServer->getPassword();
+  $this->mail->SetFrom($this->mailServer->getUser(),'EEDF Annonay');
+  $this->mail->addAddress($address);
+  $this->mail->Subject = $subject;
+  if(strlen($token)>1){
+    $url = $this->generateTokenUrl($userId,$token);
+  }
+  $url = $this->generateTokenUrl($userId,$token);
+  $bodyContent = '<p>Verification</p><a href="'.$url.'">'.$token.' '.$userId.'</a><p></p>';
+  $this->mail->Body = $bodyContent;
+
+  if (!$this->mail->send()) {
+       return "Mailer Error: " . $this->mail->ErrorInfo . ' ' .$mailAddress.' '.$address;
+  } else {
+     return "Message sent!";
+  }
+
+  return true;
+
+}
+
+  private function sendEmailOld($address,$userId,$token){
     $this->mail->isSMTP();
     $this->mail->isHTML(true);
     $this->mail->Host = "smtp.gmail.com";

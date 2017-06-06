@@ -20,7 +20,7 @@
 
 
 <body>
-	
+
 	<header>
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -36,7 +36,7 @@
 				<h3 class="vignets2">du groupe Jean Maron</h3>
 		</div>
 
-<!-- NAVBAR-->	
+<!-- NAVBAR-->
 		<div class="container" id="nav">
 			<div class="col-md-12">
 				<nav class="navbar navbar-default" id="nav">
@@ -53,7 +53,7 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						
+
 							<ul class="nav navbar-nav">
 								<li class="<?php echo ($this->url('default_accueil') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
@@ -78,16 +78,7 @@
 									<a href="<?= $this->url('default_contact') ?>">Contact</a>
 								</li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="<?php echo ($this->url('userManagement_inscription') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
-								</li>
-								<li class="<?php echo ($this->url('userManagement_connexion') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
-
-								</li>
-								
-							</ul>
+							<?= $this->section('login') ?>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
@@ -110,9 +101,9 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a> 
+					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a>
 				</div>
-				
+
 			</div>
 		</div>
 	</footer>
@@ -141,6 +132,6 @@
 		sr.reveal('.foo', 2000);
 		sr.reveal('.bar', 1500);
 	</script>
-	
+
 </body>
 </html>

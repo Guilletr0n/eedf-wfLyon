@@ -1,9 +1,7 @@
 <?php
-
+var_dump($user);
 $inputs = array(
-                  $address,
                   $user,
-                  $password
                 );
 
 foreach ($inputs as $key => $value) {
