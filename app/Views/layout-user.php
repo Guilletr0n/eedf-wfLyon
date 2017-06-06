@@ -20,7 +20,7 @@
 
 
 <body>
-	
+
 	<header>
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -78,15 +78,7 @@
 									<a href="<?= $this->url('default_contact') ?>">Contact</a>
 								</li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="<?php echo ($this->url('userManagement_inscription') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
-								</li>
-								<li class="<?php echo ($this->url('userManagement_connexion') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
-
-								</li>
-							</ul>
+							<?= $this->section('login') ?>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
