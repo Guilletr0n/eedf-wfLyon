@@ -29,10 +29,11 @@ class DocumentsModel extends \W\Model\Model{
 	}
 	public function add_documents($args){
 		
-		/* Récupération du document */
+		/* Récupération de la photo */
 		if(isset($_FILES['docfile'])){
 			$repertoire = 'documents/'; // le répertoire de destination de l'image
-			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo
+			$args['docfilename'] = $_FILES['docfile']['name']; // le nom de la photo
+			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo slugifié
 			$tmpName = $_FILES['docfile']['tmp_name']; // le nom provisoire
 			$args['size'] = $_FILES['docfile']['size']; // taille du fichier
 			// déplacement
@@ -44,7 +45,7 @@ class DocumentsModel extends \W\Model\Model{
 		}
 	}
 	public function update_documents($args, $id){
-		/* Récupération du document */
+		/* Récupération de la photo */
 		if(isset($_FILES['docfile']) && $_FILES['docfile']['size'] !== 0 ){
 			$repertoire = 'documents/'; // le répertoire de destination de l'image
 			$fichier = $this->slugify($_FILES['docfile']['name']); // le nom de la photo

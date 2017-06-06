@@ -57,5 +57,5 @@
 		['GET', '/documents', 'Default#documents', 'default_documents'],
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
 		['GET', '/events', 'Default#events', 'default_events'],
-		['GET', '/contact2', 'Default#contact2', 'default_contact2'],
+		['POST', '/contact2', 'Default#contact2', 'default_contact2'],
 	);

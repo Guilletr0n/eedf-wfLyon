@@ -211,6 +211,16 @@ section#carousel .carousel-inner{
   box-shadow: 3px 3px 10px grey;
 }
 
+img.scoutanim{
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+
+}
+img.scoutanim:hover{
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+  cursor: pointer;
+}
   /* Calendrier */
 
 section#evenements{
