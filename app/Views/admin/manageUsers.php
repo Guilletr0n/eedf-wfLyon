@@ -208,3 +208,6 @@
   </div>
 <?php endif ?>
 <?php $this->stop('main_content') ?>
+<?php $this->start('sidenav_greetings') ?>
+Salut, <?= $w_user['username'] ?>
+<?php $this->stop('sidenav_greetings') ?>

@@ -24,7 +24,7 @@
 		<div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
 			<header class="demo-drawer-header">
 				<div class="demo-avatar-dropdown">
-					<span>Salut, <?= $this->e($username) ?></span>
+					<?= $this->section('sidenav_greetings') ?>
 				</div>
 			</header>
 			<?= $this->section('sidenav_content') ?>
