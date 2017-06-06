@@ -86,7 +86,6 @@
 									<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
 
 								</li>
-								
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -137,9 +136,10 @@
 
 	<!-- apparition texte progressive -->
 	<script type="text/javascript">
-		window.sr = ScrollReveal({ duration: 3100 });
+		window.sr = ScrollReveal({ duration: 3000 });
 		sr.reveal('.foo', 2000);
 		sr.reveal('.bar', 1500);
+		sr.reveal('.apr', 600);
 	</script>
 	
 </body>

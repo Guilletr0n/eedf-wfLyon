@@ -105,6 +105,10 @@ nav ul.nav>li>a:hover{
     color: green!important; /* adapte la couleur */
     text-shadow: none;
 }
+nav ul.nav>li.active a{
+    color: green!important; /* adapte la couleur */
+    text-shadow: none;
+}
 nav .container-fluid button{
   background: #fff;
 }
@@ -252,6 +256,21 @@ section#evenements #prochainevent .trait{
   border-bottom: 1px dashed #565656;
   border-width: 1.3px;
 }
+
+/** Responsive pour les mobiles en version paysage **/
+@media screen and (max-width: 480px) {
+  img.scoutanim{
+  display:none;
+  }
+}
+/** Responsive pour les tablettes **/
+/** ajouter and min-width car sinon les critères ne seront pas pris en compte, mais mangé par le précédent **/
+@media screen and (min-width: 481px) and (max-width: 780px) {
+  img.scoutanim{
+  display:none;
+  }
+}
+
 
 
 /* PAGE DOCUMENTS */

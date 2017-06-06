@@ -27,7 +27,7 @@
 </section>
 
 <!-- CAROUSEL-->
-<section id="carousel">
+<section id="carousel" class="bar">
 	<div class="container">
 		<div class="row col-md-3" id="imgscout">
 			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="" class="scoutanim">
@@ -90,7 +90,7 @@
 </section>
 
 <!-- EVENEMENTS PROCHAINS -->
-<section id="evenements">
+<section id="evenements" class="bar">
 	<div class="container">
 		<div class="col-md-2">
 		</div>
