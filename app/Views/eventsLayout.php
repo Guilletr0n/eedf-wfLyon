@@ -7,6 +7,7 @@
     <meta name="Content-Langage" content="fr">
 
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/events.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-user.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/bootstrap.css') ?>" />
 	<link rel="shortcut icon" href="img/logo2.png">
 	<!-- Latest compiled and minified CSS -->

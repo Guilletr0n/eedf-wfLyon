@@ -12,15 +12,24 @@ font-family: 'Arya', sans-serif;
 */
 
 
-h2{
+#pageevent h2.titresevent{
     font-family: 'Alegreya Sans SC', sans-serif;
+    color: green;
 }
 
-div#calendar{
+#pageevent #calendar{
 
   background: #bcdd61;
 }
-div.container-fluid{
+#pageevent .container-fluid{
     background: #34495e;
-    opacity: 0.6;
+    opacity: 0.5;
+}
+#pageevent .event{
+  margin-top: 20px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 0;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
