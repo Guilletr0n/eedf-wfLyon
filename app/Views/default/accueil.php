@@ -25,10 +25,8 @@
 	</div>
 </section>
 
-<?php if(!isset($_SESSION['user'])): ?>No user<?php endif ?>
+<?php if(!isset($_SESSION['user'])): ?>
 <!-- CAROUSEL-->
-<?php if(isset($user)): ?>
-<section id="carousel">
 	<div class="container">
 		<div class="row col-md-3" id="imgscout">
 			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="" class="scoutanim">
@@ -87,6 +85,27 @@
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
+<!-- EVENEMENTS PROCHAINS -->
+<section id="evenements" class="bar">
+	<div class="container">
+		<div class="col-md-2">
+		</div>
+		<div class="row col-md-6">
+			<h2>Evénements prochains</h2>
+			<div id="prochainevent">
+				<div class="trait">
+					<h3>Sortie au parc - 02/04/2017</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur.</p>
+				</div>
+				<div class="trait">
+					<h3>Sortie au cimetière - 15/04/2017</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+				</div>
+				<div>
+					<h3>Sortie à la maison de retraite - 22/04/2017</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla.</p>
 				</div>
 			</div>
 		</div>
