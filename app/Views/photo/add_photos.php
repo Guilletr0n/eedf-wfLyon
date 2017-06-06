@@ -2,34 +2,31 @@
 
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
-<h3 class="text-center"> Ajouter les Photos</h3>
-  
-  <!-- Ajouter les photos -->
-  How to Add Photos
-  <form class="col-md-7 jumbotron text-center" action="<?= $this->url('photo_add_photos') ?>" method="post" enctype="multipart/form-data" id="ajoutphotos">
-      <div class="form-group text-center" id="ajoutphotos2">
-          <label for="docname" class="control-label text-center">Titre d'Album</label>
-          <input type="text" class="form-control" name="docname" id="docname" value="" required>
+<h3 id="titrephoto" class="text-center">Ajouter les Photos</h3>
+<div id="formulairephoto">
+
+  <form class="col-md-6 jumbotron" action="<?= $this->url('photo_add_photos') ?>" method="post" enctype="multipart/form-data" id="ajoutphotoform">
+      <div class="form-group text-center" id="formphoto2">
+          <label for="photoname" class="control-label text-center">Titre</label>
+          <input type="text" class="form-control" name="photoname" id="photoname" value="" required>
     </div>
     <div class="form-group text-center">
-          <label for="docdescription" class="control-label">Description d'Album</label>
-          <textarea id="docdescription" class="form-control" name="docdescription"></textarea>
+          <label for="photodescription" class="control-label">Description</label>
+          <textarea id="photodescription" class="form-control" name="photodescription"></textarea>
     </div>
     <div class="form-group text-center">
-        <label for="id_categorie" class="control-label">Catégorie d'Album</label>
+        <label for="id_gallery" class="control-label">Gallerie</label>
         <div>
-           <select id="id_categorie" name="id_categorie" class="form-control">
-              <option value="">-- Sélectionner les photos --</option>
-                 <option value="1" id="id_categorie">Photo 1</option>
-                 <option value="2" id="id_categorie">Photo 2</option>
+           <select id="id_gallery" name="id_gallery" class="form-control" required>
+              <option disabled selected required>-- Sélectionner gallerie --</option>
+              <option value="1" id="id_gallery" required>Photo gallerie</option>
             </select>
         </div>
     </div>
-    <!-- Ajout fichier -->
-    How to add Photos
+    <!-- Ajout photo -->
     <div class="form-group text-center">
-          <label for="docfile" class="control-label">Photo</label>
-          <input type="file" name="docfile" class="form-control" id="photofile" required>
+          <label for="photofile" class="control-label">Photo</label>
+          <input type="file" name="photofile" class="form-control" id="photofile" required>
     </div>
     <!-- -->
     <div class="form-group text-center">
@@ -39,5 +36,7 @@
         </div>
   </div>
   </form>
+  </div>
 </div>
 <?php $this->stop('main_content') ?>
+

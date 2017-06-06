@@ -1,8 +1,10 @@
 <?php
 
 namespace Model;
+use \W\Model\ConnectionModel;
 
 class EventsModel extends \W\Model\Model{
+
   public function slugify($text)
   {
   // replace non letter or digits by -
@@ -28,6 +30,10 @@ class EventsModel extends \W\Model\Model{
     }
     return $text;
   }
+
+
+
+
 }
 
- ?>
+?>

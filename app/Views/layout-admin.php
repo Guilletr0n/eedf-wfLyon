@@ -61,10 +61,10 @@
 							</ul>
 						</li>
 						<li>
-							<a href="<?= $this->url('admin_dashboard'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Photos</a>
+							<a href="<?= $this->url('photo_photos'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Photos</a>
 							<ul>
 								<li>
-									<a href="<?= $this->url('document_add_documents'); ?>">Ajout Photos <i class="fa fa-plus-circle fa-lg"></i></a>
+									<a href="<?= $this->url('photo_add_photos'); ?>">Ajout Photos <i class="fa fa-plus-circle fa-lg"></i></a>
 								</li>
 							</ul>
 						</li>
@@ -73,6 +73,22 @@
 							<ul>
 								<li>
 									<a href="<?= $this->url('document_add_documents'); ?>">Ajout Evenement <i class="fa fa-plus-circle fa-lg"></i></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="<?= $this->url('member_members'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i>Adhérents</a>
+							<ul>
+								<li>
+									<a href="<?= $this->url('member_addMember'); ?>">Ajout Adhérent <i class="fa fa-plus-circle fa-lg"></i></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="<?= $this->url('member_members'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i>Adhérents</a>
+							<ul>
+								<li>
+									<a href="<?= $this->url('member_addMember'); ?>">Ajout Adhérent <i class="fa fa-plus-circle fa-lg"></i></a>
 								</li>
 							</ul>
 						</li>
