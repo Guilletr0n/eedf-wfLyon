@@ -154,15 +154,6 @@ INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `
 -- --------------------------------------------------------
 
 
-/*********** Inscriptions Evènement  ************/
-INSERT INTO `listmembers` (`id_member`, `id_event`) VALUES
-(2, 1),
-(3, 1),
-(4, 2),
-(5, 2),
-(6, 5),
-(7, 5),
-(8, 4),
-(9, 3);
+
 /*********** Gallery ************/
 
