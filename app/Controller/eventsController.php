@@ -5,16 +5,16 @@ namespace Controller;
 use \W\Controller\Controller;
 
 use \Model\eventsModel as events;
-//use \Model\galleryModel as gallery;
+use \Model\galleryModel as gallery;
 
 class EventsController extends Controller
 {
 	private $eventsModel;
-	//private $galleryModel;
+	private $galleryModel;
 
 	public function __construct(){
 		$this->eventsModel = new events;
-		//$this->galleryModel = new gallery;
+		$this->galleryModel = new gallery;
 	}
 
 	/**
@@ -56,8 +56,14 @@ class EventsController extends Controller
 			$this->show('events/add_event');
 	}else{
 		//Si method POST envoyer les données à la bdd
-		$this->eventsModel->insert($_POST);
-		//$this->galleryModel->insert($_POST);
+		$galleryname = $_POST['galleryname'];
+		unset($_POST['galleryname']);
+		$event = $this->eventsModel->insert($_POST);
+		$gallery = [
+			'id_event' => $event['id'],
+			'galleryname' => $galleryname
+		];
+		$this->galleryModel->insert($gallery);
 		$this->redirectToRoute('events_add_event');
 
 		}
