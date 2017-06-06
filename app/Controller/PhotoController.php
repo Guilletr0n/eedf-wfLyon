@@ -67,9 +67,11 @@ class PhotoController extends Controller {
 		}
 	}
 
-	public function deletePhotos(){
-		$this->show('photo/delete_photos', ['photos' => $photo]);
-		$this->photosModel->delete($_POST, $id);
+	public function deletePhotos($id){
+		$photo = $this->photosModel->find($id);
+		$this->photosModel->delete($id);
+		$chemindoc = '../public/assets/'.$document['photofile'];
+		unlink($cheminphoto); /* suppression de la photo */
 		$this->redirectToRoute('photo_photos');
 	}
 }
