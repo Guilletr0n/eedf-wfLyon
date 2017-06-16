@@ -2,14 +2,16 @@
 
 <?php $this->start('main_content') ?>
 
-	<div class="row" id="members">
-		<h3 class="text-center">Gestion des adhérent</h3>
-		<div id="listmember">
-			<div class="table-responsive">          
-					<table class="table">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+                 Gestion des adhérent
+                        </div>
+				<div class="panel-body">
+                    <div class="table-responsive">        
+					<table class="table table-striped">
 						<thead>
 							<tr class="info">
-								<th>id_user</th>
+								<th>#</th>
 								<th>Section</th>
 								<th>Nom</th>
 								<th>Prénom</th>
