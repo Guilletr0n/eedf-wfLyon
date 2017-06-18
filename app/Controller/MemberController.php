@@ -41,7 +41,7 @@ class MemberController extends Controller {
 		//print_r($id_user['id']);
 		//récupération des membres en fonction d'un utilisateur
 		$id_section = 1;
-		$register = 1;
+		//$register = 1;
 		$usermembers = $this->MembersModel->userMembers($id_user['id']);
 		//print_r($usermembers);
 		$usersectionmembers = $this->MembersModel->usersectionMembers($id_user['id'],$id_section,$register);
