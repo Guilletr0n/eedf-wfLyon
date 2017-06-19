@@ -17,29 +17,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 
-
-
 <body>
-
 	<header>
-		<div class="container">
-			<div class="text-center" id="logohaut">
-				<a href="<?= $this->url('default_accueil') ?>" id="logo">
-					<img src="<?= $this->assetUrl('img/logo2.png') ?>" alt="">
-				</a>
-			</div>
-		</div>
-
-		<div class="col-md-12 text-center">
-				<h1 class="vignets">Bienvenue</h1>
-				<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs de France</h2>
-				<h3 class="vignets2">du groupe Jean Maron</h3>
-		</div>
-
-<!-- NAVBAR-->
-		<div class="container" id="nav">
+		<!-- NAVBAR-->
+		<div id="nav">
 			<div class="col-md-12">
-				<nav class="navbar navbar-default" id="nav">
+				<nav class="navbar navbar-default navbar-right nav-responsive" id="nav">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -52,9 +35,14 @@
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="collapse navbar-collapse nav-responsive" id="bs-example-navbar-collapse-1">
 
 							<ul class="nav navbar-nav">
+								<li>
+									<a href="<?= $this->url('default_accueil') ?>" id="logo">
+										<img src="<?= $this->assetUrl('img/logo.png') ?>" alt="logo EEDF">
+									</a>
+								</li>
 								<li class="<?php echo ($this->url('default_accueil') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
 								</li>
@@ -72,10 +60,10 @@
 									<a href="<?= $this->url('default_documents') ?>">Documents</a>
 								</li>
 								<li class="<?php echo ($this->url('default_quisommesnous') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('default_quisommesnous') ?>">Qui sommes nous ?</a>
+									<a href="<?= $this->url('default_quisommesnous') ?>">L'Association</a>
 								</li>
 								<li class="<?php echo ($this->url('default_contact') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-									<a href="<?= $this->url('default_contact') ?>">Contact</a>
+									<a href="<?= $this->url('default_contact') ?>" id="contactnav">Contact</a>
 								</li>
 							</ul>
 							<?= $this->section('login') ?>
@@ -84,11 +72,23 @@
 				</nav>
 			</div>
 		</div>
-
 	</header>
-		<section>
-			<?= $this->section('main_content') ?>
-		</section>
+	<section id="entetepage">
+		<div class="container">
+			<div class="col-md-12 text-center">
+				<h1 class="vignets">Bienvenue</h1>
+				<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs d'Annonay</h2>
+				<h3 class="vignets2"></h3>
+		</div>
+		</div>
+		
+	</section>
+
+		
+	
+	<section>
+		<?= $this->section('main_content') ?>
+	</section>
  	<footer>
  		<div class="footer container text-center">
 			<div class="row">

@@ -5,21 +5,24 @@
 <!-- TEXTE INTRO -->
 <section id="texteintro" class="bar">
 	<div class="container">
-		<h4 class="textdesc">Les Éclaireuses et Éclaireurs de France s'inspirent des principes et méthodes </h4>
-		<h4 class="textdesc">du Scoutisme pour les adapter à chaque tranche d'âges.</h4>
-		<div class="col-sm-7" id="bloctext">
-			<ul><h4>Cette pédagogie privilégie :</h4>
+		<h2 class="textdesc text-center">Les Éclaireuses et Éclaireurs de France </h2>
+		<h3 class="textdesc text-center title-lg divider_line-down viewport_check">s'inspirent des principes et méthodes du Scoutisme <br /> pour les adapter à chaque tranche d'âges.</h3>
+
+		<div class="col-sm-3"></div>
+		<div class="col-sm-8">
+			<ul class="bar"><h4>Cette pédagogie privilégie :</h4>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en pleine nature.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'éducation par l'action et le jeu.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en petites équipes où chacun prend des responsabilités.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> Une pratique quotidienne de la citoyenneté à travers les "conseils" et la règle de vie.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'apprentissage de l'engagement et une démarche de progression.</li>
-				<div id="btnsavoirplus">
-					<a href="#" id="savoirplus">En savoir plus...</a>
+				<div id="btnsavoirplus" class="text-right">
+					<a href="<?= $this->url('default_quisommesnous') ?>" id="savoirplus">En savoir plus</a>
 				</div>
 			</ul>
 		</div>
-		<div class="col-sm-5" id="paperplane">
+		</div>
+		<div class="container" id="paperplane">
 			<img src="<?= $this->assetUrl('img/avionpapier.png') ?>" class="img-responsive">
 		</div>
 	</div>
@@ -30,7 +33,7 @@
 <section id="carousel" class="bar">
 	<div class="container">
 		<div class="row col-md-3" id="imgscout">
-			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="">
+			<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="scout Annonay">
 		</div>
 		<div class="row col-md-7">
 			<h2>Evénements passés</h2>
@@ -46,7 +49,7 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<a href="indexeedf.php">
-							<img src="<?= $this->assetUrl('img/sortie2.jpg') ?>" alt="...">
+							<img src="<?= $this->assetUrl('img/sortie2.jpg') ?>" alt="Photos sortie">
 							<div class="carousel-caption">
 								<h3>Rivière Kwai - 22/05/2017</h3>
 								<p>Sortie à la rivière Kwai avec les ainés et les louveteaux. Activités : kayaks et canoës</p>
@@ -55,7 +58,7 @@
 					</div>
 					<div class="item">
 						<a href="indexeedf.php">
-							<img src="<?= $this->assetUrl('img/sortie1.jpg') ?>" alt="...">
+							<img src="<?= $this->assetUrl('img/sortie1.jpg') ?>" alt="Photos sortie">
 							<div class="carousel-caption">
 								<h3>Visite de la Basilique Michel</h3>
 								<p>Journée à Pau pour visiter la Basilique et ses catacombes avec les louveteaux.</p>
@@ -64,7 +67,7 @@
 					</div>
 					<div class="item">
 						<a href="indexeedf.php">
-							<img src="<?= $this->assetUrl('img/patinoire.jpg') ?>" alt="...">
+							<img src="<?= $this->assetUrl('img/patinoire.jpg') ?>" alt="Photos sortie">
 							<div class="carousel-caption">
 								<h3>Patinoire - 02/05/2017</h3>
 								<p>Après-midi à la patinoire Baraban avec les ainés et les louveteaux.</p>
@@ -113,7 +116,7 @@
 			</div>
 		</div>
 		<div class="row col-md-4 text-right" id="imgscout2">
-			<img src="<?= $this->assetUrl('img/scout2.png') ?>" alt="" class="scoutanim">
+			<img src="<?= $this->assetUrl('img/scout2.png') ?>" alt="scout Annonay" class="scoutanim">
 			<div class="col-md-3">
 			</div>
 		</div>
