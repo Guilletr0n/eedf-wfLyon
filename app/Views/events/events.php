@@ -26,6 +26,7 @@
                               <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
                               Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                               Description :  <?php echo $events['description']; ?>.<br />
+                              Matériel requis :  <?php echo $events['materiel']; ?>.<br />
                               Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
                             </p>
                         </div>
@@ -36,6 +37,7 @@
                         <strong>Sortie : "</strong>  <?php echo $events['title']; ?><strong> "</strong><br />
                         Durée de l'événement: du <?php echo $events['startdate']; ?> au <?php echo $events['enddate']; ?>.<br />
                         Description :  <?php echo $events['description']; ?>.<br />
+                        Matériel requis :  <?php echo $events['materiel']; ?>.<br />
                         Les participants déjà inscrits sont : <?php echo $events['id_member']; ?>
                       </p>
                   </div>
