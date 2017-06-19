@@ -25,7 +25,7 @@
     </div>
     <!-- Ajout fichier -->
     <div class="form-group text-center">
-    	<a href="<?= $this->assetUrl($photos['photofile']) ?>" target="_blank"><i class="material-icons">cloud_download</i></a>
+      <a href="<?= $this->assetUrl($photos['photofile']) ?>" target="_blank"><i class="material-icons">cloud_download</i></a>
           <label for="photofile" class="control-label">Fichier</label>
           <input type="file" name="photofile" class="form-control" id="photofile" value="">
     </div>

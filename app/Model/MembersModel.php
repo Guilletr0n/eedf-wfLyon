@@ -5,23 +5,38 @@ use \W\Model\ConnectionModel;
 
 class MembersModel extends \W\Model\Model{
 
-	public function findUser($id_section){
-        if (!is_numeric($id)){
-            return false;
+     //Retourne la liste des membres d'un utilisateur
+    public function userMembers($id_user){
+        if (!is_numeric($id_user)){
+                return false;
         }
-        $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $this->primaryKey .'  = (SELECT MIN(id) FROM ' . $this->table . ' WHERE id > :id ) LIMIT 1';
+        $sql = 'SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user';
         $sth = $this->dbh->prepare($sql);
-        $sth->bindValue(':id', $id);
+        $sth->bindValue(':id_user', $id_user);
         $sth->execute();
-        $result = $sth->fetch();
-        if(!$result) {
-            $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $this->primaryKey .'  = (SELECT MIN(id) FROM ' . $this->table . ') LIMIT 1';
-            $sth = $this->dbh->prepare($sql);
-            $sth->execute();
-            $result = $sth->fetch();
+        $result = $sth->fetchAll();
+        return  $result;
+        //$sql = 'SELECT `id`, `id_section`, `id_user`, `name`, `firstname`, `totem`, `infosup`, `register` FROM `members` WHERE id_user = 1
+    }
+
+
+        //Retourne la liste des membres d'un utilisateur en fonction de la section & bien enregistrer 
+        public function usersectionMembers($id_user,$id_section,$register){
+        if (!is_numeric($id_section)){
+                return false;
         }
-        return $result;
-   	}
+        $sql = 'SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user AND id_section = :id_section AND register = :register';
+        $sth = $this->dbh->prepare($sql);
+        $sth->bindValue(':id_user', $id_user);
+        $sth->bindValue(':id_section', $id_section);
+        $sth->bindValue(':register', $register);
+        $sth->execute();
+        $result = $sth->fetchAll();
+        return  $result;
+        //$sql = 'SELECT `id`, `id_section`, `id_user`, `name`, `firstname`, `totem`, `infosup`, `register` FROM `members` WHERE id_user = 1
+    }
+
+    
 }
 
  ?>

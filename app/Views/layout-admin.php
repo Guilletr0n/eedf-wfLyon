@@ -42,7 +42,7 @@
 						Accueil
 					</a>
 				</li>
-				<li><a href="<?= $this->url('default_home'); ?>">Déconnexion</a></li>
+				<li><a href="<?= $this->url('default_accueil'); ?>">Déconnexion</a></li>
 			</ul>
 			<!-- /.navbar-top-links -->
 
@@ -50,7 +50,7 @@
 				<div class="sidebar-nav navbar-collapse">
 					<ul class="nav" id="side-menu">
 						<li>
-							<a href="<?= $this->url('default_home');?>">Accueil</a>
+							<a href="<?= $this->url('default_accueil');?>">Accueil</a>
 						</li>
 						<li>
 							<a href="<?= $this->url('userManagement_list_admins'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Administrateurs</a>
@@ -77,7 +77,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="<?= $this->url('admin_dashboard'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Evenements</a>
+							<a href="<?= $this->url('events_events_admin'); ?>" class="text-uppercase"><i class="fa fa-dashboard fa-fw"></i> Evenements</a>
 							<ul>
 								<li>
 									<a href="<?= $this->url('events_add_event'); ?>">Ajout Evenement <i class="fa fa-plus-circle fa-lg"></i></a>
