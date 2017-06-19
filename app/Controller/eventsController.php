@@ -56,8 +56,14 @@ class EventsController extends Controller
 			$this->show('events/add_event');
 	}else{
 		//Si method POST envoyer les données à la bdd
-		$this->eventsModel->insert($_POST);
-		$this->galleryModel->insert($_POST);
+		$galleryname = $_POST['galleryname'];
+		unset($_POST['galleryname']);
+		$event = $this->eventsModel->insert($_POST);
+		$gallery = [
+			'id_event' => $event['id'],
+			'galleryname' => $galleryname
+		];
+		$this->galleryModel->insert($gallery);
 		$this->redirectToRoute('events_add_event');
 
 		}
@@ -69,4 +75,7 @@ class EventsController extends Controller
 		$this->redirectToRoute('events_events_admin');
 	}
 
-	}
+
+}
+
+?>

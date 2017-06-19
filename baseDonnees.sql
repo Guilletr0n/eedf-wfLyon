@@ -1,6 +1,6 @@
-DROP DATABASE `wflyon`;
-CREATE DATABASE `wflyon` COLLATE `utf8_general_ci`;
-USE `wflyon`;
+DROP DATABASE `wf3lyon`;
+CREATE DATABASE `wf3lyon` COLLATE `utf8_general_ci`;
+USE `wf3lyon`;
 
 /******************** Création des tables ********************/
 /* CREATE TABLE Crée une nouvelle table SQL  */
@@ -49,7 +49,10 @@ CREATE TABLE `events` (
 	`startdate` DATE NOT NULL,
 	`enddate` DATE NOT NULL,
 	`description` varchar(500) NOT NULL,
+	`materiel` varchar(500) NOT NULL,
+	`activites` varchar(500) NOT NULL,
 	`id_member` INT NOT NULL,
+	`id_section` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -66,7 +69,7 @@ CREATE TABLE `gallery` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `listmembers` (
+CREATE TABLE `listemembers` (
 	`id_member` INT(4) NOT NULL,
 	`id_event` INT (4) NOT NULL
 );
@@ -92,16 +95,16 @@ ALTER TABLE `photos` ADD INDEX(`id_gallery`);
 ALTER TABLE `events` ADD INDEX(`id_member`);
 ALTER TABLE `members` ADD INDEX(`id_section`);
 ALTER TABLE `members` ADD INDEX(`id_user`);
-ALTER TABLE `listmembers` ADD INDEX(`id_member`);
-ALTER TABLE `listmembers` ADD INDEX(`id_event`);
-ALTER TABLE `documents` ADD INDEX(`id_categorie`);
-ALTER TABLE `documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `listemembers` ADD INDEX(`id_member`);
+ALTER TABLE `listemembers` ADD INDEX(`id_event`);
+ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
+ALTER TABLE `Documents` ADD INDEX(`id_categorie`);
 
 /******************** Création des contraintes  ********************/
 /*******************************************************************/
 
-ALTER TABLE `listmembers` ADD CONSTRAINT `listmembers_member` FOREIGN KEY (`id_member`) REFERENCES `members`(`id`);
-ALTER TABLE `listmembers` ADD CONSTRAINT `listmembers_event` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
+ALTER TABLE `listemembers` ADD CONSTRAINT `listemembers_member` FOREIGN KEY (`id_member`) REFERENCES `members`(`id`);
+ALTER TABLE `listemembers` ADD CONSTRAINT `listemembers_event` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
 ALTER TABLE `gallery` ADD CONSTRAINT `gallery_events` FOREIGN KEY (`id_event`) REFERENCES `events`(`id`);
 ALTER TABLE `photos` ADD CONSTRAINT `Photo_gallery` FOREIGN KEY (`id_gallery`) REFERENCES `gallery`(`id`);
 ALTER TABLE `members` ADD CONSTRAINT `member_users` FOREIGN KEY (`id_user`) REFERENCES `users`(`id`);
@@ -127,12 +130,18 @@ INSERT INTO `events` (`id`, `title`, `startdate`, `enddate`, `description`, `id_
 
 /*********** Members ************/
 INSERT INTO `members` (`id`, `id_section`, `id_user`, `name`, `firstname`, `totem`, `infosup`, `register`) VALUES
-(2, 1, 1, 'Member1', 'Firstname1', 'totem1', 'infosup1', 1),
-(3, 2, 2, 'Member2', 'Firstname2', 'totem2', 'infosup2', 0),
-(4, 3, 3, 'Member3', 'Firstname3', 'totem3', 'infosup3', 1),
-(5, 4, 1, 'Member4', 'Firstname4', 'totem4', 'infosup4', 0),
-(6, 5, 2, 'Member5', 'Firstname5', 'totem5', 'infosup5', 1),
-(7, 6, 3, 'Member6', 'Firstname6', 'totem6', 'infosup6', 0);
+(1, 1, 1, 'Member1', 'Firstname1', 'totem1', 'infosup1', 1),
+(2, 2, 2, 'Member2', 'Firstname2', 'totem2', 'infosup2', 0),
+(3, 3, 3, 'Member3', 'Firstname3', 'totem3', 'infosup3', 1),
+(4, 4, 1, 'Member4', 'Firstname4', 'totem4', 'infosup4', 0),
+(5, 5, 2, 'Member5', 'Firstname5', 'totem5', 'infosup5', 1),
+(6, 6, 3, 'Member6', 'Firstname6', 'totem6', 'infosup6', 0),
+(7, 1, 1, 'Member7', 'Firstname7', 'totem7', 'infosup7', 1),
+(8, 2, 2, 'Member8', 'Firstname8', 'totem8', 'infosup8', 0),
+(9, 3, 3, 'Member9', 'Firstname9', 'totem9', 'infosup9', 1),
+(10, 4, 1, 'Member10', 'Firstname10', 'totem10', 'infosup10', 0),
+(11, 5, 2, 'Member11', 'Firstname11', 'totem11', 'infosup11', 1),
+(12, 6, 3, 'Member12', 'Firstname12', 'totem12', 'infosup12', 0);
 
 /*********** Documents ************/
 INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `size`, `id_categorie`, `docfilename`) VALUES
@@ -144,16 +153,6 @@ INSERT INTO `documents` (`id`, `docname`, `docdescription`, `date`, `docfile`, `
 
 -- --------------------------------------------------------
 
-/*********** Inscriptions Evènement  ************/
-INSERT INTO `listmembers` (`id_member`, `id_event`) VALUES
-(2, 1),
-(3, 1),
-(4, 2),
-(5, 2),
-(6, 5),
-(7, 5),
-(8, 4),
-(9, 3);
 
 
 /*********** Gallery ************/

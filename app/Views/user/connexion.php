@@ -2,8 +2,7 @@
 
 <?php $this->start('main_content') ?>
 		<hgroup>
-		<h1>Material Design Form</h1>
-		<h3>Connexion</h3>
+		<h1>Connexion</h1>
 	</hgroup>
 	<form id="form" method="POST" action="<?= $this->url('userManagement_connexion') ?>">
 		<div class="group">

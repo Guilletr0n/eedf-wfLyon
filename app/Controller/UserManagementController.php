@@ -8,6 +8,7 @@ use \W\Security\StringUtils;
 use \Model\AdherentModel;
 use \Model\AdminModel;
 use \Model\Globals;
+use \Model\MailServerModel as MailServer;
 
 class UserManagementController extends Controller {
 
@@ -16,6 +17,7 @@ class UserManagementController extends Controller {
   protected $utils;
   protected $mail;
   protected $adminUser;
+  protected $mailServer;
 
   public function __construct(){
     $this->currentUser = new AdherentModel;
@@ -23,6 +25,7 @@ class UserManagementController extends Controller {
     $this->mail        = new \PHPMailer();
     $this->utils       = new StringUtils;
     $this->adminUser   = new AdminModel;
+    $this->mailServer  = new MailServer;
   }
 
   public function listAdmins(){
@@ -38,7 +41,7 @@ class UserManagementController extends Controller {
   }
   public function deleteUser($id){
     $this->currentUser->delete($id);
-    $this->show('admin/manageUsers');
+    $this->redirectToRoute('userManagement_list_users');
   }
   public function detailsUser($id){
     $user = $this->currentUser->find($id);
@@ -123,9 +126,10 @@ class UserManagementController extends Controller {
       if($user != 0){
         $this->auth->logUserIn($this->currentUser->find($user));
         $this->show('default/accueil',['user'=>$_SESSION['user']]);
+        //$this->show('dev/output');
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
-        //$this->show('dev/output',['user'=>$_SESSION['error']]);
+        $this->show('dev/output',['user'=>$_SESSION['error']]);
       }
     }
   }
@@ -160,9 +164,52 @@ class UserManagementController extends Controller {
     $this->show('admin/manageUsers');
   }
 
+  public function testEmail(){
+    $address = $this->mailServer->getAddress();
+    $user = $this->mailServer->getUser();
+    $password = $this->mailServer->getPassword();
+    $this->sendEmail('gonzalezdecastro.guillermo@gmail.com');
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'message'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com')]);
+
+  }
+
 // UTILITIES
 
-  private function sendEmail($address,$userId,$token){
+private function sendEmail($address = '', $userId = '',$token = '', $subject = ''){
+  // set email server
+  $mailAddress = $this->mailServer->getAddress();
+  $user = $this->mailServer->getUser();
+  $password = $this->mailServer->getPassword();
+
+  $this->mail->isSMTP();
+  $this->mail->isHTML(true);
+  $this->mail->Host = $this->mailServer->getAddress();
+  $this->mail->Port = 465;
+  $this->mail->SMTPAuth = true;
+  $this->mail->SMTPSecure = 'ssl';
+  $this->mail->Username  = $this->mailServer->getUser();
+  $this->mail->Password = $this->mailServer->getPassword();
+  $this->mail->SetFrom($this->mailServer->getUser(),'EEDF Annonay');
+  $this->mail->addAddress($address);
+  $this->mail->Subject = $subject;
+  if(strlen($token)>1){
+    $url = $this->generateTokenUrl($userId,$token);
+  }
+  $url = $this->generateTokenUrl($userId,$token);
+  $bodyContent = '<p>Verification</p><a href="'.$url.'">'.$token.' '.$userId.'</a><p></p>';
+  $this->mail->Body = $bodyContent;
+
+  if (!$this->mail->send()) {
+       return "Mailer Error: " . $this->mail->ErrorInfo . ' ' .$mailAddress.' '.$address;
+  } else {
+     return "Message sent!";
+  }
+
+  return true;
+
+}
+
+  private function sendEmailOld($address,$userId,$token){
     $this->mail->isSMTP();
     $this->mail->isHTML(true);
     $this->mail->Host = "smtp.gmail.com";

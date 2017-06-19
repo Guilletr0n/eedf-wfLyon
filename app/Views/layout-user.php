@@ -53,32 +53,32 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
 							<ul class="nav navbar-nav">
-								<li>
+								<li class="<?php echo ($this->url('default_accueil') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_accueil') ?>">Accueil <span class="sr-only">(current)</span></a>
 								</li>
-								<li>
+								<li class="<?php echo ($this->url('events_events') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('events_events') ?>" id="evenement">Evénements</a>
 								</li>
 									<?php if($w_user !== null){?>
-										<li>
-											<a href="<?= $this->url('default_gallery') ?>">Photos</a>
+										<li class="<?php echo ($this->url('photo_users_photos') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
+											<a href="<?= $this->url('photo_users_photos') ?>">Photos</a>
 										</li>
 									<?php
 									}
 									?>
-								<li>
+								<li class="<?php echo ($this->url('default_documents') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_documents') ?>">Documents</a>
 								</li>
-								<li>
+								<li class="<?php echo ($this->url('default_quisommesnous') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_quisommesnous') ?>">Qui sommes nous ?</a>
 								</li>
-								<li>
+								<li class="<?php echo ($this->url('default_contact') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 									<a href="<?= $this->url('default_contact') ?>">Contact</a>
 								</li>
 							</ul>
 							<?= $this->section('login') ?>
-
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
@@ -128,9 +128,10 @@
 
 	<!-- apparition texte progressive -->
 	<script type="text/javascript">
-		window.sr = ScrollReveal({ duration: 3100 });
+		window.sr = ScrollReveal({ duration: 3000 });
 		sr.reveal('.foo', 2000);
 		sr.reveal('.bar', 1500);
+		sr.reveal('.apr', 600);
 	</script>
 
 </body>

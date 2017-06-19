@@ -1,7 +1,7 @@
 <?php
 var_dump($user);
 $inputs = array(
-                  $user
+                  $user,
                 );
 
 foreach ($inputs as $key => $value) {

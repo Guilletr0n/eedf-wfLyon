@@ -81,6 +81,8 @@ header ul#side-menu li a.text-uppercase{
 #homepage a span{
 	color: #2C3E50;
 }
+
+
 // DOCUMENTS
 #zonenoire{}
 #zonenoire{
@@ -106,6 +108,7 @@ header ul#side-menu li a.text-uppercase{
 }
 
 
+
 // AJOUT DOCUMENT
 
 form#ajoutdocform{}
@@ -129,3 +132,80 @@ h3#titredoc{
 	margin: 30px 0px 30px 0px;
 	font-family: 'Fjalla One', sans-serif;
 }
+
+// PHOTOS
+.clear			{ clear:both; }
+.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:150px; float:left; }
+.photo-link:hover	{ border-color:#999; }
+
+#zonenoirephoto{}
+#zonenoirephoto{
+	background-color: #2c3e50;
+	color: #fff;
+}
+
+#zonenoirephoto #photoprincipaux a i{
+	font-size: 150px;
+	color: #fff;
+}
+
+#zoneblanchephoto #photogallery a i{
+	font-size: 150px;
+}
+#photoprincipaux #btnphoto,
+#photosecondaires #btnphoto{
+	padding-bottom: 60px;
+}
+#zonenoirephoto h3,
+#zoneblanchephoto h3{
+	font-family: 'Fjalla One', sans-serif;
+}
+
+// AJOUT PHOTOS
+
+form#ajoutphotoform{}
+#formulairephoto{
+	text-align: center;
+}
+form#ajoutphotoform label{
+	font-size: 18px;
+	margin: 20px 0px 10px 0px;
+}
+
+button[type=submit]#btnaddphoto{
+	margin-top: 20px;
+}
+
+form select#id_gallery{ //changer l'id en gallery sur le html
+	font-weight: bold;
+	margin: 5px 0px 5px 0px;
+}
+h3#titrephoto{
+	margin: 30px 0px 30px 0px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+// EDIT PHOTOS
+
+form#modifphotoform{}
+#formulairemodifphoto{
+	text-align: center;
+}
+form#modifphotoform label{
+	font-size: 18px;
+	margin: 20px 0px 10px 0px;
+}
+
+button[type=submit]#btnaddphoto{
+	margin-top: 20px;
+}
+
+form select#id_gallery{ //changer l'id en gallery sur le html
+	font-weight: bold;
+	margin: 5px 0px 5px 0px;
+}
+h3#titremodifphoto{
+	margin: 30px 0px 30px 0px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
