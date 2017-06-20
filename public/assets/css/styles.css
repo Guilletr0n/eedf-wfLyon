@@ -118,13 +118,13 @@ h1 {
    top: 0;
    z-index:10;
    -webkit-transition: all .6s ease-in-out;
-     opacity: 0.8;
+  opacity: 0.8;
 
 }
 
 
 .affix a {
-  color: #fff !important;
+  color: #506262 !important;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
