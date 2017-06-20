@@ -41,7 +41,7 @@
 		
 
 		<div class="container-fluid">
-			</div><!--/.container -->
+			</div><!--/.container  Scroll limite de la modification de la navbar -->
 		
 			
 	</header>
@@ -85,12 +85,12 @@
 					<?= $this->section('login') ?>
 					<?= $this->section('memberspacebtn') ?>
 				<ul>
-					</div><!--/.nav-collapse -->
-				</div>
-			</div><!--/.navbar -->
+				</div><!--/.nav-collapse -->
+			</div>
+		</div><!--/.navbar -->
 
 	
-			<?= $this->section('main_content') ?>
+	<?= $this->section('main_content') ?>
 	
 
  	<footer>
@@ -111,7 +111,11 @@
 			</div>
 		</div>
 	</footer>
+	<!--Si un utilisateur est connecté -->
+	<?php if($w_user != 0): ?>
 	<?= $this->section('memberspacemodal') ?>
+	<?php endif ?>
+
 	<?= $this->section('script') ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -128,15 +132,8 @@
 	<!-- apparition texte progressive -->
 	<script type="text/javascript">
 	</script>
-	<script src="<?= $this->assetUrl('js/script.js') ?>"></script>
-	<script>
-		$(document).ready(function(){
-			$("#memberBtn").click(function(){
-				$("#Modalmember").modal();
-			});
-			//$('.nav').affix({offset: {top: 205} });
-		});
-	</script>
+	<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
+
 </body>
 </html>
 
