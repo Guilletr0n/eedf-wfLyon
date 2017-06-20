@@ -20,7 +20,7 @@ class MembersModel extends \W\Model\Model{
     }
 
 
-        //Retourne la liste des membres d'un utilisateur en fonction de la section & bien enregistrer 
+        //Retourne la liste des membres d'un utilisateur en fonction de la section & enregistrer ou nonenregistrer
         public function usersectionMembers($id_user,$id_section,$register){
         if (!is_numeric($id_section)){
                 return false;
