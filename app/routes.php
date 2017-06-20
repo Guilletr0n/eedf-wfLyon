@@ -46,7 +46,8 @@
 		['GET|POST', '/admin/addMember', 'Member#addMember', 'member_addMember'],
 		['GET|POST', '/admin/edit_members/[:id]', 'Member#editMember', 'member_editMember'],
 		['GET|POST', '/admin/delete-members/[:id]', 'Member#deleteMembers', 'member_deleteMembers'],
-
+		['GET', '/usermembers', 'Member#usermembers', 'member_usermembers'],
+		
     // photos
 		['GET|POST', '/admin/photos', 'photo#showPhotos', 'photo_photos'],
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
