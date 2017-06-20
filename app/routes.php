@@ -46,13 +46,14 @@
 		['GET|POST', '/admin/addMember', 'Member#addMember', 'member_addMember'],
 		['GET|POST', '/admin/edit_members/[:id]', 'Member#editMember', 'member_editMember'],
 		['GET|POST', '/admin/delete-members/[:id]', 'Member#deleteMembers', 'member_deleteMembers'],
-
+		['GET', '/usermembers', 'Member#usermembers', 'member_usermembers'],
+		
     // photos
 		['GET|POST', '/admin/photos', 'photo#showPhotos', 'photo_photos'],
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
 		['GET|POST', '/admin/edit-photos/[:id]', 'photo#editPhotos', 'photo_edit_photos'],
 		['GET|POST', '/admin/delete-photos/[:id]', 'photo#deletePhotos', 'photo_delete_photos'],
-		['GET|POST', '/admin/users-photos', 'photo#userPhotos', 'photo_users_photos'],
+		['GET|POST', '/users-photos', 'photo#userPhotos', 'photo_users_photos'],
 
 
     ['GET', '/accueil', 'Default#accueil', 'default_accueil'],

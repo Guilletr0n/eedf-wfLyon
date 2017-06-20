@@ -3,6 +3,7 @@
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
 <h3 id="titresupphoto" class="text-center">Supprimer les Photos</h3>
+<div class="col-md-3"></div>
 <div id="formulairesupphoto">
 
   <form class="col-md-6 jumbotron" action="<?= $this->url('photo_delete_photos') ?>" method="post" enctype="multipart/form-data" id="supphotoform">
@@ -37,6 +38,7 @@
   </div>
   </form>
   </div>
+  <div class="col-md-2"></div>
 </div>
 <?php $this->stop('main_content') ?>
 
