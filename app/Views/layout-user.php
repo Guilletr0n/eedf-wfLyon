@@ -19,11 +19,7 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
-
-
-
 <body>
-
 	<header class="masthead">
 		<div class="container">
 			<div class="text-center" id="logohaut">
@@ -35,15 +31,12 @@
 
 		<div class="col-md-12 text-center">
 			<h1 class="vignets">Bienvenue</h1>
-			<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs de France</h2>
-			<h3 class="vignets2">du groupe Jean Maron</h3>
+			<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs d'Annonay</h2>
 		</div>
 		
 
 		<div class="container-fluid">
-			</div><!--/.container  Scroll limite de la modification de la navbar -->
-		
-			
+			</div><!--/.container  Scroll limite de la modification de la navbar -->		
 	</header>
 		<!-- NAVBAR-->
 		<!-- Fixed navbar -->
@@ -75,7 +68,7 @@
 						<a href="<?= $this->url('default_documents') ?>">Documents</a>
 					</li>
 					<li class="<?php echo ($this->url('default_quisommesnous') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-						<a href="<?= $this->url('default_quisommesnous') ?>">Qui sommes nous ?</a>
+						<a href="<?= $this->url('default_quisommesnous') ?>">L'association</a>
 					</li>
 					<li class="<?php echo ($this->url('default_contact') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
 						<a href="<?= $this->url('default_contact') ?>">Contact</a>
