@@ -395,43 +395,49 @@
 				<?php if($w_user != 0): ?>
 				<!-- Modal -->
 				<div class="modal fade" id="Modalmember" role="dialog">
-					<div class="modal-dialog">
+					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">Espace Scout</h4>
+								<h4 class="modal-title">Gestion des adhérent</h4>
 							</div>
 							<div class="modal-body">
 								<div class="container">
 									<button class="btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">Ajouter un membre</button>
 								</div>
 								<div class="container">
-									<h3>Vos membres</h3>
-									<ul class="list-inline" >
-										<li><a href="#">Nom</a></li>
-										<li><a href="#">Prénom</a></li>
-										<li><a href="#">Totem</a></li>
-										<li><a href="#">section</a></li>
-									</ul>
-									<ul class="list-inline">
-										<li><a href="#">Name1</a></li>
-										<li><a href="#">Firstame1</a></li>
-										<li><a href="#">Totem1</a></li>
-										<li><a href="#">Responsable</a></li>
-									</ul>
-									<ul class="list-inline">
-										<li><a href="#">Poubelle</a></li>
-										<li><a href="#">Patrik</a></li>
-										<li><a href="#">TOTEM2</a></li>
-										<li><a href="#">Ainé</a></li>
-									</ul>
+									<div class="row">
+										<div class="col-sm-2">Section</div>
+										<div class="col-sm-2">Nom</div>
+										<div class="col-sm-2">Prénom</div>
+										<div class="col-sm-2">Totem</div>
+										<div class="col-sm-2">Enregistrer</div>
+									</div>
+															<?php //var_dump($listsections[0]['rank']); 
+															foreach ($usermembers as $key => $usermembers) {
+																?> 
+																<div class="row">
+																<div class="col-sm-2"><?= $listsections[$usermembers['id_section']-1]['rank']?></div>
+																<div class="col-sm-2"><?= $usermembers['name'] ?></div>
+																<div class="col-sm-2"><?= $usermembers['firstname'] ?></div>
+																<div class="col-sm-2"><?= $usermembers['totem'] ?></div>
+																<!--	<td><?= $usermembers['infosup'] ?></td>	-->
+																<div class="col-sm-2"><input type="checkbox" <?= ($usermembers['register']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></div>
+																</div>
+																<?php
+															}
+															?>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
 				</div>
+			</div>
+		</div>
 			<?php endif ?>
 			<?php $this->stop('memberspacemodal') ?>
