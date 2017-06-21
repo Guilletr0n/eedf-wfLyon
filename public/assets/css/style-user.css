@@ -152,6 +152,7 @@ section#texteintro{
   font-family: 'Playfair Display', serif;
 }
 section#texteintro h2.textdesc{
+  margin-top: -30px;
   font-weight: bolder;
 }
 section#texteintro h3.textdesc{
@@ -208,41 +209,14 @@ section#texteintro ul a:hover{
   color: #000;
 }
 
-  /* Carousel */
-
-section#carousel h2{
-  font-family: 'Lobster', cursive;
-  color: #bcdd61;
-  text-shadow: 1px 1px 2px black;
-  font-size: 35px;
-  letter-spacing: 1.5px;
-  margin: 40px 0px 40px 160px;
-}
-section#carousel .carousel-inner{
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px grey;
-}
-
-img.scoutanim{
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-
-}
-img.scoutanim:hover{
-  -webkit-transform:scale(1.1);
-  transform:scale(1.1);
-  cursor: pointer;
-}
   /* Calendrier */
 
 section#evenements{
-  margin-top: 100px;
+  margin-top: 10px;
 }
 section#evenements h2{
-  font-family: 'Lobster', cursive;
-  color: #bcdd61;
-  text-shadow: 1px 1px 2px black;
-  font-size: 35px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
   letter-spacing: 1.5px;
   margin: 20px 0px 40px 200px;
 }
@@ -265,6 +239,14 @@ section#evenements #prochainevent .trait{
   border-width: 1.3px;
 }
 
+/* GALLERIE ACCUEIL */
+
+.bg-4 h2{
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
 
 /* PAGE DOCUMENTS */
 
