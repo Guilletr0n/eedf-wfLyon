@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 	<div class="row" id="zonenoire">
-		<h3 class="text-center">Documents principaux</h3>
+		<h3 class="text-center">Documents d'inscription</h3>
 		<div id="docprincipaux">
 			<?php foreach ($documents as $key => $document) {
 				if($document['id_categorie'] == '1'){ ?>
@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	<div class="row" id="zoneblanche">
-		<h3 class="text-center">Documents secondaires</h3>
+		<h3 class="text-center">Documents de sortie</h3>
 		<div id="docsecondaires">
 			<?php foreach ($documents as $key => $document) {
 				if($document['id_categorie'] == '2'){ ?>

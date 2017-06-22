@@ -18,13 +18,6 @@ class DocumentController extends Controller {
 		$this->show('document/documents', ['documents' => $data]);
 	}
 
-	// public function ajaxGetDocument(){
-	// 	$data = $this->documentsModel->findAll();
-	// 	foreach ($data as $key => $document) {
-	// 		$data[$key]['action'] = $this->generateUrl('document_edit_documents', ['id' => $document['id']]);
-	// 	}
-	// 	$this->showJson($data);
-	// }
 
 	public function voir_documents(){
 		if(is_numeric($id)){

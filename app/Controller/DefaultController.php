@@ -31,23 +31,23 @@ class DefaultController extends Controller{
 	/**
 	 * Page de cgv
 	 */
-	public function cgv()
-	{
-		$this->show('default/cgv');
-	}
+	// public function cgv()
+	// {
+	// 	$this->show('default/cgv');
+	// }
 	/**
 	 * Page de la Gallery
 	 */
-	public function gallery()
-	{
-		$data = '2016-01_EEDF_Patinoire';
-		$this->show('default/gallery', ['data'=>$data,'path'=>'assets/images/']);
-	}
+	// public function gallery()
+	// {
+	// 	$data = '2016-01_EEDF_Patinoire';
+	// 	$this->show('default/gallery', ['data'=>$data,'path'=>'assets/images/']);
+	// }
 
 	public function documents()
 	{
 		$data = $this->docModel->findAll();
-		$this->show('default/documents', ['documents' => $data]);
+		$this->show('default/accueil', ['documents' => $data]);
 
 	}
 	public function voir_documents(){
@@ -57,8 +57,9 @@ class DefaultController extends Controller{
 			$document = $this->docModel->search($id);
 			$document = $document[0];
 		}
-		$this->show('default_documents', ['documents' => $document]);
+		$this->show('default/accueil', ['documents' => $document]);
 	}
+	
 	/**
 	 * Page des événements
 	 */

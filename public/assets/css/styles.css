@@ -213,7 +213,7 @@ section {
   min-height: 400px;
   height: auto !important;
   height: 100%;
-  padding-top:100px;
+  padding-top: 60px; //padding à toutes les sections !
 }
 
 .bg-1 {
@@ -242,9 +242,12 @@ section {
 
 .bg-4 {
 	padding-top:30px;
-    background-color: #d1d6d6;
+  background-color: #44525e;
+  padding-bottom: 30px;
 }
-
+.bg-4 .panel{
+  border: 1px solid #d1d1cf;
+}
 .panel img.img-responsive {
 	min-height:270px;
   max-height:270px;

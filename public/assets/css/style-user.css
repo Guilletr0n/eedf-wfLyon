@@ -12,39 +12,12 @@ font-family: 'Patrick Hand SC', cursive;
 font-family: 'Arya', sans-serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Playfair Display', serif;
+
+Couleurs:
+vert clair : #c6e07d
+gris foncé : #44525e
+gris clair : #f4f4f4
 */
-
-
-
-nav ul.nav>li>a:hover{
-  color: green!important; /* adapte la couleur */
-  background-color: none;
-}
-nav .container-fluid button{
-  background: transparent;
-}
-div.navbar{
-  background: #e3e8e8;
-  border: #abbaba;
-}
-.navbar .collapse ul li a{
-  color: #506262;
-  font-size: 16px;
-  font-family: 'Arya', sans-serif;
-  text-transform: uppercase;
-  font-weight: lighter;
-  letter-spacing: 1px;
-}
-.navbar .collapse ul li a:hover{
-  color: #abbaba;
-}
-nav.navbar .collapse ul li a#contactnav{
-  margin-right: 150px;
-}
-nav.navbar .collapse ul li a:hover{
-  background: #f2f2f2;
-}
-
 
 
 header{
@@ -116,13 +89,38 @@ header h2{
     opacity: 1;
 }
 
+/* navbar */
 
+div.navbar{
+  background: #c7dd87;
+  border: #abbaba;
+}
+.navbar .collapse ul li a{
+  color: #506262;
+  font-size: 16px;
+  font-family: 'Arya', sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.navbar .collapse ul li a:hover{
+  color: #abbaba;
+}
+button#memberBtn{
+  background: #44525e;
+  border: none; 
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+button#memberBtn:hover{
+   background: #66717a;
+}
 
 /* footer */
 
 footer{
   clear: both;
-  margin-top: 100px;
+  margin-top: 50px;
   background: #e1e1e1;
   font-size: 14px;
   color: #777777;
@@ -152,7 +150,6 @@ section#texteintro{
   font-family: 'Playfair Display', serif;
 }
 section#texteintro h2.textdesc{
-  margin-top: -30px;
   font-weight: bolder;
 }
 section#texteintro h3.textdesc{
@@ -189,7 +186,6 @@ section#texteintro #paperplane img{
   margin-top: 40px;
 }
 
-
 /* Bouton 'en savoir plus' */
 section#texteintro ul #btnsavoirplus{
   margin: 20px 180px 20px 0px;
@@ -209,7 +205,8 @@ section#texteintro ul a:hover{
   color: #000;
 }
 
-  /* Calendrier */
+
+  /* événements accueil */
 
 section#evenements{
   margin-top: 10px;
@@ -218,25 +215,35 @@ section#evenements h2{
   font-family: 'Playfair Display', serif;
   font-weight: bolder;
   letter-spacing: 1.5px;
-  margin: 20px 0px 40px 200px;
+  margin: 20px 0px 40px 0px;
 }
-section#evenements #prochainevent{
-  width: 610px;
+section#evenements .prochainevent{
+  width: auto;
   height: auto;
-  background-color: #f4f2e6;
-  margin-left: 60px;
-  border-radius: 10px;
-  border: 1px outset #ddd;
-  padding: 10px 15px 0px 15px;
+  background-color: #f4f4f4;
+  margin: 20px 40px 20px 40px;
+  border-radius: 5px;
+  border: 1px outset #eee;
+  box-shadow: 1px 1px 8px #ccc;
+  padding: 5px 15px 0px 15px;
   font-family: 'Alegreya Sans SC', sans-serif;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
-section#evenements #prochainevent p{
+section#evenements .prochainevent a{
+  text-decoration: none;
+}
+section#evenements .prochainevent a h3{
+  color: black;
+}
+section#evenements .prochainevent:hover{
+  -webkit-transform:scale(1.08);
+  transform:scale(1.08);
+ 
+}
+section#evenements .prochainevent p{
   margin-bottom: 33px;
   font-size: 15px;
-}
-section#evenements #prochainevent .trait{
-  border-bottom: 1px dashed #565656;
-  border-width: 1.3px;
 }
 
 /* GALLERIE ACCUEIL */
@@ -244,8 +251,9 @@ section#evenements #prochainevent .trait{
 .bg-4 h2{
   font-family: 'Playfair Display', serif;
   font-weight: bolder;
+  color: white;
   letter-spacing: 1.5px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 /* PAGE DOCUMENTS */
@@ -274,7 +282,7 @@ section#evenements #prochainevent .trait{
 }
 #zonedocs2{
   border: 2px outset #b8cc84;
-  background: #bcdd61;
+  background: #c6e07d;
   margin-top: 80px;
   padding-bottom: 40px;
   border-radius: 10px;
@@ -315,7 +323,7 @@ section#evenements #prochainevent .trait{
   font-size: 16.5px;
 }
 #containerassoc aside{
-  background: #bcdd61;
+  background: #c6e07d;
   color: #000;
   box-shadow: 4px 4px 10px grey;
 }
@@ -361,7 +369,7 @@ section#evenements #prochainevent .trait{
   border-bottom-left-radius: 5px;
   width: 87.5%;
   float: right;
-  box-shadow: -11px -16px 4px #bcdd61;
+  box-shadow: -11px -16px 4px #c6e07d;
 }
 .nocontainer #scoutisme #textedroite{
   margin-right: 190px;
@@ -370,7 +378,7 @@ section#evenements #prochainevent .trait{
 .nocontainer #valeurs{
   margin-top: 70px;
   margin-bottom: 90px;
-  background: #bcdd61;
+  background: #c6e07d;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 87.5%;
@@ -465,7 +473,7 @@ section#evenements #prochainevent .trait{
 
 #containercontact h1{
   font-family: 'Alegreya Sans SC', sans-serif; 
-  margin: 50px 0px 80px 0px;
+  margin: 50px 0px 60px 0px;
 }
 #containercontact h2{
   font-family: 'Lobster', cursive;
@@ -487,7 +495,7 @@ section#evenements #prochainevent .trait{
   margin-left: 40px;
 }
 .localisation #contact form{
-  background: #bcdd61;;
+  background: #44525e;
   border: 1px outset #b8cc84;
   border-radius: 10px;
   color: #fff;
@@ -503,13 +511,14 @@ section#evenements #prochainevent .trait{
   margin-top: 40px;
 }
 .localisation #contact form button{
-  background: #7c7c7c;
-  border: #809462;
+  background: #c6e07d;
+  color: #44525e;
+  border: 2px solid #c6e07d;
 }
 .localisation #contact form button:hover{
   background: #fff;
-  border: #809462;
-  color: #809462;
+  border: 2px solid #c6e07d;
+  color: #44525e;
 }
 
 
