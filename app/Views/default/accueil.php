@@ -52,18 +52,17 @@
 					<h3>Sortie au parc - 02/04/2017</h3>
 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur.</p>
-					</div>
-					<div class="trait">
+				</div>
+				<div class="trait">
 						<h3>Sortie au cimetière - 15/04/2017</h3>
 						<p>Duis aute irure dolor in reprehenderit in voluptate.</p>
-					</div>
-					<div>
-						<h3>Sortie à la maison de retraite - 22/04/2017</h3>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla.</p>
-						</div>
-					</div>
 				</div>
+					
+
+
+		</div>
+
+		</div>
 				<div class="row col-md-4 text-right" id="imgscout2">
 					<img src="<?= $this->assetUrl('img/scout2.png') ?>" alt="" class="scoutanim">
 					<div class="col-md-3">
@@ -117,7 +116,7 @@
 										<h3>Patinoire - 02/05/2017</h3>
 										<p>Après-midi à la patinoire Baraban avec les ainés et les louveteaux.</p>
 									</div>
-								</a>	
+								</a>
 							</div>
 						</div>
 
@@ -176,7 +175,7 @@
 							<p></p>
 
 						</div>
-					</div><!--/panel--> 
+					</div><!--/panel-->
 				</div><!--/col-->
 
 				<div class="col-sm-4 col-xs-6">
@@ -188,9 +187,9 @@
 							<p></p>
 
 						</div>
-					</div><!--/panel--> 
+					</div><!--/panel-->
 
-				</div><!--/col--> 
+				</div><!--/col-->
 
 				<div class="col-sm-4 col-xs-6">
 
@@ -201,9 +200,9 @@
 							<p></p>
 
 						</div>
-					</div><!--/panel--> 
+					</div><!--/panel-->
 
-				</div><!--/col--> 
+				</div><!--/col-->
 
 				<div class="col-sm-4 col-xs-6">
 
@@ -214,9 +213,9 @@
 							<p></p>
 
 						</div>
-					</div><!--/panel--> 
+					</div><!--/panel-->
 
-				</div><!--/col--> 
+				</div><!--/col-->
 
 				<div class="col-sm-4 col-xs-6">
 
@@ -227,9 +226,9 @@
 							<p></p>
 
 						</div>
-					</div><!--/panel--> 
+					</div><!--/panel-->
 
-				</div><!--/col--> 
+				</div><!--/col-->
 
 			</div><!--/row-->
 		</div><!--/container-->
@@ -244,7 +243,7 @@
 		<h1>Documents</h1>
 	</div>
 	<div class="divider"></div>
-	<!-- Fin Documents -->	
+	<!-- Fin Documents -->
 
 	<!-- Qui sommes nous ? -->
 	<div class="divider" id="section5"></div>
@@ -275,8 +274,8 @@
 							</aside>
 						</div>
 						<div class="bar">
-							<div id="textebas"> 
-								<h3 class="lobster">Présentation du mouvement EEDF</h3>		 
+							<div id="textebas">
+								<h3 class="lobster">Présentation du mouvement EEDF</h3>
 								<h4><strong>Les EEDF, un mouvement de scoutisme laïque</strong></h4>
 								<p>Les Eclaireuses Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
 								<h4><strong>Les EEDF, association reconnue d’utilité publique et complémentaire de l’école publique</strong></h4>
@@ -312,7 +311,7 @@
 					<!-- Fin Qui sommes nous ? -->
 
 					<!-- Contact -->
-					<div class="divider" id="section6"></div>  
+					<div class="divider" id="section6"></div>
 					<div class="container" id="containercontact">
 						<div class="row">
 							<h1 class="text-center bar">Où nous trouver ?</h1>
@@ -321,13 +320,13 @@
 							<div class="col-md-6 bar" id="carte">
 								<div class="adress">
 									<ul class="text-center">
-										<h2 class="text-center">Notre adresse</h2>	
+										<h2 class="text-center">Notre adresse</h2>
 										<li>Eclaireuses et Eclaireurs de France</li>
 										<li>Groupe Jean Maron</li>
 										<li>20, chemin de la Carrière</li>
 										<li>07100 ANNONAY</li><br />
 										<li><strong><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 06.95.42.63.48</strong></li>
-									</ul>					
+									</ul>
 								</div>
 								<div class="text-center">
 									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.8714950085746!2d4.668762215457518!3d45.250391279099055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f513a54634ff03%3A0xfcc636aa6773d1e1!2s20+Chemin+de+la+Carri%C3%A8re%2C+07100+Annonay!5e0!3m2!1sfr!2sfr!4v1496587786295" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>

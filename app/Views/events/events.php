@@ -67,3 +67,15 @@
     });
 </script>
 <?php $this->stop('script') ?>
+
+
+A récupérer pour accueil :
+<?php foreach ($events as $key => $events) { ?>
+<div class="trait">
+      <p> Sortie : "<?php echo $events['title']; ?> "</p>
+      <p>
+          Le <?php echo $events['startdate']; ?>
+          <?php echo $events['description']; ?>
+      </p>
+</div>
+<?php } ?>
