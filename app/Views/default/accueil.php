@@ -25,11 +25,8 @@
 				</div>
 			</ul>
 		</div>
-		</div>
-		<div class="container" id="paperplane">
-			<img src="<?= $this->assetUrl('img/avionpapier.png') ?>" class="img-responsive">
-		</div>
 	</div>
+</div>
 </section>
 <!-- END TEXTE INTRO -->
 
@@ -46,7 +43,7 @@
 		<div class="col-md-2">
 		</div>
 		<div class="row col-md-6">
-			<h2>Evénements prochains</h2>
+			<h2>Prochains événements</h2>
 			<div id="prochainevent">
 				<div class="trait">
 					<h3>Sortie au parc - 02/04/2017</h3>
@@ -72,172 +69,109 @@
 			</div>
 		</section>
 
-		<?php if($w_user != 0): ?>
 
-		<!-- CAROUSEL-->
-		<section id="carousel" class="bar">
+		<section class="bg-3">
 			<div class="container">
-				<div class="row col-md-3" id="imgscout">
-					<img src="<?= $this->assetUrl('img/scout.png') ?>" alt="">
-				</div>
-				<div class="row col-md-7">
-					<h2>Evénements passés</h2>
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
-
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
-							<div class="item active">
-								<a href="indexeedf.php">
-									<img src="<?= $this->assetUrl('img/sortie2.jpg') ?>" alt="...">
-									<div class="carousel-caption">
-										<h3>Rivière Kwai - 22/05/2017</h3>
-										<p>Sortie à la rivière Kwai avec les ainés et les louveteaux. Activités : kayaks et canoës</p>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a href="indexeedf.php">
-									<img src="<?= $this->assetUrl('img/sortie1.jpg') ?>" alt="...">
-									<div class="carousel-caption">
-										<h3>Visite de la Basilique Michel</h3>
-										<p>Journée à Pau pour visiter la Basilique et ses catacombes avec les louveteaux.</p>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a href="indexeedf.php">
-									<img src="<?= $this->assetUrl('img/patinoire.jpg') ?>" alt="...">
-									<div class="carousel-caption">
-										<h3>Patinoire - 02/05/2017</h3>
-										<p>Après-midi à la patinoire Baraban avec les ainés et les louveteaux.</p>
-									</div>
-								</a>	
-							</div>
-						</div>
-
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3">
+				<div class="responsiveCal"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Evénements</h2>
+					<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=800&amp;wkst=1&amp;hl=fr&amp;bgcolor=%23ffffff&amp;src=nordine.sebih%40gmail.com&amp;color=%232952A3&amp;ctz=Europe%2FParis" style="border:solid 1px #777" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
 				</div>
 			</div>
 		</section>
-	<?php endif ?>
 
-	<section class="bg-3">
-		<div class="container">
-			<div class="responsiveCal"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Evénements</h2>
-				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=800&amp;wkst=1&amp;hl=fr&amp;bgcolor=%23ffffff&amp;src=nordine.sebih%40gmail.com&amp;color=%232952A3&amp;ctz=Europe%2FParis" style="border:solid 1px #777" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
-			</div>
+		<div class="divider"></div>
+		<!-- FIN EVENEMENTS PROCHAINS -->
+
+		<?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
+
+		<!-- Gallerie -->
+		<div class="divider" id="section3"></div>
+		<div class="bg-4">
+			<div class="container">
+				<h2 class="text-center">Galerie photo</h2>
+				<div class="row">
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>Patinoire</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel-->
+					</div><!--/col-->
+
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>Parc naturel</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel--> 
+					</div><!--/col-->
+
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>Plongée sous marine</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel--> 
+
+					</div><!--/col--> 
+
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>New Construction</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel--> 
+
+					</div><!--/col--> 
+
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>Site Planning</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel--> 
+
+					</div><!--/col--> 
+
+					<div class="col-sm-4 col-xs-6">
+
+						<div class="panel panel-default">
+							<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-body">
+								<p>Churches</p>
+								<p></p>
+
+							</div>
+						</div><!--/panel--> 
+
+					</div><!--/col--> 
+
+				</div><!--/row-->
+			</div><!--/container-->
 		</div>
-	</section>
+		<!-- Fin Gallerie -->
 
-	<div class="divider"></div>
-	<!-- FIN EVENEMENTS PROCHAINS -->
-
-	<!-- Gallerie -->
-	<div class="divider" id="section3"></div>
-	<div class="bg-4">
-		<div class="container">
-			<h1>Gallerie</h1>
-			<div class="row">
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="//placehold.it/600x400/444/F8F8F8" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>Renovations</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel-->
-				</div><!--/col-->
-
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="//placehold.it/600x400/454545/FFF" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>Academic Institutions</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel--> 
-				</div><!--/col-->
-
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="//placehold.it/600x400/555/F2F2F2" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>Interiors</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel--> 
-
-				</div><!--/col--> 
-
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="//placehold.it/600x400/555/FFF" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>New Construction</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel--> 
-
-				</div><!--/col--> 
-
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="//placehold.it/600x400/555/EEE" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>Site Planning</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel--> 
-
-				</div><!--/col--> 
-
-				<div class="col-sm-4 col-xs-6">
-
-					<div class="panel panel-default">
-						<div class="panel-thumbnail"><a href="#" title="Churches"><img src="//placehold.it/600x400/666/F4F4F4" class="img-responsive"></a></div>
-						<div class="panel-body">
-							<p>Churches</p>
-							<p></p>
-
-						</div>
-					</div><!--/panel--> 
-
-				</div><!--/col--> 
-
-			</div><!--/row-->
-		</div><!--/container-->
-	</div>
-	<div class="divider"></div>
-	<!-- Fin Gallerie -->
-
-
+		<?php endif ?>
+	
 	<!-- Documents -->
 	<div class="divider" id="section4"></div>
 	<div class="container">
@@ -358,44 +292,44 @@
 						<div class="divider"></div>
 						<!--Fin Contact -->
 
-						<div class="container">
-							<div class="col-sm-8 col-sm-offset-2 text-center">
+		<div class="container">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
 
-								<ul class="list-inline center-block">
-								</ul>
+				<ul class="list-inline center-block">
+				</ul>
 
-							</div><!--/col-->
-						</div><!--/container-->
+			</div><!--/col-->
+		</div><!--/container-->
 
-					</div><!--/wrap-->
-					<?php $this->stop('main_content') ?>
+	</div><!--/wrap-->
+	<?php $this->stop('main_content') ?>
 
-					<?php $this->start('login') ?>
-					<?php if(!isset($w_user)): ?>
-					<li>
-						<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
-					</li>
-					<li>
-						<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
-					</li>
-				<?php endif ?>
-				<?php if($w_user != 0): ?>
-				<li><a href="#">Salut <?= $w_user['username'] ?></a></li>
-				<li><a href="<?= $this->url('admin_deconnexion'); ?>">Deconnexion</a></li>
-			<?php endif ?>
-			<?php $this->stop('login') ?>
+	<?php $this->start('login') ?>
+	<?php if(!isset($w_user)): ?>
+		<li>
+			<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
+		</li>
+		<li>
+			<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
+		</li>
+	<?php endif ?>
+	<?php if($w_user != 0): ?>
+		<li><a href="#">Salut <?= $w_user['username'] ?></a></li>
+		<li><a href="<?= $this->url('admin_deconnexion'); ?>">Deconnexion</a></li>
+	<?php endif ?>
+	<?php $this->stop('login') ?>
 
 
-			<?php $this->start('memberspacebtn') ?>
-			<?php if($w_user != 0): ?>
+	<?php $this->start('memberspacebtn') ?>
+	<?php if($w_user != 0): ?>
+		<li>
+			<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
 			<li>
-				<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
-				<li>
-				<?php endif ?>
-				<?php $this->stop('memberspacebtn') ?>
+			<?php endif ?>
+			<?php $this->stop('memberspacebtn') ?>
 
-				<?php $this->start('memberspacemodal') ?>
-				<?php if($w_user != 0): ?>
+			<?php $this->start('memberspacemodal') ?>
+			<?php if($w_user != 0): ?>
 				<!-- Modal -->
 				<div class="modal fade" id="Modalmember" role="dialog">
 					<div class="modal-dialog modal-lg">

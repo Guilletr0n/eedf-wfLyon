@@ -217,7 +217,7 @@ section {
 }
 
 .bg-1 {
-	background: url('../images/eedfcircle.JPG') no-repeat center center fixed; 
+	background: url('../img/photoeedf.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -242,22 +242,26 @@ section {
 
 .bg-4 {
 	padding-top:30px;
-    background-color:#e6e6e6;
+    background-color: #d1d6d6;
 }
 
-.panel .img-responsive {
+.panel img.img-responsive {
 	min-height:270px;
-    max-height:270px;
+  max-height:270px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.panel img.img-responsive:hover{
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
 }
 
 .responsiveCal {
- 
 position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
  
 }
  
 .responsiveCal iframe {
- 
 position: absolute; top:0; left: 0; width: 100%; height: 100%;
  
 }
