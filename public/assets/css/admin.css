@@ -113,6 +113,9 @@ nav.demo-navigation a{
 #homepage a span{
 	color: #2C3E50;
 }
+#homepage a span:hover{
+	color: #8090a0;
+}
 
 
 // DOCUMENTS
@@ -237,3 +240,14 @@ h3#titremodifphoto{
 	font-family: 'Fjalla One', sans-serif;
 }
 
+/* EVENEMENTS */
+#events #listevents{
+	border: 1px solid #e8e8e8;
+	background: white;
+	padding: 10px 10px 10px 10px;
+	margin-top: 20px;
+}
+#events #listevents table{
+	margin-left: 10px;
+	margin-right: 10px;
+}
