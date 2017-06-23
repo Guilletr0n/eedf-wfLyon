@@ -4,7 +4,7 @@
 <?php $this->stop('header_content') ?>
 <?php $this->start('sidenav_content') ?>
 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-  <a class="mdl-navigation__link" href="<?= $this->url('default_home'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Accueil</a>
+  <a class="mdl-navigation__link" href="<?= $this->url('admin_dashboard'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Accueil</a>
   <a class="mdl-navigation__link" href="<?= $this->url('userManagement_inscription'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Inscription</a>
   <a class="mdl-navigation__link" href="<?= $this->url('userManagement_list_users'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>List Users</a>
   <a class="mdl-navigation__link" href="<?= $this->url('userManagement_list_admins'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>List Admins</a>
