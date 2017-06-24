@@ -341,10 +341,17 @@
 
 
 			<?php $this->start('memberspacebtn') ?>
+			<?php if($w_user != 0): ?>
+				<li>
+					<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
+				<li>
+				<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
+			<?php endif ?>
 			<?php $this->stop('memberspacebtn') ?>
 
-			<?php if($w_user != 0): ?>
+			
 			<?php $this->start('memberspacemodal') ?>
+			<?php if($w_user != 0): ?>
 				<!-- Modal -->
 				<div class="modal fade" id="Modalmember" role="dialog">
 					<div class="modal-dialog modal-lg">
@@ -391,5 +398,6 @@
 				</div>
 			</div>
 		</div>
-			<?php $this->stop('memberspacemodal') ?>
-			<?php endif ?>
+		<?php endif ?>
+		<?php $this->stop('memberspacemodal') ?>
+			
