@@ -92,7 +92,7 @@
 					<div class="col-sm-4 col-xs-6">
 
 						<div class="panel panel-default">
-							<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive"></a></div>
+							<div class="panel-thumbnail"><a href="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" title="Test"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive"></a></div>
 							<div class="panel-body">
 								<p>Patinoire</p>
 								<p></p>

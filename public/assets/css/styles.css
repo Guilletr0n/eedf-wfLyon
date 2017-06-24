@@ -124,7 +124,7 @@ h1 {
 
 
 .affix a {
-  color: #506262 !important;
+  color: #506262;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }

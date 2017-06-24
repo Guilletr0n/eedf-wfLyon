@@ -9,6 +9,8 @@ use \Model\AdherentModel;
 use \Model\AdminModel;
 use \Model\Globals;
 use \Model\MailServerModel as MailServer;
+use \Model\MembersModel as members;
+use \Model\SectionsModel as sections;
 
 class UserManagementController extends Controller {
 
@@ -18,6 +20,8 @@ class UserManagementController extends Controller {
   protected $mail;
   protected $adminUser;
   protected $mailServer;
+  private $MembersModel;
+  private $SectionsModel;
 
   public function __construct(){
     $this->currentUser = new AdherentModel;
@@ -26,6 +30,8 @@ class UserManagementController extends Controller {
     $this->utils       = new StringUtils;
     $this->adminUser   = new AdminModel;
     $this->mailServer  = new MailServer;
+    $this->MembersModel = new members;
+    $this->SectionsModel = new sections;
   }
 
   public function listAdmins(){
@@ -125,7 +131,10 @@ class UserManagementController extends Controller {
       $user = $this->auth->isValidLoginInfo($_POST['username'], $_POST['password']);
       if($user != 0){
         $this->auth->logUserIn($this->currentUser->find($user));
-        $this->show('default/accueil',['user'=>$_SESSION['user']]);
+        //récupération des sections existantes
+        $listsections = $this->SectionsModel->findAll('id');
+        //récupération des membres en fonction d'un utilisateur
+        $usermembers = $this->MembersModel->userMembers($user);
         //$this->show('dev/output');
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";
