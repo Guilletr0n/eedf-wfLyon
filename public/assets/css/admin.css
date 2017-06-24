@@ -41,12 +41,44 @@ header ul#side-menu li a.text-uppercase{
 }
 
 
+/* NAV ADMIN LEFT */
+
+nav.demo-navigation ul{
+	margin-left: -40px;
+}
+nav.demo-navigation ul li{
+	list-style: none;
+}
+nav.demo-navigation ul li ul li{
+	margin-left: -30px;
+	border-bottom: 1px dashed #6b838e;
+	background: #566a75;
+  	color: rgba(255, 255, 255, 0.8);
+}
+nav.demo-navigation a{
+	text-decoration: none;
+}
+#menuvertical ul {
+    display: none;
+}
+#menuvertical li:hover ul {
+    display: block ;
+    top: 36px; 
+    left: 0px; 
+    z-index: 1000; 
+}
+
 // ACCUEIL ADMIN
 #homepage{}
 #homepage .col-lg-4{
 	padding-top: 50px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	color: #fff;
+	padding-left: 50px;
+	padding-right: 40px;
+}
+#homepage .huge{
+	font-size: 2em;
 }
 #homepage #blocevent{
 	background: #2e8ece;
@@ -54,8 +86,8 @@ header ul#side-menu li a.text-uppercase{
 	border-radius: 5px;
 }
 #homepage #blocphoto{
-	background: #e67e22;
-	border: 1px solid #e67e22;
+	background: #19b698;
+	border: 1px solid #19b698;
 	border-radius: 5px;
 }
 #homepage #blocdoc{
@@ -69,8 +101,8 @@ header ul#side-menu li a.text-uppercase{
 	border-radius: 5px;
 }
 #homepage #blocadherent{
-	background: #19b698;
-	border: 1px solid #19b698;
+	background: #e67e22;
+	border: 1px solid #e67e22;
 	border-radius: 5px;
 }
 #homepage #blocadmin{
@@ -80,6 +112,9 @@ header ul#side-menu li a.text-uppercase{
 }
 #homepage a span{
 	color: #2C3E50;
+}
+#homepage a span:hover{
+	color: #8090a0;
 }
 
 
@@ -117,7 +152,7 @@ form#ajoutdocform{}
 }
 form#ajoutdocform label{
 	font-size: 18px;
-	margin: 20px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 }
 
 button[type=submit]#btnadddoc{
@@ -169,13 +204,11 @@ form#ajoutphotoform{}
 }
 form#ajoutphotoform label{
 	font-size: 18px;
-	margin: 20px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 }
-
 button[type=submit]#btnaddphoto{
 	margin-top: 20px;
 }
-
 form select#id_gallery{ //changer l'id en gallery sur le html
 	font-weight: bold;
 	margin: 5px 0px 5px 0px;
@@ -193,13 +226,11 @@ form#modifphotoform{}
 }
 form#modifphotoform label{
 	font-size: 18px;
-	margin: 20px 0px 10px 0px;
+	margin: 5px 0px 10px 0px;
 }
-
 button[type=submit]#btnaddphoto{
 	margin-top: 20px;
 }
-
 form select#id_gallery{ //changer l'id en gallery sur le html
 	font-weight: bold;
 	margin: 5px 0px 5px 0px;
@@ -209,3 +240,14 @@ h3#titremodifphoto{
 	font-family: 'Fjalla One', sans-serif;
 }
 
+/* EVENEMENTS */
+#events #listevents{
+	border: 1px solid #e8e8e8;
+	background: white;
+	padding: 10px 10px 10px 10px;
+	margin-top: 20px;
+}
+#events #listevents table{
+	margin-left: 10px;
+	margin-right: 10px;
+}
