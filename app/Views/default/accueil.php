@@ -78,15 +78,8 @@
 <div class="divider"></div>
 <!-- FIN EVENEMENTS PROCHAINS -->
 
-<<<<<<< HEAD
-						<div class="panel panel-default">
-							<div class="panel-thumbnail"><a href="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" title="Test"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive"></a></div>
-							<div class="panel-body">
-								<p>Patinoire</p>
-								<p></p>
-=======
+
 <?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
->>>>>>> refs/remotes/origin/master
 
 <!-- Gallerie -->
 <div class="divider" id="section3"></div>
@@ -348,8 +341,10 @@
 
 
 			<?php $this->start('memberspacebtn') ?>
+			<?php $this->stop('memberspacebtn') ?>
+
 			<?php if($w_user != 0): ?>
-<<<<<<< HEAD
+			<?php $this->start('memberspacemodal') ?>
 				<!-- Modal -->
 				<div class="modal fade" id="Modalmember" role="dialog">
 					<div class="modal-dialog modal-lg">
@@ -396,57 +391,5 @@
 				</div>
 			</div>
 		</div>
-			<?php endif ?>
 			<?php $this->stop('memberspacemodal') ?>
-=======
-				<li>
-					<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
-					<li>
-					<?php endif ?>
-					<?php $this->stop('memberspacebtn') ?>
-
-					<?php $this->start('memberspacemodal') ?>
-					<?php if($w_user != 0): ?>
-						<!-- Modal -->
-						<div class="modal fade" id="Modalmember" role="dialog">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Espace Scout</h4>
-									</div>
-									<div class="modal-body">
-										<div class="container">
-											<button class="btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">Ajouter un membre</button>
-										</div>
-										<div class="container">
-											<h3>Vos membres</h3>
-											<ul class="list-inline" >
-												<li><a href="#">Nom</a></li>
-												<li><a href="#">Prénom</a></li>
-												<li><a href="#">Totem</a></li>
-												<li><a href="#">section</a></li>
-											</ul>
-											<ul class="list-inline">
-												<li><a href="#">Name1</a></li>
-												<li><a href="#">Firstame1</a></li>
-												<li><a href="#">Totem1</a></li>
-												<li><a href="#">Responsable</a></li>
-											</ul>
-											<ul class="list-inline">
-												<li><a href="#">Poubelle</a></li>
-												<li><a href="#">Patrik</a></li>
-												<li><a href="#">TOTEM2</a></li>
-												<li><a href="#">Ainé</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					<?php endif ?>
-					<?php $this->stop('memberspacemodal') ?>
->>>>>>> refs/remotes/origin/master
+			<?php endif ?>
