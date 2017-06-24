@@ -65,13 +65,13 @@
 					}
 					?>
 					<li class="<?php echo ($this->url('default_documents') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-						<a href="<?= $this->url('default_documents') ?>">Documents</a>
+						<a href="#section4">Documents</a>
 					</li>
 					<li class="<?php echo ($this->url('default_quisommesnous') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-						<a href="<?= $this->url('default_quisommesnous') ?>">L'association</a>
+						<a href="#section5">L'association</a>
 					</li>
 					<li class="<?php echo ($this->url('default_contact') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-						<a href="<?= $this->url('default_contact') ?>">Contact</a>
+						<a href="#section6">Contact</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
