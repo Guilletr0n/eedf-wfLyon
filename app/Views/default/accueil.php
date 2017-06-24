@@ -249,7 +249,6 @@
 						<p>L’association, laïque comme l’Ecole publique, diffuse ses propositions pédagogiques en direction des écoles, collèges et lycées. Elle intervient, en particulier, dans la formation des délégués de classe et l’organisation de sorties et de classes découvertes autour de la thématique de l’éducation à l’environnement.</p>
 					</div>
 				</div>
-			</div>
 			<div class="nocontainer">
 				<div class="bar text-right" id="scoutisme">
 					<div id="textedroite">
@@ -271,6 +270,7 @@
 					</div>
 				</div>
 			</div>
+	</div>
 
 		<div class="divider"></div>
 		<!-- Fin Qui sommes nous ? -->
