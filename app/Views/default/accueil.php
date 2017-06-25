@@ -14,7 +14,8 @@
 
 		<div class="col-sm-3"></div>
 		<div class="col-sm-8">
-			<ul class="bar"><h4>Cette pédagogie privilégie :</h4>
+			<ul class="bar">
+				<li><h4>Cette pédagogie privilégie :</h4></li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en pleine nature.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'éducation par l'action et le jeu.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en petites équipes où chacun prend des responsabilités.</li>

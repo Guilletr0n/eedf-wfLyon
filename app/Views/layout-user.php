@@ -77,7 +77,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<?= $this->section('login') ?>
 					<?= $this->section('memberspacebtn') ?>
-				<ul>
+				</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div><!--/.navbar -->
