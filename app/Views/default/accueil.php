@@ -378,6 +378,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	<?php endif ?>
 <?php $this->stop('memberspacemodal') ?>
 
