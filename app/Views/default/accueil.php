@@ -300,7 +300,6 @@
 			</form>
 		</div> <!-- class="contact"-->
 	</div> <!-- class="localisation"-->
-	</div>
 </div><!--/wrap-->
 
 <div class="divider"></div>
