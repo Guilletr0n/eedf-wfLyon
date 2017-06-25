@@ -281,7 +281,7 @@
 		</div>
 		<div class="col-md-5 bar" id="contact">
 			<h2 class="text-center">Nous contacter</h2>
-			<form id="" method="post" action="<?= $this->url('default_contact2') ?>" enctype="multipart/form-data">
+			<form id="formcontact" method="post" action="<?= $this->url('default_contact2') ?>" enctype="multipart/form-data">
 				<div class="form-group">
 					<input type="text" class="form-control well-lg" name="name" id="name" value="" placeholder="Nom et Prénom" required>
 				</div>
