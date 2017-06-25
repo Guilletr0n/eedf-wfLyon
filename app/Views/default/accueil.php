@@ -21,13 +21,12 @@
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en petites équipes où chacun prend des responsabilités.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> Une pratique quotidienne de la citoyenneté à travers les "conseils" et la règle de vie.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'apprentissage de l'engagement et une démarche de progression.</li>
-				<div id="btnsavoirplus" class="text-right">
+				<li><div id="btnsavoirplus" class="text-right">
 					<a href="#" id="savoirplus">En savoir plus</a>
-				</div>
+				</div></li>
 			</ul>
 		</div>
 	</div>
-</div>
 </section>
 <!-- END TEXTE INTRO -->
 
