@@ -327,7 +327,6 @@
 		<li>
 			<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
 		</li>
-		<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
 	<?php endif ?>
 <?php $this->stop('memberspacebtn') ?>
 

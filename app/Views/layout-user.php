@@ -7,10 +7,9 @@
 	<meta name="Content-Type" content="UTF-8">
 	<meta name="Content-Langage" content="fr">
 
-
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/bootstrap.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-user.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/styles.css') ?>" />
-	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/bootstrap.css') ?>" />
 	<link rel="shortcut icon" href="img/logo2.png">
 	<!-- Latest compiled and minified CSS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -18,6 +17,7 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 </head>
 <body>
 	<header class="masthead">
@@ -40,7 +40,7 @@
 	</header>
 		<!-- NAVBAR-->
 		<!-- Fixed navbar -->
-		<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+		<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -85,7 +85,6 @@
 	
 	<?= $this->section('main_content') ?>
 	
-
  	<footer>
  		<div class="footer container text-center">
 			<div class="row">
@@ -115,8 +114,8 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
-	<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<!--  <script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
 
 	<script>
 
