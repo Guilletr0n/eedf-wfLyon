@@ -283,7 +283,7 @@
 			<h2 class="text-center">Nous contacter</h2>
 			<form id="formcontact" method="post" action="<?= $this->url('default_contact2') ?>" enctype="multipart/form-data">
 				<div class="form-group">
-					<input type="text" class="form-control well-lg" name="name" id="name" value="" placeholder="Nom et Prénom" required>
+					<input type="text" class="form-control well-lg" name="contactname" id="contactname" value="" placeholder="Nom et Prénom" required>
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control well-lg" name="pseudo" id="pseudo" value="" placeholder="Pseudo (si adhérent)">
@@ -338,10 +338,9 @@
 			<div class="modal-content">
 				<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Gestion des adhérent</h4>
+						<h4 class="modal-title">Gestion des membres</h4>
 				</div>
 			<div class="modal-body">
-				<button class="btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">Ajouter un membre</button>
 				<div class="table-responsive">          
 					<table class="table">
 						<thead>
@@ -370,10 +369,43 @@
 						</tbody>
 					</table>
 				</div>
+				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
+				<div class="container-fluid" id="divaddUsermember" style="display: none;">
+		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
+					    <div class="form-group">
+					      <label for="name">Nom</label>
+					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">
+					    </div>
+					    <div class="form-group">
+					      <label for="firstname">Prénom</label>
+					      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom" name="firstname">
+					    </div>
+					    <div class="form-group">
+					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
+                        	<?= '<select class="form-control" id="id_section" name="id_section">';
+                        	foreach ($listsections as $id => $listsections) {
+                            ?>
+                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <?php
+                        	}
+                        	?>
+                    		</select>
+                    	</div>
+					    <div class="form-group">
+					      <label for="totem">Totem</label>
+					      <input type="text" class="form-control" id="totem" name="totem" placeholder="Votre Totem" name="pwd">
+					    </div>
+					    <div class="form-group">
+					    	 <label for="firstname">Informations supplémentaires</label>
+	                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
+	                    </div>
+					 </form>
+					 <button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button>
+				</div>
 			</div>
 			<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
 			</div>
 		</div>
 	</div>

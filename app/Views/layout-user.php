@@ -116,14 +116,6 @@
 	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
 	<!--  <script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
-
-	<script>
-
-	</script>
-
-	<!-- apparition texte progressive -->
-	<script type="text/javascript">
-	</script>
 	<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
 
 </body>
