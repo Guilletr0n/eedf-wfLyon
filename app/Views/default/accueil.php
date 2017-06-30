@@ -338,7 +338,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Gestion des membres</h4>
+						<div class="text-center"><h4 class="modal-title">Gestion des membres</h4></div>
 				</div>
 			<div class="modal-body">
 				<div class="table-responsive">          
@@ -401,7 +401,7 @@
 	                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
 	                    </div>
 					 </form>
-					 <button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button>
+					 		<div class="text-center"><button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button></div>
 				</div>
 			</div>
 			<div class="modal-footer">
