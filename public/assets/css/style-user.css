@@ -247,7 +247,7 @@ section#evenements .prochainevent p{
 
 /* GALLERIE ACCUEIL */
 
-.bg-4 h2{
+.bg-4 h3{
   font-family: 'Playfair Display', serif;
   font-weight: bolder;
   color: white;
@@ -419,6 +419,90 @@ section#evenements .prochainevent p{
   text-align: justify;
   }
 
+  header a img{
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 33.33%;
+  }
+  header h1{
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  header h2{
+    margin-top: -15px;
+    font-size: 20px;
+    line-height: 33px;
+  }
+  #texteintro h2{
+    font-size: 16px;
+    margin-top: -30px;
+  }
+  #texteintro h3{
+    font-size: 12px!important;
+    margin-bottom: 0px!important;
+  }
+  section#texteintro h3.divider_line-down::after {
+  height: 42px;
+  margin-top: 45px;
+  }
+  #texteintro ul{
+    margin-left: -40px!important;
+    margin-top: 70px!important;
+    margin-bottom: 0px!important;
+  }
+  #texteintro ul h4{
+    margin-left: 0px!important;
+    font-size: 14px;
+  }
+  #texteintro ul li{
+    font-size: 13px!important;
+    text-align: justify;
+    line-height: 20px!important;
+  }
+  #texteintro #btnsavoirplus a{
+    font-size: 12px;
+  }
+  #texteintro #btnsavoirplus{
+    width: 100%!important;
+  }
+  // section.bg-1 {
+  //  height: 100px!important;
+  // }
+  section#evenements{
+    padding-top: 0px!important;
+  }
+  section#evenements h2,
+  .bg-4 h3{
+    font-size: 20px!important;
+  }
+  section#evenements h3{
+    font-size: 18px!important;
+  }
+  section#evenements p{
+    font-size: 13px!important;
+  }
+  section#evenements .prochainevent{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  section#evenements #iframecal{
+    margin-left: -20px!important;
+    margin-right: -20px!important;
+  }
+  section#evenements iframe{
+    margin-top: 20px;
+    width: 100%!important;
+    height: 400px!important;
+  }
+  .bg-4 .panel-thumbnail{
+    width: auto!important;
+  }
+  .bg-4 .panel-body{
+    height: 50px!important;
+    font-size: 10px;
+  }
+
+
   #quisommesnous h1,
   #containercontact h1{
     font-size: 30px;
@@ -491,6 +575,11 @@ section#evenements .prochainevent p{
 /** Responsive pour les tablettes **/
 /** ajouter and min-width car sinon les critères ne seront pas pris en compte, mais mangé par le précédent **/
 @media screen and (min-width: 481px) and (max-width: 780px) {
+  
+  .bg-4 .panel-thumbnail{
+    width: auto!important;
+  }
+
   #containerassoc #textehaut{
   margin-bottom: 60px;
   }
