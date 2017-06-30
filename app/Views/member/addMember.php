@@ -74,7 +74,7 @@
                         <input type="text" id="totem" name="totem" class="form-control mb-2 mr-sm-2 mb-sm-0" value=""/>
                     </div>
                     <div class="form-group text-center">
-                        <label for="info" class="mr-sm-2">Informations supplémenataires</label>
+                        <label for="info" class="mr-sm-2">Informations supplémentaires</label>
                         <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
                     <div>
                     <div class="form-group text-center">

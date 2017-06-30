@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 	<meta charset="utf-8">
@@ -7,6 +7,7 @@
 	<meta name="Content-Type" content="UTF-8">
 	<meta name="Content-Langage" content="fr">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+
 	<!-- Latest compiled and minified CSS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -39,7 +40,7 @@
 	</header>
 		<!-- NAVBAR-->
 		<!-- Fixed navbar -->
-		<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+		<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -76,7 +77,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<?= $this->section('login') ?>
 					<?= $this->section('memberspacebtn') ?>
-				<ul>
+				</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div><!--/.navbar -->
@@ -84,7 +85,6 @@
 	
 	<?= $this->section('main_content') ?>
 	
-
  	<footer>
  		<div class="footer container text-center">
 			<div class="row">
@@ -113,17 +113,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="<?= $this->assetUrl('js/bootstrap.js') ?>"></script>
-	<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-	<script>
-
-	</script>
-
-	<!-- apparition texte progressive -->
-	<script type="text/javascript">
-	</script>
+	<!--<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
 	<script src="<?= $this->assetUrl('js/scripts.js') ?>"></script>
 
 </body>

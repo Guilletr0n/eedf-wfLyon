@@ -103,6 +103,19 @@ class MemberController extends Controller {
 	  }
 	}
 
+	public function addUsermember(){
+		//Si mehod GET mettre à jours les informations du modal						 
+		//Si method POST envoyer les données à la bdd
+		$user = $this->AuthentificationModel->getLoggedUser();
+		$_POST['id_user'] = $user['id'];
+		$_POST['register'] =0;
+		$this->MembersModel->insert($_POST);
+		$usermembers = $this->MembersModel->userMembers($user['id']);
+		$this->showJson($usermembers);
+		//on redirige vers la route member_addMembers
+		//$this->redirectToRoute('default_accueil');
+	}
+
 	public function deleteMembers($id){
 		// on efface le membre correspondant à l'id de la table members
 		$this->MembersModel->delete($id);
