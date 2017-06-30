@@ -19,7 +19,6 @@ gris foncé : #44525e
 gris clair : #f4f4f4
 */
 
-
 header{
   background: linear-gradient(
   rgba(0, 0, 0, 0.30), 
@@ -92,7 +91,7 @@ header h2{
 /* navbar */
 
 div.navbar{
-  background: #c7dd87;
+  background: #a6d65c;
   border: #abbaba;
 }
 .navbar .collapse ul li a{
@@ -419,6 +418,75 @@ section#evenements .prochainevent p{
   .nocontainer #scoutisme #textedroite p{
   text-align: justify;
   }
+
+  #quisommesnous h1,
+  #containercontact h1{
+    font-size: 30px;
+  }
+  #quisommesnous p{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  #containerassoc #branches h3,
+  .nocontainer #textedroite h3,
+  .nocontainer #textegauche h3{
+    font-size: 22px;
+  }
+  #containerassoc #branches ul{
+    margin-left: -20px;
+    margin-right: 10px;
+  }
+  #containerassoc #branches p{
+    font-size: 13px;
+    letter-spacing: 0px;
+    text-align: justify;
+  }
+  #quisommesnous #textebas h3{
+    font-size: 22px;
+  }
+  #quisommesnous #textebas h4{
+    font-size: 16px;
+  }
+  #quisommesnous #textebas p,
+  .nocontainer #textedroite p,
+  .nocontainer #textegauche li{
+    font-size: 13px;
+    letter-spacing: 0px;
+  }
+  .nocontainer #textedroite{
+    width: 90%!important;
+  }
+  .nocontainer #textegauche ul{
+    margin-left: -35px;
+  }
+  #containercontact .adress ul{
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  #containercontact h2{
+    font-size: 22px;
+  }
+  #containercontact .adress li{
+    font-size: 16px;
+  }
+  #containercontact iframe{
+    width: 100%!important;
+  }
+  #containercontact #contact{
+    margin: 0px -20px 0px -20px;
+  }
+  #containercontact #contact form{
+    margin-top: 5px;
+    padding: 10px;
+  }
+  #containercontact #contact button{
+    margin-bottom: -25px;
+    padding: 4px 8px;
+  }
+  footer .row{
+    font-size: 9px;
+    text-align: right;
+  }
 }
 /** Responsive pour les tablettes **/
 /** ajouter and min-width car sinon les critères ne seront pas pris en compte, mais mangé par le précédent **/
@@ -437,6 +505,9 @@ section#evenements .prochainevent p{
   }
   .nocontainer #scoutisme #textedroite p{
   text-align: justify;
+  }
+  #containercontact iframe{
+    width: 100%!important;
   }
 }
 
