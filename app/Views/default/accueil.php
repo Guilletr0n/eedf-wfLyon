@@ -370,6 +370,7 @@
 					</table>
 				</div>
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
+				<div class="status"></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
 		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
 					    <div class="form-group">
