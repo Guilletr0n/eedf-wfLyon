@@ -15,11 +15,11 @@
 		<div class="col-sm-3"></div>
 		<div class="col-sm-8">
 			<ul class="bar"><h4>Cette pédagogie privilégie :</h4>
-				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en pleine nature.</li>
-				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'éducation par l'action et le jeu.</li>
-				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> La vie en petites équipes où chacun prend des responsabilités.</li>
-				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> Une pratique quotidienne de la citoyenneté à travers les "conseils" et la règle de vie.</li>
-				<li><img src="<?= $this->assetUrl('img/feuille.png')?>"> L'apprentissage de l'engagement et une démarche de progression.</li>
+				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> La vie en pleine nature.</li>
+				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'éducation par l'action et le jeu.</li>
+				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> La vie en petites équipes où chacun prend des responsabilités.</li>
+				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> Une pratique quotidienne de la citoyenneté à travers les "conseils" et la règle de vie.</li>
+				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'apprentissage de l'engagement et une démarche de progression.</li>
 				<div id="btnsavoirplus" class="text-right">
 					<a href="#" id="savoirplus">En savoir plus</a>
 				</div>
@@ -90,7 +90,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive" alt="sortie 1"></a></div>
 					<div class="panel-body">
 						<p>Patinoire</p>
 						<p></p>
@@ -101,7 +101,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive" alt="sortie 2"></a></div>
 					<div class="panel-body">
 						<p>Parc naturel</p>
 						<p></p>
@@ -112,7 +112,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" class="img-responsive" alt="sortie 3"></a></div>
 					<div class="panel-body">
 						<p>Plongée sous marine</p>
 						<p></p>
@@ -125,7 +125,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" class="img-responsive" alt="sortie 4"></a></div>
 					<div class="panel-body">
 						<p>New Construction</p>
 						<p></p>
@@ -138,7 +138,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive" alt="sortie 5"></a></div>
 					<div class="panel-body">
 						<p>Site Planning</p>
 						<p></p>
@@ -151,7 +151,7 @@
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive"></a></div>
+					<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive" alt="sortie 6"></a></div>
 					<div class="panel-body">
 						<p>Churches</p>
 						<p></p>
@@ -228,10 +228,10 @@
 			<aside class="col-md-4">
 				<div id="branches">
 					<ul><h3>Dans notre groupe, il existe deux branches :</h3>
-						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>"> Les lutins/louveteaux (6-11 ans) :</h4>
+						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les lutins/louveteaux (6-11 ans) :</h4>
 							<p>Les années lutins/louveteaux sont celles des premiers départs sans les parents, l'apprentissage de la vie en collectivité et de la découverte du monde qui nous entoure.</p></li>
 
-							<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>"> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
+							<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
 								<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
 							</ul>
 						</div>
@@ -241,7 +241,7 @@
 					<div id="textebas"> 
 						<h3 class="lobster">Présentation du mouvement EEDF</h3>		 
 						<h4><strong>Les EEDF, un mouvement de scoutisme laïque</strong></h4>
-						<p>Les Eclaireuses Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
+						<p>Les Eclaireuses et Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
 						<h4><strong>Les EEDF, association reconnue d’utilité publique et complémentaire de l’école publique</strong></h4>
 						<p>Reconnue d’utilité publique et agréée par le ministère de la Jeunesse, de l’Education Nationale et de la Recherche en tant qu’association de jeunesse et d’éducation populaire, l’association est fondée sur le bénévolat et le volontariat. Indépendante et non politique, ouverte à toutes et à tous, sans distinction d’origines ou de croyance, son action complète les autres formes d’éducation (la famille, l’école, les amis, etc.). L’une des forces de l’association est dans sa capacité à remettre en question ses méthodes éducatives pour qu’elles répondent aux attentes de tous les jeunes, appliquant ainsi les principes du scoutisme, tout en tenant compte d’une réalité qui a profondément évolué avec le temps.</p>
 
@@ -261,11 +261,11 @@
 				<div class="bar" id="valeurs">
 					<div id="textegauche">
 						<ul><h3 class="lobster">Nos valeurs</h3>
-							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
-							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En s’éduquant réciproquement les uns par les autres, en éduquant en commun les filles et les garçons, c’est l’affirmation de la coéducation.</li>
-							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
-							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
-							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>"> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
+							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
+							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En s’éduquant réciproquement les uns par les autres, en éduquant en commun les filles et les garçons, c’est l’affirmation de la coéducation.</li>
+							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
+							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
+							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 						</div>
 					</div>
 				</div>

@@ -41,7 +41,7 @@
 <?php $this->stop('sidenav_content') ?>
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
-  <h3 class="text-center">Modifier le document</h3>
+  <h3 class="text-center" id="titredoc">Modifier le document</h3>
   <div class="col-md-2"></div>
   <form class="col-md-7 jumbotron" action="<?= $this->url('document_edit_documents', ['id' => $documents['id']]) ?>" method="POST" enctype="multipart/form-data" id="modifdocform">
     <div class="form-group text-center" id="formdoc2">

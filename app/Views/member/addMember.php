@@ -1,4 +1,4 @@
-<?php $this->layout('layout-user-management',['title'=>'addMember']); ?>
+<?php $this->layout('layout-user-management',['title'=>'Ajouter un adhérent']); ?>
 <?php $this->start('sidenav_content') ?>
 
 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
