@@ -250,6 +250,7 @@ section {
 .panel img.img-responsive {
 	min-height:270px;
   max-height:270px;
+  min-height: 90px;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }

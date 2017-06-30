@@ -12,9 +12,8 @@
 		<h2 class="textdesc text-center">Les Éclaireuses et Éclaireurs de France </h2>
 		<h3 class="textdesc text-center title-lg divider_line-down viewport_check">s'inspirent des principes et méthodes du Scoutisme <br /> pour les adapter à chaque tranche d'âges.</h3>
 
-		<div class="col-sm-3"></div>
-		<div class="col-sm-8">
-
+		<div class="col-sm-3 col-xs-0"></div>
+		<div class="col-sm-8 col-xs-12">
 			<ul class="bar"><h4>Cette pédagogie privilégie :</h4>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> La vie en pleine nature.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'éducation par l'action et le jeu.</li>
@@ -22,8 +21,8 @@
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> Une pratique quotidienne de la citoyenneté à travers les "conseils" et la règle de vie.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'apprentissage de l'engagement et une démarche de progression.</li>
 				<div id="btnsavoirplus" class="text-right">
-					<a href="#" id="savoirplus">En savoir plus</a>
-				</div></li>
+					<a href="#section5" id="savoirplus">En savoir plus</a>
+				</div>
 			</ul>
 		</div>
 	</div>
@@ -44,7 +43,7 @@
 		<h2 class="text-center">Prochains événements</h2>
 		<div class="col-md-5 col-sm-12">
 			<div class="prochainevent">
-				<div class="trait">
+				<div>
 					<a href="#">
 					<h3>Sortie au parc - 02/04/2017</h3>
 					<p>Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur.</p>
@@ -52,7 +51,7 @@
 				</div>
 			</div>
 			<div class="prochainevent">
-				<div class="trait">
+				<div>
 					<a href="#">
 						<h3>Sortie au cimetière - 15/04/2017</h3>
 						<p>Duis aute irure dolor in reprehenderit in voluptate.</p>
@@ -68,12 +67,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6 col-sm-12 text-center"><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=800&amp;wkst=1&amp;hl=fr&amp;bgcolor=%23ffffff&amp;src=nordine.sebih%40gmail.com&amp;color=%23000000&amp;ctz=Europe%2FParis" style="border:none; border-radius:10px" width="550" height="550" frameborder="0" scrolling="no"></iframe>
+		<div class="col-md-6 col-sm-12 text-center" id="iframecal"><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=800&amp;wkst=1&amp;hl=fr&amp;bgcolor=%23ffffff&amp;src=nordine.sebih%40gmail.com&amp;color=%23000000&amp;ctz=Europe%2FParis" style="border:none; border-radius:10px" width="550" height="550" frameborder="0" scrolling="no"></iframe>
 		</div>
 	</div>
 </section>
-
-<div class="divider"></div>
 <!-- FIN EVENEMENTS PROCHAINS -->
 
 
@@ -84,9 +81,10 @@
 
 <div class="bg-4">
 	<div class="container">
-		<h2 class="text-center">Galerie photo</h2>
+		<h3 class="text-center">Galerie photo</h3>
 		<div class="row">
-			<div class="col-md-4 col-sm-6">
+			<div class="col-md-4 col-sm-6 col-xs-6">
+
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive" alt="sortie 1"></a></div>
 					<div class="panel-body">
@@ -95,7 +93,9 @@
 					</div>
 				</div><!--/panel-->
 			</div><!--/col-->
-			<div class="col-md-4 col-sm-6">
+
+			<div class="col-md-4 col-sm-6 col-xs-6">
+
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive" alt="sortie 2"></a></div>
 					<div class="panel-body">
@@ -104,7 +104,8 @@
 					</div>
 				</div><!--/panel--> 
 			</div><!--/col-->
-			<div class="col-md-4 col-sm-6">
+
+			<div class="col-md-4 col-sm-6 col-xs-6">
 
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" class="img-responsive" alt="sortie 3"></a></div>
@@ -114,7 +115,8 @@
 					</div>
 				</div><!--/panel--> 
 			</div><!--/col--> 
-			<div class="col-md-4 col-sm-6">
+
+			<div class="col-md-4 col-sm-6 col-xs-6">
 
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" class="img-responsive" alt="sortie 4"></a></div>
@@ -124,7 +126,9 @@
 					</div>
 				</div><!--/panel--> 
 			</div><!--/col--> 
-			<div class="col-md-4 col-sm-6">
+
+			<div class="col-md-4 col-sm-6 col-xs-6">
+
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive" alt="sortie 5"></a></div>
 					<div class="panel-body">
@@ -133,7 +137,9 @@
 					</div>
 				</div><!--/panel--> 
 			</div><!--/col--> 
-			<div class="col-md-4 col-sm-6">
+
+			<div class="col-md-4 col-sm-6 col-xs-6">
+
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive" alt="sortie 6"></a></div>
 					<div class="panel-body">
