@@ -24,9 +24,42 @@ $('#nav .navbar-nav li>a').click(function(){
   $('body,html').animate({scrollTop:posi},700);
 });
 
+/*       Modal      */
+
+/*  btnmember */
 $("#memberBtn").click(function(){
         $("#Modalmember").modal();
       });
+
+/*  btnnewmember */
+$("#newmemberbtn").click(function(){
+        $( "#divaddUsermember" ).slideToggle( "slow" );
+        var newmember = $('#newmemberbtn').val();
+      });
+
+/* btnaddusermember */
+$('#addUsermember').click(function () {
+    var name = $('#name').val();
+    var firstname = $('#firstname').val();
+    var id_section = $('#id_section').val();
+    var totem = $('#totem').val();
+    var infosup = $('#infosup').val();
+    console.log('AjaxStart !');
+    $.ajax({
+        url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+        data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
+        type: "post",
+        cache: false,
+        success: function (data) {
+            $(".status").val(data);
+            console.log('ajaxsuccess !');
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log('ajaxError !');
+        }
+    });
+    
+});
 
 $(".vignets").addClass("load");
 $(".vignets2").addClass("load");

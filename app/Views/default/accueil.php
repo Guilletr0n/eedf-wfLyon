@@ -14,6 +14,7 @@
 
 		<div class="col-sm-3"></div>
 		<div class="col-sm-8">
+
 			<ul class="bar"><h4>Cette pédagogie privilégie :</h4>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> La vie en pleine nature.</li>
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'éducation par l'action et le jeu.</li>
@@ -22,11 +23,10 @@
 				<li><img src="<?= $this->assetUrl('img/feuille.png')?>" alt=""> L'apprentissage de l'engagement et une démarche de progression.</li>
 				<div id="btnsavoirplus" class="text-right">
 					<a href="#" id="savoirplus">En savoir plus</a>
-				</div>
+				</div></li>
 			</ul>
 		</div>
 	</div>
-</div>
 </section>
 <!-- END TEXTE INTRO -->
 
@@ -39,7 +39,7 @@
 <!-- EVENEMENTS PROCHAINS -->
 <div class="divider" id="section2"></div>
 
-<section class="" id="evenements">
+<section class="evenements" id="evenements">
 	<div class="container">
 		<h2 class="text-center">Prochains événements</h2>
 		<div class="col-md-5 col-sm-12">
@@ -47,25 +47,23 @@
 				<div class="trait">
 					<a href="#">
 					<h3>Sortie au parc - 02/04/2017</h3>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur.</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur.</p>
 					</a>
 				</div>
 			</div>
 			<div class="prochainevent">
 				<div class="trait">
 					<a href="#">
-					<h3>Sortie au cimetière - 15/04/2017</h3>
-					<p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+						<h3>Sortie au cimetière - 15/04/2017</h3>
+						<p>Duis aute irure dolor in reprehenderit in voluptate.</p>
 					</a>
 				</div>
 			</div>
 			<div class="prochainevent">
 				<div>
 					<a href="#">
-					<h3>Sortie à la maison de retraite - 22/04/2017</h3>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla.</p>
+						<h3>Sortie à la maison de retraite - 22/04/2017</h3>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla.</p>
 					</a>
 				</div>
 			</div>
@@ -78,6 +76,7 @@
 <div class="divider"></div>
 <!-- FIN EVENEMENTS PROCHAINS -->
 
+
 <?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
 
 <!-- Gallerie -->
@@ -88,7 +87,6 @@
 		<h2 class="text-center">Galerie photo</h2>
 		<div class="row">
 			<div class="col-md-4 col-sm-6">
-
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive" alt="sortie 1"></a></div>
 					<div class="panel-body">
@@ -97,9 +95,7 @@
 					</div>
 				</div><!--/panel-->
 			</div><!--/col-->
-
 			<div class="col-md-4 col-sm-6">
-
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive" alt="sortie 2"></a></div>
 					<div class="panel-body">
@@ -108,7 +104,6 @@
 					</div>
 				</div><!--/panel--> 
 			</div><!--/col-->
-
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
@@ -116,12 +111,9 @@
 					<div class="panel-body">
 						<p>Plongée sous marine</p>
 						<p></p>
-
 					</div>
 				</div><!--/panel--> 
-
 			</div><!--/col--> 
-
 			<div class="col-md-4 col-sm-6">
 
 				<div class="panel panel-default">
@@ -129,48 +121,37 @@
 					<div class="panel-body">
 						<p>New Construction</p>
 						<p></p>
-
 					</div>
 				</div><!--/panel--> 
-
 			</div><!--/col--> 
-
 			<div class="col-md-4 col-sm-6">
-
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive" alt="sortie 5"></a></div>
 					<div class="panel-body">
 						<p>Site Planning</p>
 						<p></p>
-
 					</div>
 				</div><!--/panel--> 
-
 			</div><!--/col--> 
-
 			<div class="col-md-4 col-sm-6">
-
 				<div class="panel panel-default">
 					<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive" alt="sortie 6"></a></div>
 					<div class="panel-body">
 						<p>Churches</p>
 						<p></p>
-
 					</div>
 				</div><!--/panel--> 
-
 			</div><!--/col--> 
-
 		</div><!--/row-->
 	</div><!--/container-->
-</div>
+</div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
 
 <?php endif ?>
 
 <!-- Documents -->
 <div class="divider" id="section4"></div>
-	<div class="container" id="containerdoc">
+<div class="container" id="containerdoc">
 	<div class="row" id="zonedocs1">
 		<h3 class="text-center">Documents d'inscription</h3>
 		<div id="docprincipaux">
@@ -183,13 +164,13 @@
 					<h5><?= $document['docdescription'].'<br />';?></h5>	
 				</div>
 				<?php
-				}
-			} 
-			?>
+			}
+		} 
+		?>
 		</div>
 	</div>
 	<div class="row" id="zonedocs2">
-		<h3 class="text-center">Documents de sortie</h3>
+	<h3 class="text-center">Documents de sortie</h3>
 		<div id="docsecondaires">
 			<?php foreach ($documents as $key => $document) {
 				if($document['id_categorie'] == '2'){ ?>
@@ -200,12 +181,13 @@
 					<h5><?= $document['docdescription'].'<br />';?></h5>
 				</div>
 				<?php
-				}
-			} 
-			?>
+			}
+		} 
+		?>
 		</div>
 	</div>
 </div>
+
 <div class="divider"></div>
 <!-- Fin Documents -->	
 
@@ -215,12 +197,12 @@
 	<div class="container" id="containerassoc">
 		<div class="bar">
 			<div class="row">
-			<h1 class="text-center">L'association EEDF</h1>
+				<h1 class="text-center">L'association EEDF</h1>
 			</div>
 			<div id="textehaut" class="col-md-8">
-			<p>Au fil de l'année ou lors du camp, les enfants et les jeunes découvrent, agissent et vivent des <strong>aventures adaptées à leur âge</strong>. Partir en randonnée, cuisiner un "repas trappeur", dormir à la belle étoile, monter un spectacle, réaliser un four solaire, suivre la piste au trésor, découvrir des ruines mystérieuses, échanger avec des enfants du bout du monde, l'aventure du Scoutisme réserve bien des surprises !</p>
-			<br />
-			<p>En fonction de son âge, on apprend peu à peu à devenir <strong>autonome, responsable et solidaire</strong>. Après les premières découvertes des Lutins (6 à 8 ans), les Louveteaux (8 à 11 ans) s'organisent pour jouer et vivre les premières aventures collectives. <br />
+				<p>Au fil de l'année ou lors du camp, les enfants et les jeunes découvrent, agissent et vivent des <strong>aventures adaptées à leur âge</strong>. Partir en randonnée, cuisiner un "repas trappeur", dormir à la belle étoile, monter un spectacle, réaliser un four solaire, suivre la piste au trésor, découvrir des ruines mystérieuses, échanger avec des enfants du bout du monde, l'aventure du Scoutisme réserve bien des surprises !</p>
+				<br />
+				<p>En fonction de son âge, on apprend peu à peu à devenir <strong>autonome, responsable et solidaire</strong>. Après les premières découvertes des Lutins (6 à 8 ans), les Louveteaux (8 à 11 ans) s'organisent pour jouer et vivre les premières aventures collectives. <br />
 				Ensuite, les Éclés (11 à 15 ans) prennent des responsabilités dans l'équipage et les Aînés (15 à 18 ans) apprennent à s'engager dans des actions et des projets plus ambitieux en faisant l’apprentissage de l’autonomie individuelle et collective.</p>
 				<br />
 				<p>A partir de 17 ans, ceux qui le souhaitent peuvent préparer le BAFA et devenir respons pour avoir le plaisir de faire découvrir les Éclés à des plus jeunes.</p>
@@ -244,19 +226,16 @@
 						<p>Les Eclaireuses et Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
 						<h4><strong>Les EEDF, association reconnue d’utilité publique et complémentaire de l’école publique</strong></h4>
 						<p>Reconnue d’utilité publique et agréée par le ministère de la Jeunesse, de l’Education Nationale et de la Recherche en tant qu’association de jeunesse et d’éducation populaire, l’association est fondée sur le bénévolat et le volontariat. Indépendante et non politique, ouverte à toutes et à tous, sans distinction d’origines ou de croyance, son action complète les autres formes d’éducation (la famille, l’école, les amis, etc.). L’une des forces de l’association est dans sa capacité à remettre en question ses méthodes éducatives pour qu’elles répondent aux attentes de tous les jeunes, appliquant ainsi les principes du scoutisme, tout en tenant compte d’une réalité qui a profondément évolué avec le temps.</p>
-
 						<p>L’association, laïque comme l’Ecole publique, diffuse ses propositions pédagogiques en direction des écoles, collèges et lycées. Elle intervient, en particulier, dans la formation des délégués de classe et l’organisation de sorties et de classes découvertes autour de la thématique de l’éducation à l’environnement.</p>
 					</div>
 				</div>
-			</div>
-			<div class="nocontainer">
-				<div class="bar text-right" id="scoutisme">
-					<div id="textedroite">
-						<h3 class="lobster">Notre scoutisme</h3>
-						<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
-						<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
-						<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
-					</div>
+		<div class="nocontainer">
+			<div class="bar text-right" id="scoutisme">
+				<div id="textedroite">
+					<h3 class="lobster">Notre scoutisme</h3>
+					<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
+					<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
+					<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
 				</div>
 				<div class="bar" id="valeurs">
 					<div id="textegauche">
@@ -268,126 +247,168 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 						</div>
 					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="divider"></div>
+<!-- Fin Qui sommes nous ? -->
+
+<!-- Contact -->
+<div class="divider" id="section6"></div>  
+<div class="container" id="containercontact">
+	<div class="row">
+		<h1 class="text-center bar">Où nous trouver ?</h1>
+	</div>
+	<div class="localisation">
+		<div class="col-md-6 bar" id="carte">
+			<div class="adress">
+				<ul class="text-center">
+					<li><h2 class="text-center">Notre adresse</h2></li>	
+					<li>Eclaireuses et Eclaireurs de France</li>
+					<li>Groupe Jean Maron</li>
+					<li>20, chemin de la Carrière</li>
+					<li>07100 ANNONAY</li>
+					<li><strong><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 06.95.42.63.48</strong></li>
+				</ul>					
+			</div>
+			<div class="text-center">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.8714950085746!2d4.668762215457518!3d45.250391279099055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f513a54634ff03%3A0xfcc636aa6773d1e1!2s20+Chemin+de+la+Carri%C3%A8re%2C+07100+Annonay!5e0!3m2!1sfr!2sfr!4v1496587786295" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="col-md-5 bar" id="contact">
+			<h2 class="text-center">Nous contacter</h2>
+			<form id="formcontact" method="post" action="<?= $this->url('default_contact2') ?>" enctype="multipart/form-data">
+				<div class="form-group">
+					<input type="text" class="form-control well-lg" name="contactname" id="contactname" value="" placeholder="Nom et Prénom" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control well-lg" name="pseudo" id="pseudo" value="" placeholder="Pseudo (si adhérent)">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control well-lg" name="mail" id="mail" value="" placeholder="Email" required>
+				</div>
+				<div class="form-group">
+					<textarea id="commentaire" class="form-control well-lg" name="commentaire" placeholder="Commentaire" required></textarea>
+				</div>
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-success" id="btnsend">Envoyer</button>
+				</div>
+			</form>
+		</div> <!-- class="contact"-->
+	</div> <!-- class="localisation"-->
+</div><!--/wrap-->
+
+<div class="divider"></div>
+<!--Fin Contact -->
+
+<?php $this->stop('main_content') ?>
+
+<?php $this->start('login') ?>
+	<?php if(!isset($w_user)): ?>
+		<li>
+			<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
+		</li>
+		<li>
+			<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
+		</li>
+	<?php endif ?>
+	<?php if($w_user != 0): ?>
+		<li><a href="#">Salut <?= $w_user['username'] ?></a></li>
+		<li><a href="<?= $this->url('admin_deconnexion'); ?>">Deconnexion</a></li>
+	<?php endif ?>
+<?php $this->stop('login') ?>
+
+<?php $this->start('memberspacebtn') ?>
+	<?php if($w_user != 0): ?>
+		<li>
+			<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
+		</li>
+	<?php endif ?>
+<?php $this->stop('memberspacebtn') ?>
+
+<?php $this->start('memberspacemodal') ?>
+	<?php if($w_user != 0): ?>
+	<!-- Modal -->
+	<div class="modal fade" id="Modalmember" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="text-center"><h4 class="modal-title">Gestion des membres</h4></div>
+				</div>
+			<div class="modal-body">
+				<div class="table-responsive">          
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Section</th>
+								<th>Nom</th>
+								<th>Prénom</th>
+								<th>Totem</th>
+								<th>Enregister</th>
+							</tr>
+						</thead>
+						<tbody>
+						<?php //var_dump($listsections[0]['rank']); 
+						foreach ($usermembers as $key => $usermembers) {
+							?> 	
+								<tr>
+									<td><?= $listsections[$usermembers['id_section']-1]['rank']?></td>
+									<td><?= $usermembers['name'] ?></td>
+									<td><?= $usermembers['firstname'] ?></td>
+									<td><?= $usermembers['totem'] ?></td>
+									<td><input type="checkbox" <?= ($usermembers['register']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></td>
+								</tr>
+							<?php
+						}
+						?>
+						</tbody>
+					</table>
+				</div>
+				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
+				<div class="status"></div>
+				<div class="container-fluid" id="divaddUsermember" style="display: none;">
+		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
+					    <div class="form-group">
+					      <label for="name">Nom</label>
+					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">
+					    </div>
+					    <div class="form-group">
+					      <label for="firstname">Prénom</label>
+					      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom" name="firstname">
+					    </div>
+					    <div class="form-group">
+					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
+                        	<?= '<select class="form-control" id="id_section" name="id_section">';
+                        	foreach ($listsections as $id => $listsections) {
+                            ?>
+                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <?php
+                        	}
+                        	?>
+                    		</select>
+                    	</div>
+					    <div class="form-group">
+					      <label for="totem">Totem</label>
+					      <input type="text" class="form-control" id="totem" name="totem" placeholder="Votre Totem" name="pwd">
+					    </div>
+					    <div class="form-group">
+					    	 <label for="firstname">Informations supplémentaires</label>
+	                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
+	                    </div>
+					 </form>
+					 		<div class="text-center"><button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button></div>
 				</div>
 			</div>
-
-		<div class="divider"></div>
-		<!-- Fin Qui sommes nous ? -->
-
-	<!-- Contact -->
-	<div class="divider" id="section6"></div>  
-	<div class="container" id="containercontact">
-		<div class="row">
-				<h1 class="text-center bar">Où nous trouver ?</h1>
-				</div>
-				<div class="localisation">
-					<div class="col-md-6 bar" id="carte">
-						<div class="adress">
-							<ul class="text-center">
-								<h2 class="text-center">Notre adresse</h2>	
-								<li>Eclaireuses et Eclaireurs de France</li>
-								<li>Groupe Jean Maron</li>
-								<li>20, chemin de la Carrière</li>
-								<li>07100 ANNONAY</li><br />
-								<li><strong><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 06.95.42.63.48</strong></li>
-							</ul>					
-						</div>
-						<div class="text-center">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.8714950085746!2d4.668762215457518!3d45.250391279099055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f513a54634ff03%3A0xfcc636aa6773d1e1!2s20+Chemin+de+la+Carri%C3%A8re%2C+07100+Annonay!5e0!3m2!1sfr!2sfr!4v1496587786295" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-						</div>
-						<div class="col-md-5 bar" id="contact">
-							<h2 class="text-center">Nous contacter</h2>
-							<form id="" method="post" action="<?= $this->url('default_contact2') ?>" enctype="multipart/form-data">
-								<div class="form-group">
-									<input type="text" class="form-control well-lg" name="name" id="name" value="" placeholder="Nom et Prénom" required>
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control well-lg" name="pseudo" id="pseudo" value="" placeholder="Pseudo (si adhérent)">
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control well-lg" name="mail" id="mail" value="" placeholder="Email" required>
-								</div>
-								<div class="form-group">
-									<textarea id="commentaire" class="form-control well-lg" name="commentaire" placeholder="Commentaire" required></textarea>
-								</div>
-								<div class="form-group text-center">
-									<button type="submit" class="btn btn-success" id="btnsend">Envoyer</button>
-								</div>
-							</form>
-						</div> <!-- class="contact"-->
-					</div> <!-- class="localisation"-->
-				</div>
-
-				<!--Fin Contact -->
-
-			</div><!--/wrap-->
-			<?php $this->stop('main_content') ?>
-
-			<?php $this->start('login') ?>
-			<?php if(!isset($w_user)): ?>
-				<li>
-					<a href="<?= $this->url('userManagement_inscription') ?>">S'inscrire</a>
-				</li>
-				<li>
-					<a href="<?= $this->url('userManagement_connexion') ?>">Se connecter</a>
-				</li>
-			<?php endif ?>
-			<?php if($w_user != 0): ?>
-				<li><a href="#">Salut <?= $w_user['username'] ?></a></li>
-				<li><a href="<?= $this->url('admin_deconnexion'); ?>">Deconnexion</a></li>
-			<?php endif ?>
-			<?php $this->stop('login') ?>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+		</div>
+	</div>
+	<?php endif ?>
+<?php $this->stop('memberspacemodal') ?>
 
 
-			<?php $this->start('memberspacebtn') ?>
-			<?php if($w_user != 0): ?>
-				<li>
-					<button type="button" class="btn btn-info navbar-btn" id="memberBtn">Espace membre</button>
-					<li>
-					<?php endif ?>
-					<?php $this->stop('memberspacebtn') ?>
-
-					<?php $this->start('memberspacemodal') ?>
-					<?php if($w_user != 0): ?>
-						<!-- Modal -->
-						<div class="modal fade" id="Modalmember" role="dialog">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Espace Scout</h4>
-									</div>
-									<div class="modal-body">
-										<div class="container">
-											<button class="btn btn-info navbar-btn" data-toggle="modal" data-target="#myModal">Ajouter un membre</button>
-										</div>
-										<div class="container">
-											<h3>Vos membres</h3>
-											<ul class="list-inline" >
-												<li><a href="#">Nom</a></li>
-												<li><a href="#">Prénom</a></li>
-												<li><a href="#">Totem</a></li>
-												<li><a href="#">section</a></li>
-											</ul>
-											<ul class="list-inline">
-												<li><a href="#">Name1</a></li>
-												<li><a href="#">Firstame1</a></li>
-												<li><a href="#">Totem1</a></li>
-												<li><a href="#">Responsable</a></li>
-											</ul>
-											<ul class="list-inline">
-												<li><a href="#">Poubelle</a></li>
-												<li><a href="#">Patrik</a></li>
-												<li><a href="#">TOTEM2</a></li>
-												<li><a href="#">Ainé</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					<?php endif ?>
-					<?php $this->stop('memberspacemodal') ?>

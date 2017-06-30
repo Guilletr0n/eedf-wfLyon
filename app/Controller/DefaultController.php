@@ -6,12 +6,21 @@ use \W\Controller\Controller;
 use DocumentController;
 use \Model\DocumentsModel as document;
 use \PHPMailer;
+use \Model\MembersModel as members;
+use \Model\SectionsModel as sections;
+use \W\Security\AuthentificationModel as auth;
 
 class DefaultController extends Controller{
 	protected $docModel;
+	private $MembersModel;
+	private $SectionsModel;
+	private $auth;
 
 	public function __construct(){
 		$this->docModel = new document;
+		$this->MembersModel = new members;
+		$this->SectionsModel = new sections;
+		$this->AuthentificationModel = new auth;
 	}
 	/**
 	 * Page d'accueil par défaut
@@ -71,8 +80,22 @@ class DefaultController extends Controller{
 
 	public function accueil()
 	{
-		$this->show('default/accueil');
-
+		//récupération des informations utilisateur
+		$id_user = $this->AuthentificationModel->getLoggedUser();
+		$listsections = $this->SectionsModel->findAll('id');
+		//print_r($id_user['id']);
+		//récupération des information documents 
+		$data = $this->docModel->findAll();
+		if(is_numeric($id_user['id'])){
+		//récupération des membres en fonction d'un utilisateur
+		$usermembers = $this->MembersModel->userMembers($id_user['id']);
+		//print_r($usermembers);
+		//$member = $this->MembersModel->findAll('id_section');
+ 		//$listsections = $this->SectionsModel->findAll('id');
+ 		$this->show('default/accueil',['usermembers' => $usermembers,'listsections' => $listsections,'documents' => $data]);
+		}else{
+		$this->show('default/accueil',['documents' => $data]);
+		}
 	}
 
 	public function quisommesnous()

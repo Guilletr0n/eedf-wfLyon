@@ -118,13 +118,13 @@ h1 {
    top: 0;
    z-index:10;
    -webkit-transition: all .6s ease-in-out;
-     opacity: 0.8;
+  opacity: 0.8;
 
 }
 
 
 .affix a {
-  color: #5c7070 !important;
+  color: #506262;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -146,7 +146,6 @@ h1 {
   
 /* customize nav style */
 .navbar-custom {
-    background-color: #008080;
 	  font-weight:700;
     text-transform:uppercase;
     border-width:0;
