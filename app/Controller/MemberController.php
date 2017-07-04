@@ -41,7 +41,7 @@ class MemberController extends Controller {
 		//print_r($id_user['id']);
 		//récupération des membres en fonction d'un utilisateur
 		$id_section = 1;
-		//$register = 1;
+		$register = 1;
 		$usermembers = $this->MembersModel->userMembers($id_user['id']);
 		//print_r($usermembers);
 		$usersectionmembers = $this->MembersModel->usersectionMembers($id_user['id'],$id_section,$register);
@@ -101,6 +101,19 @@ class MemberController extends Controller {
 		//on redirige vers la route member_addMembers
 		$this->redirectToRoute('member_addMember');
 	  }
+	}
+
+	public function addUsermember(){
+		//Si mehod GET mettre à jours les informations du modal						 
+		//Si method POST envoyer les données à la bdd
+		$user = $this->AuthentificationModel->getLoggedUser();
+		$_POST['id_user'] = $user['id'];
+		$_POST['register'] =0;
+		$this->MembersModel->insert($_POST);
+		$usermembers = $this->MembersModel->userMembers($user['id']);
+		$this->showJson($usermembers);
+		//on redirige vers la route member_addMembers
+		//$this->redirectToRoute('default_accueil');
 	}
 
 	public function deleteMembers($id){

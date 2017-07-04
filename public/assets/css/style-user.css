@@ -12,76 +12,52 @@ font-family: 'Patrick Hand SC', cursive;
 font-family: 'Arya', sans-serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Playfair Display', serif;
+
+Couleurs:
+vert clair : #c6e07d
+gris foncé : #44525e
+gris clair : #f4f4f4
 */
 
+header{
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.30), 
+  rgba(0, 0, 0, 0.30)
+  ),url('../img/eedfindex.png') center center no-repeat;
+  //border: 15px solid #fff;
+  background-size: cover;
+  text-align: center;
+  height: 300px;
+}
 
-
-nav ul.nav>li>a:hover{
-  color: green!important; /* adapte la couleur */
-  background-color: none;
-}
-nav .container-fluid button{
-  background: transparent;
-}
-nav.navbar{
-  background: none;
-  border: none;
-}
-nav.navbar .collapse ul li a{
-  color: #fff;
-  font-size: 16px;
-  line-height: 70px;
-  font-family: 'Arya', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-nav.navbar .collapse ul li a#contactnav{
-  margin-right: 150px;
-}
-nav.navbar .collapse ul li a:hover{
-  background: #f2f2f2;
-}
-nav ul.nav li a img{
-  width: 70px;
+header a img{
+  float: left;
+  margin-top: 50px;
+  margin-left: -30px;
+  width: 160px;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
-nav ul.nav li a img:hover{
+header a img:hover{
   -webkit-transform:scale(1.15);
   transform:scale(1.15);
   cursor: pointer;
 }
 
-
-section#entetepage{
-  background: linear-gradient(
-  rgba(0, 0, 0, 0.30), 
-  rgba(0, 0, 0, 0.30)
-  ),url('../img/eedfindex.png') center center no-repeat;
-  border: 15px solid #fff;
-  background-size: cover;
-  text-align: center;
-  height: 380px;
-}
-
-
-#entetepage h1{
-  margin: 25px 0px 30px 0px;
+header h1{
+  margin: -140px 0px 30px 0px;
   font-size: 60px;
   color: #fff;
   font-family: 'Lobster', cursive;  
   text-shadow: #000 1px 1px 3px;
 }
-#entetepage h3{
-  margin: 20px 0px 50px 0px;
-}
-#entetepage h2,
-#entetepage h3{
+header h2{
   color: #fff;
   font-family: 'Lobster', cursive;
   word-spacing: 6px;
   letter-spacing: 1px;
   text-shadow: #000 1px 1px 3px;
+  margin-bottom: 50px;
 
 }
 
@@ -112,13 +88,38 @@ section#entetepage{
     opacity: 1;
 }
 
+/* navbar */
 
+div.navbar{
+  background: #a6d65c;
+  border: #abbaba;
+}
+.navbar .collapse ul li a{
+  color: #506262;
+  font-size: 16px;
+  font-family: 'Arya', sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.navbar .collapse ul li a:hover{
+  color: #abbaba;
+}
+button#memberBtn{
+  background: #44525e;
+  border: none; 
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
+
+button#memberBtn:hover{
+   background: #66717a;
+}
 
 /* footer */
 
 footer{
   clear: both;
-  margin-top: 100px;
+  margin-top: 50px;
   background: #e1e1e1;
   font-size: 14px;
   color: #777777;
@@ -145,7 +146,6 @@ footer a:hover{
 /* PAGE ACCUEIL */
 
 section#texteintro{
-  margin-top: 50px; 
   font-family: 'Playfair Display', serif;
 }
 section#texteintro h2.textdesc{
@@ -185,7 +185,6 @@ section#texteintro #paperplane img{
   margin-top: 40px;
 }
 
-
 /* Bouton 'en savoir plus' */
 section#texteintro ul #btnsavoirplus{
   margin: 20px 180px 20px 0px;
@@ -205,63 +204,56 @@ section#texteintro ul a:hover{
   color: #000;
 }
 
-  /* Carousel */
 
-section#carousel h2{
-  font-family: 'Lobster', cursive;
-  color: #bcdd61;
-  text-shadow: 1px 1px 2px black;
-  font-size: 35px;
-  letter-spacing: 1.5px;
-  margin: 40px 0px 40px 160px;
-}
-section#carousel .carousel-inner{
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px grey;
-}
-
-img.scoutanim{
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-
-}
-img.scoutanim:hover{
-  -webkit-transform:scale(1.1);
-  transform:scale(1.1);
-  cursor: pointer;
-}
-  /* Calendrier */
+  /* événements accueil */
 
 section#evenements{
-  margin-top: 100px;
+  margin-top: 10px;
 }
 section#evenements h2{
-  font-family: 'Lobster', cursive;
-  color: #bcdd61;
-  text-shadow: 1px 1px 2px black;
-  font-size: 35px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
   letter-spacing: 1.5px;
-  margin: 20px 0px 40px 200px;
+  margin: 20px 0px 40px 0px;
 }
-section#evenements #prochainevent{
-  width: 610px;
+section#evenements .prochainevent{
+  width: auto;
   height: auto;
-  background-color: #f4f2e6;
-  margin-left: 60px;
-  border-radius: 10px;
-  border: 1px outset #ddd;
-  padding: 10px 15px 0px 15px;
+  background-color: #f4f4f4;
+  margin: 20px 40px 20px 40px;
+  border-radius: 5px;
+  border: 1px outset #eee;
+  box-shadow: 1px 1px 8px #ccc;
+  padding: 5px 15px 0px 15px;
   font-family: 'Alegreya Sans SC', sans-serif;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
-section#evenements #prochainevent p{
+section#evenements .prochainevent a{
+  text-decoration: none;
+}
+section#evenements .prochainevent a h3{
+  color: black;
+}
+section#evenements .prochainevent:hover{
+  -webkit-transform:scale(1.08);
+  transform:scale(1.08);
+ 
+}
+section#evenements .prochainevent p{
   margin-bottom: 33px;
   font-size: 15px;
 }
-section#evenements #prochainevent .trait{
-  border-bottom: 1px dashed #565656;
-  border-width: 1.3px;
-}
 
+/* GALLERIE ACCUEIL */
+
+.bg-4 h3{
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 1.5px;
+  margin-bottom: 35px;
+}
 
 /* PAGE DOCUMENTS */
 
@@ -289,7 +281,7 @@ section#evenements #prochainevent .trait{
 }
 #zonedocs2{
   border: 2px outset #b8cc84;
-  background: #bcdd61;
+  background: #c6e07d;
   margin-top: 80px;
   padding-bottom: 40px;
   border-radius: 10px;
@@ -330,7 +322,7 @@ section#evenements #prochainevent .trait{
   font-size: 16.5px;
 }
 #containerassoc aside{
-  background: #bcdd61;
+  background: #c6e07d;
   color: #000;
   box-shadow: 4px 4px 10px grey;
 }
@@ -376,7 +368,7 @@ section#evenements #prochainevent .trait{
   border-bottom-left-radius: 5px;
   width: 87.5%;
   float: right;
-  box-shadow: -11px -16px 4px #bcdd61;
+  box-shadow: -11px -16px 4px #c6e07d;
 }
 .nocontainer #scoutisme #textedroite{
   margin-right: 190px;
@@ -385,7 +377,7 @@ section#evenements #prochainevent .trait{
 .nocontainer #valeurs{
   margin-top: 70px;
   margin-bottom: 90px;
-  background: #bcdd61;
+  background: #c6e07d;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 87.5%;
@@ -426,10 +418,168 @@ section#evenements #prochainevent .trait{
   .nocontainer #scoutisme #textedroite p{
   text-align: justify;
   }
+
+  header a img{
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 33.33%;
+  }
+  header h1{
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  header h2{
+    margin-top: -15px;
+    font-size: 20px;
+    line-height: 33px;
+  }
+  #texteintro h2{
+    font-size: 16px;
+    margin-top: -30px;
+  }
+  #texteintro h3{
+    font-size: 12px!important;
+    margin-bottom: 0px!important;
+  }
+  section#texteintro h3.divider_line-down::after {
+  height: 42px;
+  margin-top: 45px;
+  }
+  #texteintro ul{
+    margin-left: -40px!important;
+    margin-top: 70px!important;
+    margin-bottom: 0px!important;
+  }
+  #texteintro ul h4{
+    margin-left: 0px!important;
+    font-size: 14px;
+  }
+  #texteintro ul li{
+    font-size: 13px!important;
+    text-align: justify;
+    line-height: 20px!important;
+  }
+  #texteintro #btnsavoirplus a{
+    font-size: 12px;
+  }
+  #texteintro #btnsavoirplus{
+    width: 100%!important;
+  }
+  // section.bg-1 {
+  //  height: 100px!important;
+  // }
+  section#evenements{
+    padding-top: 0px!important;
+  }
+  section#evenements h2,
+  .bg-4 h3{
+    font-size: 20px!important;
+  }
+  section#evenements h3{
+    font-size: 18px!important;
+  }
+  section#evenements p{
+    font-size: 13px!important;
+  }
+  section#evenements .prochainevent{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  section#evenements #iframecal{
+    margin-left: -20px!important;
+    margin-right: -20px!important;
+  }
+  section#evenements iframe{
+    margin-top: 20px;
+    width: 100%!important;
+    height: 400px!important;
+  }
+  .bg-4 .panel-thumbnail{
+    width: auto!important;
+  }
+  .bg-4 .panel-body{
+    height: 50px!important;
+    font-size: 10px;
+  }
+
+
+  #quisommesnous h1,
+  #containercontact h1{
+    font-size: 30px;
+  }
+  #quisommesnous p{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  #containerassoc #branches h3,
+  .nocontainer #textedroite h3,
+  .nocontainer #textegauche h3{
+    font-size: 22px;
+  }
+  #containerassoc #branches ul{
+    margin-left: -20px;
+    margin-right: 10px;
+  }
+  #containerassoc #branches p{
+    font-size: 13px;
+    letter-spacing: 0px;
+    text-align: justify;
+  }
+  #quisommesnous #textebas h3{
+    font-size: 22px;
+  }
+  #quisommesnous #textebas h4{
+    font-size: 16px;
+  }
+  #quisommesnous #textebas p,
+  .nocontainer #textedroite p,
+  .nocontainer #textegauche li{
+    font-size: 13px;
+    letter-spacing: 0px;
+  }
+  .nocontainer #textedroite{
+    width: 90%!important;
+  }
+  .nocontainer #textegauche ul{
+    margin-left: -35px;
+  }
+  #containercontact .adress ul{
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  #containercontact h2{
+    font-size: 22px;
+  }
+  #containercontact .adress li{
+    font-size: 16px;
+  }
+  #containercontact iframe{
+    width: 100%!important;
+  }
+  #containercontact #contact{
+    margin: 0px -20px 0px -20px;
+  }
+  #containercontact #contact form{
+    margin-top: 5px;
+    padding: 10px;
+  }
+  #containercontact #contact button{
+    margin-bottom: -25px;
+    padding: 4px 8px;
+  }
+  footer .row{
+    font-size: 9px;
+    text-align: right;
+  }
 }
 /** Responsive pour les tablettes **/
 /** ajouter and min-width car sinon les critères ne seront pas pris en compte, mais mangé par le précédent **/
 @media screen and (min-width: 481px) and (max-width: 780px) {
+  
+  .bg-4 .panel-thumbnail{
+    width: auto!important;
+  }
+
   #containerassoc #textehaut{
   margin-bottom: 60px;
   }
@@ -444,6 +594,9 @@ section#evenements #prochainevent .trait{
   }
   .nocontainer #scoutisme #textedroite p{
   text-align: justify;
+  }
+  #containercontact iframe{
+    width: 100%!important;
   }
 }
 
@@ -480,7 +633,7 @@ section#evenements #prochainevent .trait{
 
 #containercontact h1{
   font-family: 'Alegreya Sans SC', sans-serif; 
-  margin: 50px 0px 80px 0px;
+  margin: 50px 0px 60px 0px;
 }
 #containercontact h2{
   font-family: 'Lobster', cursive;
@@ -502,7 +655,7 @@ section#evenements #prochainevent .trait{
   margin-left: 40px;
 }
 .localisation #contact form{
-  background: #bcdd61;;
+  background: #44525e;
   border: 1px outset #b8cc84;
   border-radius: 10px;
   color: #fff;
@@ -518,13 +671,14 @@ section#evenements #prochainevent .trait{
   margin-top: 40px;
 }
 .localisation #contact form button{
-  background: #7c7c7c;
-  border: #809462;
+  background: #c6e07d;
+  color: #44525e;
+  border: 2px solid #c6e07d;
 }
 .localisation #contact form button:hover{
   background: #fff;
-  border: #809462;
-  color: #809462;
+  border: 2px solid #c6e07d;
+  color: #44525e;
 }
 
 

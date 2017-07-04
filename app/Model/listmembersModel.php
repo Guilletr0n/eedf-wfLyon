@@ -5,7 +5,7 @@ use \W\Model\ConnectionModel;
 
 class ListMembersModel extends \W\Model\Model{
 
-	//Retourne la liste des id membres inscrit à un évènement
+	//Retourne la liste des membres inscrit à un évènement en fonction de l'id_event
     public function listMembers($id_event){
     if (!is_numeric($id_event)){
         return false;

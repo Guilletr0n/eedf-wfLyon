@@ -10,7 +10,7 @@
 			<label>Username</label>
 		</div>
 		<div class="group">
-			<input type="email" name="password"><span class="highlight"></span><span class="bar"></span>
+			<input type="password" name="password"><span class="highlight"></span><span class="bar"></span>
 			<label>Password</label>
 		</div>
 		<button id="buttonSubmit" ype="button" class="button buttonBlue">Se Connecter
