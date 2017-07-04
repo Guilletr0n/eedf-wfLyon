@@ -91,11 +91,11 @@ header h2{
 /* navbar */
 
 div.navbar{
-  background: #a6d65c;
+  background: #75ad9d;
   border: #abbaba;
 }
 .navbar .collapse ul li a{
-  color: #506262;
+  color: #fff;
   font-size: 16px;
   font-family: 'Arya', sans-serif;
   text-transform: uppercase;
@@ -268,7 +268,7 @@ section#evenements .prochainevent p{
   color: #34495e;
 }
 #containerdoc h3{
-  padding-top: 30px;
+  padding-top: 20px;
   font-family: 'Lobster', cursive;
   font-size: 26px;
 }
@@ -280,19 +280,23 @@ section#evenements .prochainevent p{
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 #zonedocs2{
-  border: 2px outset #b8cc84;
-  background: #c6e07d;
-  margin-top: 80px;
-  padding-bottom: 40px;
-  border-radius: 10px;
+  height: 100%;
+  background:url('../img/docbg.png') center center no-repeat;
+  background-size: cover;
+  //background: #c6e07d;
+  margin-top: 65px;
+  padding-bottom: 50px;
   color: #34495e;
-  margin-left: 10%;
-  margin-right: 10%;
-  box-shadow: 3px 3px 10px grey;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 #zonedocs2 h3{
   color: #fff;
   text-shadow: #000 1px 1px 3px;
+}
+#zonedocs2 h4,
+#zonedocs2 h5{
+  color: black;
 }
 #zonedocs2 a i{
   color: #fff;
@@ -322,9 +326,15 @@ section#evenements .prochainevent p{
   font-size: 16.5px;
 }
 #containerassoc aside{
-  background: #c6e07d;
+  background: #75ad9d;
   color: #000;
   box-shadow: 4px 4px 10px grey;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+#containerassoc aside:hover{
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
 }
 #containerassoc #branches{
   border: 1px dashed #fff;
@@ -368,23 +378,40 @@ section#evenements .prochainevent p{
   border-bottom-left-radius: 5px;
   width: 87.5%;
   float: right;
-  box-shadow: -11px -16px 4px #c6e07d;
+  border-top: 1px solid #7ca599;
+  box-shadow: -3px -3px 5px #7ca599;
 }
 .nocontainer #scoutisme #textedroite{
-  margin-right: 190px;
+  margin-right: 180px;
   margin-left: 15px
 }
 .nocontainer #valeurs{
   margin-top: 70px;
   margin-bottom: 90px;
-  background: #c6e07d;
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.25), 
+  rgba(0, 0, 0, 0.25)
+  ),url('../img/valeurs.jpg') center center no-repeat;
+  background-size: cover;
+  //background: #c6e07d;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 87.5%;
   float: left;
-  color: #000;
+  color: #fff;
+  text-shadow: #000 1px 1px 3px;
   text-align: justify;
-  box-shadow: 11px -16px 3px #e6e6e6;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  box-shadow: 5px -3px 5px #d1d1d1;
+}
+.nocontainer #valeurs:hover{
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.40), 
+  rgba(0, 0, 0, 0.40)
+  ),url('../img/valeurs.jpg') center center no-repeat;
+  background-size: cover;
+  //background: #c6e07d;
 }
 .nocontainer #valeurs h3{
   color: #fff;
@@ -392,6 +419,12 @@ section#evenements .prochainevent p{
 }
 .nocontainer #valeurs ul li{
   list-style: none!important;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.nocontainer #valeurs ul li:hover{
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
 }
 .nocontainer #valeurs ul li img{
   width: 19px;
@@ -401,28 +434,92 @@ section#evenements .prochainevent p{
   margin-right: 15px;
 }
 
-/** Responsive pour les mobiles en version paysage **/
-@media screen and (max-width: 480px) {
-  #containerassoc #textehaut{
-  margin-bottom: 40px;
-  }
-  #containerassoc #textebas{
-  margin-top: 80px;
-  }
-  .nocontainer #valeurs #textegauche{
-  margin-left: 20px;
-  }
-  .nocontainer #scoutisme #textedroite{
-  margin-right: 60px;
-  }
-  .nocontainer #scoutisme #textedroite p{
-  text-align: justify;
-  }
 
+
+/* PAGE CONTACT */
+
+#containercontact h1{
+  font-family: 'Alegreya Sans SC', sans-serif; 
+  margin: 50px 0px 60px 0px;
+}
+#containercontact h2{
+  font-family: 'Lobster', cursive;
+  margin-bottom: 15px;
+}
+.localisation #carte{
+  margin-bottom: 70px;
+}
+.localisation .adress ul{
+  margin-bottom: 50px;
+}
+.localisation .adress ul li{
+  list-style: none;
+  font-size: 18px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #34495e;
+}
+.localisation #contact{
+  margin-left: 40px;
+}
+.localisation #contact form{
+  background: url('../img/branchebg.png') left center no-repeat;
+  background-size: cover;
+  border: 1px outset #b8cc84;
+  border-radius: 10px;
+  color: #fff;
+  margin: 50px 10px 0px 10px;
+  padding: 50px 25px 0px 25px;
+  box-shadow: 4px 4px 10px grey;
+}
+.localisation #contact form .form-group{
+  margin-bottom: 30px;
+}
+.localisation #contact form textarea#commentaire{
+  padding-bottom: 102px;
+  margin-top: 40px;
+}
+.localisation #contact form button{
+  background: #c6e07d;
+  color: #44525e;
+  border: 2px solid #c6e07d;
+}
+.localisation #contact form button:hover{
+  background: #fff;
+  border: 2px solid #c6e07d;
+  color: #44525e;
+}
+
+
+/* PAGE PHOTOS */
+
+
+.clear      { clear:both; }
+.photo-link   { padding:5px; margin:5px; border:1px solid #ccc; display:block; width:150px; float:left; }
+.photo-link:hover { border-color:#999; }
+
+#zoneblanchephoto #photogallery a i{
+  font-size: 150px;
+  display: flex;
+  
+}
+#photoprincipaux #btnphoto,
+#photosecondaires #btnphoto{
+  padding-bottom: 60px;
+}
+#zonenoirephoto h3,
+#zoneblanchephoto h3{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
+/******** RESPONSIVE **********/
+
+/** Responsive pour les mobiles **/
+@media screen and (max-width: 480px) {
   header a img{
     width: 100px;
     margin-top: 10px;
-    margin-left: 33.33%;
+    margin-left: 35%;
   }
   header h1{
     margin-top: 20px;
@@ -502,9 +599,36 @@ section#evenements .prochainevent p{
     font-size: 10px;
   }
 
-
+  #containerdoc a i.fa{
+  font-size: 60px;
+  }
+  #section4 h4{
+    font-size: 11px;
+    margin-bottom: -20px!important;
+  }
+  #containerdoc h3{
+    padding-top: 10px;
+    font-size: 22px;
+  }
+  // #zonedocs2{
+  //   margin-left: -15px;
+  //   margin-right: -16px;
+  //   border: 1px solid #b8cc84;
+  //   background: #c6e07d;
+  //   margin-top: 40px;
+  //   padding-bottom: 20px;
+  //   border-radius: 0px;
+  //   color: #34495e;
+  //   box-shadow: 0px 0px 0px grey;
+  // }
+  #zonedocs2{
+  height: 100%;
+  background:url('../img/docbg.png') center center no-repeat;
+  background-size: cover;
+  }
   #quisommesnous h1,
   #containercontact h1{
+    margin-top: 20px;
     font-size: 30px;
   }
   #quisommesnous p{
@@ -531,6 +655,44 @@ section#evenements .prochainevent p{
   #quisommesnous #textebas h4{
     font-size: 16px;
   }
+   #containerassoc #textehaut{
+  margin-bottom: 40px;
+  }
+  #containerassoc #textebas{
+  margin-top: 80px;
+  }
+  .nocontainer #valeurs #textegauche{
+  margin-left: 20px;
+  }
+  .nocontainer #scoutisme #textedroite p{
+  text-align: justify;
+  }
+  .nocontainer #scoutisme{
+  margin-top: 30px;
+  margin-bottom: 0px;
+  border-radius: 3px;
+  width: 100%;
+  box-shadow: 0px 0px 0px #c6e07d;
+}
+.nocontainer #scoutisme #textedroite{
+  margin-right: 0px;
+  margin-left: 15px
+}
+.nocontainer #valeurs{
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.45), 
+  rgba(0, 0, 0, 0.45)
+  ),url('../img/valeurs.jpg') center center no-repeat;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  width: 100%;
+  color: #fff;
+  text-align: justify;
+  box-shadow: 0px 0px 0px #e6e6e6;
+  text-shadow:#000 1px 1px 3px;
+  border-radius: 0px;
+}
+
   #quisommesnous #textebas p,
   .nocontainer #textedroite p,
   .nocontainer #textegauche li{
@@ -539,9 +701,10 @@ section#evenements .prochainevent p{
   }
   .nocontainer #textedroite{
     width: 90%!important;
+    margin-right: -20px;
   }
   .nocontainer #textegauche ul{
-    margin-left: -35px;
+    margin-left: -50px;
   }
   #containercontact .adress ul{
     margin-left: -30px;
@@ -561,6 +724,7 @@ section#evenements .prochainevent p{
   }
   #containercontact #contact form{
     margin-top: 5px;
+    border-radius: 3px;
     padding: 10px;
   }
   #containercontact #contact button{
@@ -575,7 +739,22 @@ section#evenements .prochainevent p{
 /** Responsive pour les tablettes **/
 /** ajouter and min-width car sinon les critères ne seront pas pris en compte, mais mangé par le précédent **/
 @media screen and (min-width: 481px) and (max-width: 780px) {
-  
+  header a img{
+    width: 100px;
+    margin-top: 10px;
+    display: block;
+    margin-left: 43%;
+  }
+  header h1{
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  header h2{
+    margin-top: -15px;
+    font-size: 20px;
+    line-height: 33px;
+  }
+
   .bg-4 .panel-thumbnail{
     width: auto!important;
   }
@@ -600,7 +779,31 @@ section#evenements .prochainevent p{
   }
 }
 
-@media screen and (min-width: 781px) and (max-width: 1200px) {
+@media screen and (min-width: 781px) and (max-width: 990px) {
+  header a img{
+    width: 100px;
+    margin-top: 10px;
+  }
+  header h1{
+    margin-top: 0px;
+    font-size: 45px;
+  }
+  header h2{
+    margin-top: -15px;
+    font-size: 28px;
+    line-height: 50px;
+  }
+
+  .nocontainer #scoutisme #textedroite{
+    margin-right: 120px
+  }
+  .nocontainer #valeurs #textegauche{
+    margin-left: 100px
+  }
+  
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
   
   #containerassoc #textehaut{
   margin-bottom: 10px;
@@ -626,79 +829,4 @@ section#evenements .prochainevent p{
   #containerassoc #textebas{
   margin-top: 500px;
   }
-}
-
-
-/* PAGE CONTACT */
-
-#containercontact h1{
-  font-family: 'Alegreya Sans SC', sans-serif; 
-  margin: 50px 0px 60px 0px;
-}
-#containercontact h2{
-  font-family: 'Lobster', cursive;
-  margin-bottom: 15px;
-}
-.localisation #carte{
-  margin-bottom: 70px;
-}
-.localisation .adress ul{
-  margin-bottom: 50px;
-}
-.localisation .adress ul li{
-  list-style: none;
-  font-size: 18px;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  color: #34495e;
-}
-.localisation #contact{
-  margin-left: 40px;
-}
-.localisation #contact form{
-  background: #44525e;
-  border: 1px outset #b8cc84;
-  border-radius: 10px;
-  color: #fff;
-  margin: 50px 10px 0px 10px;
-  padding: 50px 25px 0px 25px;
-  box-shadow: 4px 4px 10px grey;
-}
-.localisation #contact form .form-group{
-  margin-bottom: 30px;
-}
-.localisation #contact form textarea#commentaire{
-  padding-bottom: 102px;
-  margin-top: 40px;
-}
-.localisation #contact form button{
-  background: #c6e07d;
-  color: #44525e;
-  border: 2px solid #c6e07d;
-}
-.localisation #contact form button:hover{
-  background: #fff;
-  border: 2px solid #c6e07d;
-  color: #44525e;
-}
-
-
-/* PAGE PHOTOS */
-
-
-.clear      { clear:both; }
-.photo-link   { padding:5px; margin:5px; border:1px solid #ccc; display:block; width:150px; float:left; }
-.photo-link:hover { border-color:#999; }
-
-#zoneblanchephoto #photogallery a i{
-  font-size: 150px;
-  display: flex;
-  
-}
-#photoprincipaux #btnphoto,
-#photosecondaires #btnphoto{
-  padding-bottom: 60px;
-}
-#zonenoirephoto h3,
-#zoneblanchephoto h3{
-  font-family: 'Fjalla One', sans-serif;
 }
