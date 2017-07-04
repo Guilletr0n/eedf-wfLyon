@@ -1,6 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,300i,400,400i,500,700i,800|Arya:400,700|Bubbler+One|El+Messiri:400,500,600,700|Lobster|Patrick+Hand+SC|Yesteryear');
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,700,900');
 /*
 font-family: 'Bubbler One', sans-serif;
 font-family: 'El Messiri', sans-serif;
@@ -9,61 +10,75 @@ font-family: 'Alegreya Sans SC', sans-serif;
 font-family: 'Yesteryear', cursive;
 font-family: 'Patrick Hand SC', cursive;
 font-family: 'Arya', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
 */
 
-header{
+
+
+nav ul.nav>li>a:hover{
+  color: green!important; /* adapte la couleur */
+  background-color: none;
+}
+nav .container-fluid button{
+  background: transparent;
+}
+nav.navbar{
+  background: none;
+  border: none;
+}
+nav.navbar .collapse ul li a{
+  color: #fff;
+  font-size: 16px;
+  line-height: 70px;
+  font-family: 'Arya', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+nav.navbar .collapse ul li a#contactnav{
+  margin-right: 150px;
+}
+nav.navbar .collapse ul li a:hover{
+  background: #f2f2f2;
+}
+nav ul.nav li a img{
+  width: 70px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+nav ul.nav li a img:hover{
+  -webkit-transform:scale(1.15);
+  transform:scale(1.15);
+  cursor: pointer;
+}
+
+
+section#entetepage{
   background: linear-gradient(
   rgba(0, 0, 0, 0.30), 
   rgba(0, 0, 0, 0.30)
   ),url('../img/eedfindex.png') center center no-repeat;
+  border: 15px solid #fff;
   background-size: cover;
   text-align: center;
-}
-// header:hover{
-//    background:  linear-gradient(
-//   rgba(0, 0, 0, 0.20), 
-//   rgba(0, 0, 0, 0.20)
-//   )url('img/eedfindex.png') center center no-repeat;
-// }
-
-nav.navbar{
-background: none;
-border: none;
-}
-nav.navbar .collapse ul li a{
-  color: white;
-  font-size: 17px;
-
-}
-nav.navbar .collapse ul li a:hover{
-  background: #f2f2f2;
-
+  height: 380px;
 }
 
-header a#logo img{
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
 
-}
-header a#logo img:hover{
-  -webkit-transform:scale(1.2);
-  transform:scale(1.2);
-  cursor: pointer;
-}
-header h1{
-  margin: 10px 0px 30px 0px;
+#entetepage h1{
+  margin: 25px 0px 30px 0px;
   font-size: 60px;
   color: #fff;
   font-family: 'Lobster', cursive;  
   text-shadow: #000 1px 1px 3px;
 }
-header h3{
+#entetepage h3{
   margin: 20px 0px 50px 0px;
 }
-header h2,
-header h3{
+#entetepage h2,
+#entetepage h3{
   color: #fff;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Lobster', cursive;
   word-spacing: 6px;
   letter-spacing: 1px;
   text-shadow: #000 1px 1px 3px;
@@ -98,17 +113,6 @@ header h3{
 }
 
 
-nav ul.nav>li>a{
-    text-shadow: #000 1px 1px 3px;
-}
-nav ul.nav>li>a:hover{
-    color: green!important; /* adapte la couleur */
-    text-shadow: none;
-}
-nav .container-fluid button{
-  background: #fff;
-}
-
 
 /* footer */
 
@@ -142,20 +146,37 @@ footer a:hover{
 
 section#texteintro{
   margin-top: 50px; 
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
-section#texteintro h4.textdesc{
-  margin: 20px 0px 20px 50px;
+section#texteintro h2.textdesc{
+  font-weight: bolder;
+}
+section#texteintro h3.textdesc{
+  margin: 10px 0px 20px 0px;
   font-size: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 35px;
 }
 
+section#texteintro h3.divider_line-down::after {
+  content: "";
+  width: 1.5px;
+  background-color: #e86c40;
+  height: 70px;
+  position: absolute;
+  left: calc(50% - 0.5px);
+  margin-top: 60px;
+}
+section#texteintro ul h4{
+  margin-left: 100px;
+}
 section#texteintro ul{
-  margin: 30px 0px 80px 20px;
+  margin: 110px 0px 80px 20px;
 }
 section#texteintro ul li{
   list-style: none;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 section#texteintro ul li img{
   width: 18px;
@@ -164,33 +185,21 @@ section#texteintro #paperplane img{
   margin-top: 40px;
 }
 
-section#texteintro #bloctext ul{
-  border: 3px solid #bcdd61;
-  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16); 
-  
-}
-section#texteintro #bloctext ul h4{
-  margin-bottom: 15px;
-}
-section#texteintro #bloctext ul li{
-  margin-bottom: 5px;
-  font-size: 17px;
-}
 
 /* Bouton 'en savoir plus' */
-section#texteintro #bloctext ul #btnsavoirplus{
-  margin: 20px 0px 20px 0px;
+section#texteintro ul #btnsavoirplus{
+  margin: 20px 180px 20px 0px;
 }
-section#texteintro #bloctext ul a{
+section#texteintro ul a{
   border: 2px solid #bcdd61;
   border-radius: 10px;
   background: #bcdd61;
   color: black;
   text-decoration: none;
-  padding: 5px 5px 5px 5px;
-  font-size: 17px;
+  padding: 3px 4px 4px 4px;
+  font-size: 13px;
 }
-section#texteintro #bloctext ul a:hover{
+section#texteintro ul a:hover{
   border: 2px solid #bcdd61;
   background: #fff;
   color: #000;
