@@ -48,7 +48,7 @@
 		['GET|POST', '/admin/delete-members/[:id]', 'Member#deleteMembers', 'member_deleteMembers'],
 		['GET', '/usermembers', 'Member#usermembers', 'member_usermembers'],
 		['GET|POST', '/addUsermember', 'Member#addUsermember', 'member_addUsermember'],
-		
+
     // photos
 		['GET|POST', '/admin/photos', 'photo#showPhotos', 'photo_photos'],
 		['GET|POST', '/admin/add-photos', 'photo#addPhotos', 'photo_add_photos'],
@@ -62,5 +62,5 @@
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
 		['GET', '/events', 'Default#events', 'default_events'],
 		['POST', '/contact2', 'Default#contact2', 'default_contact2'],
-		['GET', '/testemail', 'userManagement#testEmail', 'dev_testEmail'],
+		['GET', '/testemail/[:email]', 'userManagement#testEmail', 'dev_testEmail'],
 	);
