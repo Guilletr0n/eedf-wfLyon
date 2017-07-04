@@ -53,10 +53,14 @@ $('#addUsermember').click(function () {
         type: "post",
         cache: false,
         success: function (data) {
-            $(".status").val(data);
             $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
             $( "#divaddUsermember" ).slideToggle( "slow" );
-            $("#tbodymember").remove();
+            $(".infomember").remove();
+            $("#tbodymember").append("<tr class='infomember'></tr>");
+            var tbodymember = $("#tbodymember");
+              $.each(data, function(k,v){
+                tbodymember.append('<tr class="infomember"><td>'+v.id_section+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+v.register+'</td></tr>');
+              });
             console.log('ajaxsuccess !');
         },
         error: function (xhr, ajaxOptions, thrownError) {
