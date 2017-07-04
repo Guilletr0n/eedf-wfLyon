@@ -126,6 +126,28 @@ class UserManagementController extends Controller {
       }
     }
   }
+  function askNewPassword(){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      $this->show('user/newPassword');
+    }else{
+      $data = ['email'=>$_POST['email']];
+      $user = $this->currentUser->search($data);
+      $user_id = $user[0]['id'];
+      $this->show('dev/output',['email'=>$_POST['email'],'result'=>$user[0]['id']]);
+    }
+  }
+
+  function resetPassword($id, $token){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+
+      $this->show('user/resetPassword',['id'=>$id,'token'=>$token]);
+    } else {
+      $data = ['password'=>$this->auth->hashPassword($_POST['password'])];
+
+      //$this->currentUser->update($data);
+      //$this->show('user/resetPassword'),['msg'=>];
+    }
+  }
 
   public function connexion(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -189,7 +211,7 @@ class UserManagementController extends Controller {
 
 // UTILITIES
 
-private function sendEmail($address = '', $userId = '',$token = '', $subject = ''){
+private function sendEmail($address = '', $userId = '',$token = '', $subject = '', $content = ''){
   // set email server
   $mailAddress = $this->mailServer->getHost();
   $user = $this->mailServer->getUser();

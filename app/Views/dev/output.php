@@ -1,11 +1,8 @@
 <?php
-var_dump($user);
+
 $inputs = array(
-                  $user,
-                  $address,
-                  $password,
                   $email,
-                  $sent
+                  $result,
                 );
 
 foreach ($inputs as $key => $value) {
