@@ -357,19 +357,6 @@
 							</tr>
 						</thead>
 						<tbody id="tbodymember">
-						<?php //var_dump($listsections[0]['rank']); 
-						foreach ($usermembers as $key => $usermembers) {
-							?> 	
-								<tr class="infomember">
-									<td><?= $listsections[$usermembers['id_section']-1]['rank']?></td>
-									<td><?= $usermembers['name'] ?></td>
-									<td><?= $usermembers['firstname'] ?></td>
-									<td><?= $usermembers['totem'] ?></td>
-									<td><input type="checkbox" <?= ($usermembers['register']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></td>
-								</tr>
-							<?php
-						}
-						?>
 						</tbody>
 					</table>
 				</div>
