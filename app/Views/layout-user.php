@@ -8,20 +8,23 @@
 	<meta name="Content-Langage" content="fr">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 
+	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">	
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/bootstrap.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-user.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/styles.css') ?>" />
-	<link rel="shortcut icon" href="<?= $this->assetUrl('img/logo2.png') ?>"> 
-	<!-- Latest compiled and minified CSS -->
-	
-
+	<!-- logo de l'onglet-->
+	<link rel="shortcut icon" href="<?= $this->assetUrl('img/logo-onglet1.png') ?>"> 
 </head>
 <body>
 	<header class="masthead">
 		<div class="container">
 			<div class="text-center" id="logohaut">
 				<a href="<?= $this->url('default_accueil') ?>" id="logo">
-					<img src="<?= $this->assetUrl('img/logo2.png') ?>" alt="">
+					<img src="<?= $this->assetUrl('img/logo2.png') ?>" alt="logo EEDF">
 				</a>
 			</div>
 		</div>
@@ -85,15 +88,15 @@
  	<footer>
  		<div class="footer container text-center">
 			<div class="row">
-				<div class="col-sm-5">
+				<div class="col-sm-5 col-xs-6">
 					&copy; EEDF Annonay 2017
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-1">
 					<div id="retourhaut">
 					 	<a href="#logohaut"><span class="glyphicon glyphicon-chevron-up"></span></a>
 					</div>
 				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-5 col-xs-4">
 					<a href="<?= $this->url('default_contact') ?>">Nous contacter</a>
 				</div>
 

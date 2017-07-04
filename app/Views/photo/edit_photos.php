@@ -1,4 +1,4 @@
-<?php $this->layout('layout-user-management', ['title'=>'Modification photos']); ?>
+<?php $this->layout('layout-user-management', ['title'=>'Modification des photos']); ?>
 
 <?php $this->start('sidenav_content') ?>
 

@@ -1,4 +1,4 @@
-<?php $this->layout('layout-user-management', ['title'=>'Ajouter les Photos']); ?>
+<?php $this->layout('layout-user-management', ['title'=>'Ajout de Photos']); ?>
 
 <?php $this->start('sidenav_content') ?>
 
@@ -39,7 +39,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="container-fluid">
-<h3 id="titrephoto" class="text-center">Ajouter les Photos</h3>
+<h3 id="titrephoto" class="text-center">Ajout de Photos</h3>
 <div class="col-md-3"></div>
 <div id="formulairephoto">
 
