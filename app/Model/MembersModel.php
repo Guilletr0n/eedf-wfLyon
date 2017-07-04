@@ -10,13 +10,14 @@ class MembersModel extends \W\Model\Model{
         if (!is_numeric($id_user)){
                 return false;
         }
-        $sql = 'SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user';
+        //$sql = 'SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user';
+        $sql = 'SELECT m.id_section, m.name, m.firstname, m.totem, m.infosup, m.register, s.rank FROM members m INNER JOIN sections s ON m.id_section = s.id WHERE id_user = :id_user';
         $sth = $this->dbh->prepare($sql);
         $sth->bindValue(':id_user', $id_user);
         $sth->execute();
         $result = $sth->fetchAll();
         return  $result;
-        //$sql = 'SELECT `id`, `id_section`, `id_user`, `name`, `firstname`, `totem`, `infosup`, `register` FROM `members` WHERE id_user = 1
+        //$sql = 'SELECT m.id_section, m.name, m.firstname, m.totem, m.infosup, m.register, s.rank FROM members m INNER JOIN sections s ON m.id_section = s.id WHERE id_user = :id_user'
     }
 
 
