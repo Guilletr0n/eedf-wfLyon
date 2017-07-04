@@ -26,6 +26,8 @@ $('#nav .navbar-nav li>a').click(function(){
 
 /*       Modal      */
 
+/* Load modal content*/
+
 /*  btnmember */
 $("#memberBtn").click(function(){
         $("#Modalmember").modal();
@@ -52,10 +54,14 @@ $('#addUsermember').click(function () {
         cache: false,
         success: function (data) {
             $(".status").val(data);
+            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
+            $( "#divaddUsermember" ).slideToggle( "slow" );
+            $("#tbodymember").remove();
             console.log('ajaxsuccess !');
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log('ajaxError !');
+            $("#alertinfo").append("<div class='alert alert-danger fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Error !</strong>  Un problème à été rencontré.</div>");
         }
     });
     
