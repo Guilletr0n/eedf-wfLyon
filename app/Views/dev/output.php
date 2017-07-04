@@ -2,6 +2,10 @@
 var_dump($user);
 $inputs = array(
                   $user,
+                  $address,
+                  $password,
+                  $email,
+                  $sent
                 );
 
 foreach ($inputs as $key => $value) {

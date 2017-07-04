@@ -178,26 +178,26 @@ class UserManagementController extends Controller {
     $this->show('admin/manageUsers');
   }
 
-  public function testEmail(){
-    $address = $this->mailServer->getAddress();
+  public function testEmail($email){
+    $address = $this->mailServer->getHost();
     $user = $this->mailServer->getUser();
     $password = $this->mailServer->getPassword();
-    $this->sendEmail('gonzalezdecastro.guillermo@gmail.com');
-    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'message'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com')]);
 
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'email'=>$email,'sent'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com')]);
+//$this->sendEmail($_GET['email'])
   }
 
 // UTILITIES
 
 private function sendEmail($address = '', $userId = '',$token = '', $subject = ''){
   // set email server
-  $mailAddress = $this->mailServer->getAddress();
+  $mailAddress = $this->mailServer->getHost();
   $user = $this->mailServer->getUser();
   $password = $this->mailServer->getPassword();
 
   $this->mail->isSMTP();
   $this->mail->isHTML(true);
-  $this->mail->Host = $this->mailServer->getAddress();
+  $this->mail->Host = $this->mailServer->getHost();
   $this->mail->Port = 465;
   $this->mail->SMTPAuth = true;
   $this->mail->SMTPSecure = 'ssl';
