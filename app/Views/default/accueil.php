@@ -346,7 +346,7 @@
 				</div>
 			<div class="modal-body">
 				<div class="table-responsive">          
-					<table class="table">
+					<table class="table" id="tablemember">
 						<thead>
 							<tr>
 								<th>Section</th>
@@ -356,11 +356,11 @@
 								<th>Enregister</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="tbodymember">
 						<?php //var_dump($listsections[0]['rank']); 
 						foreach ($usermembers as $key => $usermembers) {
 							?> 	
-								<tr>
+								<tr class="infomember">
 									<td><?= $listsections[$usermembers['id_section']-1]['rank']?></td>
 									<td><?= $usermembers['name'] ?></td>
 									<td><?= $usermembers['firstname'] ?></td>
@@ -373,8 +373,9 @@
 						</tbody>
 					</table>
 				</div>
+				<div id="alertinfo">
+				</div>
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
-				<div class="status"></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
 		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
 					    <div class="form-group">
