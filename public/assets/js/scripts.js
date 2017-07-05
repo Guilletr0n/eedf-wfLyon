@@ -80,7 +80,7 @@ $('#addUsermember').click(function () {
         type: "post",
         cache: false,
         success: function (data) {
-            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
+            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Le membre : "+data.firstname+" "+data.name+" a été ajouté avec succès.</div>");
             $( "#divaddUsermember" ).slideToggle( "slow" );
             loadmember();
             console.log('ajaxsuccess !');
