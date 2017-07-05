@@ -139,7 +139,7 @@ class UserManagementController extends Controller {
         //récupération des membres en fonction d'un utilisateur
         $usermembers = $this->MembersModel->userMembers($user);
         $data = $this->docModel->findAll();
-        $this->show('default/accueil',['user'=>$_SESSION['user'],'usermembers' => $usermembers,'listsections' => $listsections,'documents' => $data]);
+        $this->show('default/accueil',['user'=>$_SESSION['user'],'listsections' => $listsections,'documents' => $data]);
         //$this->show('dev/output');
       }else{
         $_SESSION['error'] = "Identifiant ou mot de passe incorrect";

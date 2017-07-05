@@ -92,7 +92,7 @@ class DefaultController extends Controller{
 		//print_r($usermembers);
 		//$member = $this->MembersModel->findAll('id_section');
  		//$listsections = $this->SectionsModel->findAll('id');
- 		$this->show('default/accueil',['usermembers' => $usermembers,'listsections' => $listsections,'documents' => $data]);
+ 		$this->show('default/accueil',['listsections' => $listsections,'documents' => $data]);
 		}else{
 		$this->show('default/accueil',['documents' => $data]);
 		}

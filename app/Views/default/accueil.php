@@ -352,7 +352,7 @@
 								<th>Nom</th>
 								<th>Prénom</th>
 								<th>Totem</th>
-								<th>Enregister</th>
+								<th>Validation</th>
 							</tr>
 						</thead>
 						<tbody id="tbodymember">
@@ -374,10 +374,10 @@
 					    </div>
 					    <div class="form-group">
 					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
-                        	<?= '<select class="form-control" id="id_section" name="id_section">';
+                        	<?= '<select class="form-control" id="id_section" name="id_section"><option id="id_section" name="id_section" disabled selected required>-- Sélectionner votre section --</option>';
                         	foreach ($listsections as $id => $listsections) {
                             ?>
-                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
                             <?php
                         	}
                         	?>

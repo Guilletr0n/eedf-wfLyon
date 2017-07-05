@@ -39,9 +39,9 @@ function loadmember(){
             var tbodymember = $("#tbodymember");
               $.each(data, function(k,v){
                 if(v.register==1){
-                  registericon="<span class='glyphicon glyphicon-ok'></span>";
+                  registericon="<span class='glyphicon glyphicon-ok' data-toggle='tooltip' data-placement='right' title='Confirmer, vous pouvez participer aux évènements'></span>";
                 }else{
-                  registericon="<span class='glyphicon glyphicon-remove'></span>";
+                  registericon="<span class='glyphicon glyphicon-remove'data-toggle='tooltip' data-placement='right' title='En attende de confirmation, vous ne pouvez pas encore participer aux évènements'></span>";
                 }
                 tbodymember.append('<tr class="infomember"><td>'+v.rank+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+registericon+'</td></tr>');
               });
@@ -80,7 +80,7 @@ $('#addUsermember').click(function () {
         type: "post",
         cache: false,
         success: function (data) {
-            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
+            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Le membre : "+data.firstname+" "+data.name+" a été ajouté avec succès.</div>");
             $( "#divaddUsermember" ).slideToggle( "slow" );
             loadmember();
             console.log('ajaxsuccess !');

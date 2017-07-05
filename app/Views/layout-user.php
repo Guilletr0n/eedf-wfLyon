@@ -59,7 +59,7 @@
 						</li>
 						<?php if($w_user !== null){?>
 						<li class="<?php echo ($this->url('photo_users_photos') == $_SERVER['REQUEST_URI']) ? 'active' : ''; ?>">
-							<a href="<?= $this->url('photo_users_photos') ?>">Photos</a>
+							<a href="#section3">Photos</a>
 						</li>
 						<?php
 					}
