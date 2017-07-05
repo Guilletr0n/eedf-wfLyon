@@ -218,11 +218,11 @@
 						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les lutins/louveteaux (6-11 ans) :</h4>
 							<p>Les années lutins/louveteaux sont celles des premiers départs sans les parents, l'apprentissage de la vie en collectivité et de la découverte du monde qui nous entoure.</p></li>
 
-							<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
-								<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
-							</ul>
-						</div>
-					</aside>
+						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
+							<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
+					</ul>
+				</div>
+			</aside>
 				</div>
 				<div class="bar">
 					<div id="textebas"> 
@@ -234,17 +234,16 @@
 						<p>L’association, laïque comme l’Ecole publique, diffuse ses propositions pédagogiques en direction des écoles, collèges et lycées. Elle intervient, en particulier, dans la formation des délégués de classe et l’organisation de sorties et de classes découvertes autour de la thématique de l’éducation à l’environnement.</p>
 					</div>
 				</div>
-	</div>
-		<div class="nocontainer">
-			<div class="bar text-right" id="scoutisme">
-				<div id="textedroite">
-					<h3 class="lobster">Notre scoutisme</h3>
-					<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
-					<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
-					<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
+			<div class="nocontainer">
+				<div class="bar text-right" id="scoutisme">
+					<div id="textedroite">
+						<h3 class="lobster">Notre scoutisme</h3>
+						<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
+						<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
+						<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
+					</div>
 				</div>
-			</div>
-			<div class="bar" id="valeurs">
+				<div class="bar" id="valeurs">
 					<div id="textegauche">
 						<ul><h3 class="lobster">Nos valeurs</h3>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
@@ -252,9 +251,10 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
-						</div>
+					</div>
 				</div>
-		</div>
+			</div>
+	</div>
 </div>
 
 <div class="divider"></div>
