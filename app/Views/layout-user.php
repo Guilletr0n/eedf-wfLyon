@@ -29,7 +29,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-12 text-center">
+		<div class="col-md-12 col-sm-12 text-center">
 			<h1 class="vignets">Bienvenue</h1>
 			<h2 class="vignets2">Sur le site des Éclaireuses et Éclaireurs d'Annonay</h2>
 		</div>
