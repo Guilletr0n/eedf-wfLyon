@@ -72,7 +72,7 @@
 	</div>
 </section>
 <!-- FIN EVENEMENTS PROCHAINS -->
-
+<div class="divider"></div>
 
 <?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
 
@@ -152,7 +152,7 @@
 	</div><!--/container-->
 </div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
-
+<div class="divider"></div>
 <?php endif ?>
 
 <!-- Documents -->
@@ -194,6 +194,7 @@
 	</div>
 </div>
 <!-- Fin Documents -->	
+<div class="divider"></div>
 
 <!-- Qui sommes nous ? -->
 <div class="divider" id="section5"></div>
@@ -253,7 +254,6 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 						</div>
 				</div>
-			</div>
 		</div>
 </div>
 
