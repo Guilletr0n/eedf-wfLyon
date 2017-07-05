@@ -15,5 +15,4 @@ RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule .? - [L]
 
 # Réécrit tout le reste à public/index.php.
-#RewriteRule .? %{ENV:W_BASE}/index.php [L]
-RewriteRule .? %{ENV:W_BASE}/../app/Views/default/accueil.php [L]
+RewriteRule .? %{ENV:W_BASE}/index.php [L]
