@@ -1,9 +1,7 @@
 <?php
 
 $inputs = array(
-                  $email,
-                  $result,
-                  $url
+                  $msg
                 );
 
 foreach ($inputs as $key => $value) {

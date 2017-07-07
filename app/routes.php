@@ -36,7 +36,7 @@
 		['GET','/listUsers','userManagement#listUsers','guillermo_userManagement_list'],
 		['GET|POST','/pass','userManagement#askNewPassword','userManagement_ask_new_password'],
 		['GET|POST','/nouvelle-motdepasse','userManagement#resetPassword','userManagement_reset_password'],
-
+		['GET','/checkPassword','userManagement#checkPassword','userManagement_check_password'],
 
 		//documents
 		['GET|POST', '/admin/documents', 'Document#documents', 'document_documents'],

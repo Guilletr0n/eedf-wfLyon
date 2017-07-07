@@ -135,23 +135,37 @@ class UserManagementController extends Controller {
       $data = ['email'=>$_POST['email']];
       $user = $this->currentUser->search($data);
       $user_id = $user[0]['id'];
-      $url = $this->generateTokenUrl($user[0]['id'], $this->utils->randomString(),'userManagement_reset_password');
+      $data = ['token'=>$this->utils->randomString()];
+      $this->currentUser->update($data,$user[0]['id']);
+      $url = $this->generateTokenUrl($user[0]['id'], $data['token'],'userManagement_reset_password');
       $content = "Clique ici pour changer votre mot de passe ".$url;
-      $this->show('dev/output',['email'=>$_POST['email'],'result'=> $user[0]['id'],'url'=>$content]);
+      $sent = $this->sendMail($_POST['email'], 'Reinitialiser votre mot de passe', $content);
+      $this->show('dev/output',['email'=>$_POST['email'],'result'=> $user[0]['id'],'data'=>$data, 'sent'=>$sent]);
     }
   }
 
-  function resetPassword($id, $token){
+  function resetPassword(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
-      $this->show('user/resetPassword',['id'=>$id,'token'=>$token]);
+      $this->show('user/resetPassword',['id'=>$_GET['id'],'token'=>$_GET['token']]);
     } else {
       $data = ['password'=>$this->auth->hashPassword($_POST['password'])];
-
-      //$this->currentUser->update($data);
-      //$this->show('user/resetPassword'),['msg'=>];
+      $user = $this->currentUser->find($_POST['id']);
+      if($user['token']==$_POST['token']){
+        $this->currentUser->update($data,$_POST['id']);
+      } else {
+        $this->show('user/resetPassword',['msg'=>'Erreur']);
+      }
+      $this->show('user/resetPassword',['msg'=>'ok!']);
     }
   }
-
+  function checkPassword(){
+    if($this->auth->isValidLoginInfo($_GET['email'], $_GET['password'])){
+      $msg='passwords is correct';
+    } else {
+      $msg='password is not correct';
+    }
+    $this->show('dev/output',['msg'=>$msg]);
+  }
   public function connexion(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('user/connexion');
@@ -248,6 +262,29 @@ private function sendEmail($address = '', $subject = '', $content = ''){
 }
 
 private function sendMail($address = '', $subject='', $content=''){
+  // set email server
+  $mailAddress = $this->mailServer->getHost();
+  $user = $this->mailServer->getUser();
+  $password = $this->mailServer->getPassword();
+  // Email Settings
+  $this->mail->isSMTP();
+  $this->mail->isHTML(true);
+  $this->mail->Host = $this->mailServer->getHost();
+  $this->mail->Port = 465;
+  $this->mail->SMTPAuth = true;
+  $this->mail->SMTPSecure = 'ssl';
+  $this->mail->Username  = $this->mailServer->getUser();
+  $this->mail->Password = $this->mailServer->getPassword();
+  $this->mail->SetFrom($this->mailServer->getUser(),'EEDF Annonay');
+  $this->mail->addAddress($address);
+  // content & subject
+  $this->mail->Subject = $subject;
+  $this->mail->Body = $content;
+  if (!$this->mail->send()) {
+       return "Mailer Error: " . $this->mail->ErrorInfo . ' ' .$mailAddress.' '.$address;
+  } else {
+     return "Message sent!";
+  }
 
 }
 
