@@ -32,6 +32,7 @@ function loadmember(){
   var registericon="";
    $.ajax({
         url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+        //url: 'http://eedfannonay.fr/public/addUsermember',
         type: "get",
         cache: false,
         success: function (data) {
@@ -39,9 +40,9 @@ function loadmember(){
             var tbodymember = $("#tbodymember");
               $.each(data, function(k,v){
                 if(v.register==1){
-                  registericon="<span class='glyphicon glyphicon-ok'></span>";
+                  registericon="<span class='glyphicon glyphicon-ok' data-toggle='tooltip' data-placement='right' title='Confirmer, vous pouvez participer aux évènements'></span>";
                 }else{
-                  registericon="<span class='glyphicon glyphicon-remove'></span>";
+                  registericon="<span class='glyphicon glyphicon-remove'data-toggle='tooltip' data-placement='right' title='En attende de confirmation, vous ne pouvez pas encore participer aux évènements'></span>";
                 }
                 tbodymember.append('<tr class="infomember"><td>'+v.rank+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+registericon+'</td></tr>');
               });
@@ -73,24 +74,45 @@ $('#addUsermember').click(function () {
     var totem = $('#totem').val();
     var infosup = $('#infosup').val();
     var registericon="";
+    var valid = 0;
     console.log('AjaxStart !');
-    $.ajax({
-        url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-        data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
-        type: "post",
-        cache: false,
-        success: function (data) {
-            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
-            $( "#divaddUsermember" ).slideToggle( "slow" );
-            loadmember();
-            console.log('ajaxsuccess !');
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log('ajaxError !');
-            $("#alertinfo").append("<div class='alert alert-danger fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Error !</strong>  Un problème à été rencontré.</div>");
-        }
-    });
-    
+    $('#membername').removeClass("has-error has-feedback");
+    $('#memberfirstname').removeClass("has-error has-feedback");
+    $('#membersection').removeClass("has-error has-feedback");
+    if (name.length<2){
+      $('#membername').addClass("has-error has-feedback");
+      valid=1;
+    }
+    if (firstname.length<2){
+      $('#memberfirstname').addClass("has-error has-feedback");
+      valid=1;
+    }
+    if($.isNumeric(id_section)){
+    }else{
+      $('#membersection').addClass("has-error has-feedback");
+      valid=1;
+    }
+    console.log("valid =".valid);
+    console.log("id_section =".id_section);
+    if(valid==0){
+      $.ajax({
+          url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+          //url: 'http://eedfannonay.fr/public/addUsermember',
+          data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
+          type: "post",
+          cache: false,
+          success: function (data) {
+              $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Le membre : "+data.firstname+" "+data.name+" a été ajouté avec succès.</div>");
+              $( "#divaddUsermember" ).slideToggle( "slow" );
+              loadmember();
+              console.log('ajaxsuccess !');
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+              console.log('ajaxError !');
+              $("#alertinfo").append("<div class='alert alert-danger fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Error !</strong>  Un problème à été rencontré.</div>");
+          }
+      });
+    }
 });
 
 $(".vignets").addClass("load");

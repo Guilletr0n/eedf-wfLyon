@@ -72,7 +72,7 @@
 	</div>
 </section>
 <!-- FIN EVENEMENTS PROCHAINS -->
-
+<div class="divider"></div>
 
 <?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
 
@@ -102,7 +102,7 @@
 						<p>Parc naturel</p>
 						<p></p>
 					</div>
-				</div><!--/panel-->
+				</div><!--/panel--> 
 			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
@@ -113,8 +113,8 @@
 						<p>Plongée sous marine</p>
 						<p></p>
 					</div>
-				</div><!--/panel-->
-			</div><!--/col-->
+				</div><!--/panel--> 
+			</div><!--/col--> 
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -124,8 +124,8 @@
 						<p>New Construction</p>
 						<p></p>
 					</div>
-				</div><!--/panel-->
-			</div><!--/col-->
+				</div><!--/panel--> 
+			</div><!--/col--> 
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -135,8 +135,8 @@
 						<p>Site Planning</p>
 						<p></p>
 					</div>
-				</div><!--/panel-->
-			</div><!--/col-->
+				</div><!--/panel--> 
+			</div><!--/col--> 
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -146,13 +146,13 @@
 						<p>Churches</p>
 						<p></p>
 					</div>
-				</div><!--/panel-->
-			</div><!--/col-->
+				</div><!--/panel--> 
+			</div><!--/col--> 
 		</div><!--/row-->
 	</div><!--/container-->
 </div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
-
+<div class="divider"></div>
 <?php endif ?>
 
 <!-- Documents -->
@@ -167,11 +167,11 @@
 					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?>
 					<h4><?= $document['docname'].'<br />';?> </h4>
-					<h5><?= $document['docdescription'].'<br />';?></h5>
+					<h5><?= $document['docdescription'].'<br />';?></h5>	
 				</div>
 				<?php
 			}
-		}
+		} 
 		?>
 		</div>
 	</div>
@@ -188,18 +188,13 @@
 				</div>
 				<?php
 			}
-		}
+		} 
 		?>
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
-
-<div class="divider"></div>
-<!-- Fin Documents -->
-=======
 <!-- Fin Documents -->	
->>>>>>> refs/remotes/origin/master
+<div class="divider"></div>
 
 <!-- Qui sommes nous ? -->
 <div class="divider" id="section5"></div>
@@ -223,15 +218,15 @@
 						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les lutins/louveteaux (6-11 ans) :</h4>
 							<p>Les années lutins/louveteaux sont celles des premiers départs sans les parents, l'apprentissage de la vie en collectivité et de la découverte du monde qui nous entoure.</p></li>
 
-							<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
-								<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
-							</ul>
-						</div>
-					</aside>
+						<li><h4><img src="<?= $this->assetUrl('img/puce.png')?>" alt=""> Les éclaireurs/éclaireuses (11-15 ans) :</h4>
+							<p>Les "Éclés" correspondent à l’âge ou l'on commence à prendre des responsabilités et à créer des projets. Les Éclés sont organisés  en équipage, chacun y a un rôle à tenir, coordinateur, secrétaire, etc.</p></li>
+					</ul>
+				</div>
+			</aside>
 				</div>
 				<div class="bar">
-					<div id="textebas">
-						<h3 class="lobster">Présentation du mouvement EEDF</h3>
+					<div id="textebas"> 
+						<h3 class="lobster">Présentation du mouvement EEDF</h3>		 
 						<h4><strong>Les EEDF, un mouvement de scoutisme laïque</strong></h4>
 						<p>Les Eclaireuses et Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
 						<h4><strong>Les EEDF, association reconnue d’utilité publique et complémentaire de l’école publique</strong></h4>
@@ -239,17 +234,16 @@
 						<p>L’association, laïque comme l’Ecole publique, diffuse ses propositions pédagogiques en direction des écoles, collèges et lycées. Elle intervient, en particulier, dans la formation des délégués de classe et l’organisation de sorties et de classes découvertes autour de la thématique de l’éducation à l’environnement.</p>
 					</div>
 				</div>
-	</div>
-		<div class="nocontainer">
-			<div class="bar text-right" id="scoutisme">
-				<div id="textedroite">
-					<h3 class="lobster">Notre scoutisme</h3>
-					<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
-					<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
-					<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
+			<div class="nocontainer">
+				<div class="bar text-right" id="scoutisme">
+					<div id="textedroite">
+						<h3 class="lobster">Notre scoutisme</h3>
+						<p>Notre association a pour objet de former des citoyens volontaires, désireux et capables de s’intégrer de façon active dans la société de demain ; des citoyens capables de lutter individuellement contre toute forme d’asservissement, d’intégrisme, de racisme ; des citoyens s’engageant à promouvoir les valeurs de liberté, d’égalité et de fraternité dans une dimension tant nationale qu’internationale.</p>
+						<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
+						<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
+					</div>
 				</div>
-			</div>
-			<div class="bar" id="valeurs">
+				<div class="bar" id="valeurs">
 					<div id="textegauche">
 						<ul><h3 class="lobster">Nos valeurs</h3>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
@@ -257,17 +251,17 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En faisant le choix de relations égalitaires, en permettant à chacun avec ses droits et ses devoirs de participer à l’élaboration de projets communs et de prendre des responsabilités, en vivant la citoyenneté, c’est la volonté d’être une école de démocratie.</li>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
-						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+	</div>
 </div>
 
 <div class="divider"></div>
 <!-- Fin Qui sommes nous ? -->
 
 <!-- Contact -->
-<div class="divider" id="section6"></div>
+<div class="divider" id="section6"></div>  
 <div class="container" id="containercontact">
 	<div class="row">
 		<h1 class="text-center bar">Nous trouver</h1>
@@ -276,13 +270,13 @@
 		<div class="col-md-6 bar" id="carte">
 			<div class="adress">
 				<ul class="text-center">
-					<li><h2 class="text-center">Notre adresse</h2></li>
+					<li><h2 class="text-center">Notre adresse</h2></li>	
 					<li>Eclaireuses et Eclaireurs de France</li>
 					<li>Groupe Jean Maron</li>
 					<li>20, chemin de la Carrière</li>
 					<li>07100 ANNONAY</li>
 					<li><strong><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 06.95.42.63.48</strong></li>
-				</ul>
+				</ul>					
 			</div>
 			<div class="text-center">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.8714950085746!2d4.668762215457518!3d45.250391279099055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f513a54634ff03%3A0xfcc636aa6773d1e1!2s20+Chemin+de+la+Carri%C3%A8re%2C+07100+Annonay!5e0!3m2!1sfr!2sfr!4v1496587786295" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -350,40 +344,18 @@
 						<div class="text-center"><h4 class="modal-title">Gestion des membres</h4></div>
 				</div>
 			<div class="modal-body">
-<<<<<<< HEAD
-				<div class="table-responsive">
-					<table class="table">
-=======
 				<div class="table-responsive">          
 					<table class="table" id="tablemember">
->>>>>>> refs/remotes/origin/master
 						<thead>
 							<tr>
 								<th>Section</th>
 								<th>Nom</th>
 								<th>Prénom</th>
 								<th>Totem</th>
-								<th>Enregister</th>
+								<th>Validation</th>
 							</tr>
 						</thead>
-<<<<<<< HEAD
-						<tbody>
-						<?php //var_dump($listsections[0]['rank']);
-						foreach ($usermembers as $key => $usermembers) {
-							?>
-								<tr>
-									<td><?= $listsections[$usermembers['id_section']-1]['rank']?></td>
-									<td><?= $usermembers['name'] ?></td>
-									<td><?= $usermembers['firstname'] ?></td>
-									<td><?= $usermembers['totem'] ?></td>
-									<td><input type="checkbox" <?= ($usermembers['register']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></td>
-								</tr>
-							<?php
-						}
-						?>
-=======
 						<tbody id="tbodymember">
->>>>>>> refs/remotes/origin/master
 						</tbody>
 					</table>
 				</div>
@@ -392,34 +364,35 @@
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
 		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
-					    <div class="form-group">
+					    <div class="form-group" id="membername">
 					      <label for="name">Nom</label>
 					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">
 					    </div>
-					    <div class="form-group">
+					    <div class="form-group" id="memberfirstname">
 					      <label for="firstname">Prénom</label>
 					      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom" name="firstname">
 					    </div>
-					    <div class="form-group">
+					    <div class="form-group" id="membersection">
 					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
-                        	<?= '<select class="form-control" id="id_section" name="id_section">';
+                        	<?= '<select class="form-control" id="id_section" name="id_section"><option id="id_section" name="id_section" disabled selected required>-- Sélectionner votre section --</option>';
                         	foreach ($listsections as $id => $listsections) {
                             ?>
-                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <option id="id_section" name="id_section" value=<?= $listsections['id']?>><?=$listsections['rank']?></option>
                             <?php
                         	}
                         	?>
                     		</select>
                     	</div>
 					    <div class="form-group">
-					      <label for="totem">Totem</label>
+					      <label for="totem">* Totem</label>
 					      <input type="text" class="form-control" id="totem" name="totem" placeholder="Votre Totem" name="pwd">
 					    </div>
 					    <div class="form-group">
-					    	 <label for="firstname">Informations supplémentaires</label>
+					    	 <label for="firstname">* Informations supplémentaires</label>
 	                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
 	                    </div>
 					 </form>
+					 	<div class="text-left"><p>* Champ facultatif</p></div>
 					 		<div class="text-center"><button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button></div>
 				</div>
 			</div>
@@ -431,3 +404,5 @@
 	</div>
 	<?php endif ?>
 <?php $this->stop('memberspacemodal') ?>
+
+
