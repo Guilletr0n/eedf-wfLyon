@@ -35,7 +35,7 @@
    	['POST','/login','userManagement#loginUser','userManagement_login'],
 		['GET','/listUsers','userManagement#listUsers','guillermo_userManagement_list'],
 		['GET|POST','/pass','userManagement#askNewPassword','userManagement_ask_new_password'],
-		['GET|POST','/nouvelle-motdepasse/[:id]/[:token]','userManagement#resetPassword','userManagement_reset_password'],
+		['GET|POST','/nouvelle-motdepasse','userManagement#resetPassword','userManagement_reset_password'],
 
 
 		//documents

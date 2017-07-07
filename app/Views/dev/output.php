@@ -3,6 +3,7 @@
 $inputs = array(
                   $email,
                   $result,
+                  $url
                 );
 
 foreach ($inputs as $key => $value) {

@@ -26,8 +26,36 @@ $('#nav .navbar-nav li>a').click(function(){
 
 /*       Modal      */
 
+/* Load modal content*/
+
+function loadmember(){
+  var registericon="";
+   $.ajax({
+        url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+        type: "get",
+        cache: false,
+        success: function (data) {
+            $(".infomember").remove();
+            var tbodymember = $("#tbodymember");
+              $.each(data, function(k,v){
+                if(v.register==1){
+                  registericon="<span class='glyphicon glyphicon-ok'></span>";
+                }else{
+                  registericon="<span class='glyphicon glyphicon-remove'></span>";
+                }
+                tbodymember.append('<tr class="infomember"><td>'+v.rank+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+registericon+'</td></tr>');
+              });
+            console.log('ajaxsuccess !');
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log('ajaxError !');
+        }
+    });
+}
+
 /*  btnmember */
 $("#memberBtn").click(function(){
+        loadmember();
         $("#Modalmember").modal();
       });
 
@@ -44,6 +72,7 @@ $('#addUsermember').click(function () {
     var id_section = $('#id_section').val();
     var totem = $('#totem').val();
     var infosup = $('#infosup').val();
+    var registericon="";
     console.log('AjaxStart !');
     $.ajax({
         url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
@@ -51,11 +80,14 @@ $('#addUsermember').click(function () {
         type: "post",
         cache: false,
         success: function (data) {
-            $(".status").val(data);
+            $("#alertinfo").append("<div class='alert alert-success fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Success !</strong>  Utilisateur ajouté avec succès.</div>");
+            $( "#divaddUsermember" ).slideToggle( "slow" );
+            loadmember();
             console.log('ajaxsuccess !');
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log('ajaxError !');
+            $("#alertinfo").append("<div class='alert alert-danger fade in alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a><strong>Error !</strong>  Un problème à été rencontré.</div>");
         }
     });
     

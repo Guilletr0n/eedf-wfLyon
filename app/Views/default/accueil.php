@@ -163,7 +163,7 @@
 		<div id="docprincipaux">
 			<?php foreach ($documents as $key => $document) {
 				if($document['id_categorie'] == '1'){ ?>
-				<div class="col-md-6 text-center">
+				<div class="col-md-6 col-xs-6 text-center">
 					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?>
 					<h4><?= $document['docname'].'<br />';?> </h4>
@@ -180,7 +180,7 @@
 		<div id="docsecondaires">
 			<?php foreach ($documents as $key => $document) {
 				if($document['id_categorie'] == '2'){ ?>
-				<div class="col-md-6 text-center">
+				<div class="col-md-4 col-sm-4 col-xs-6 text-center">
 					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?>
 					<h4><?= $document['docname'].'<br />';?></h4>
@@ -193,9 +193,13 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD
 
 <div class="divider"></div>
 <!-- Fin Documents -->
+=======
+<!-- Fin Documents -->	
+>>>>>>> refs/remotes/origin/master
 
 <!-- Qui sommes nous ? -->
 <div class="divider" id="section5"></div>
@@ -235,6 +239,7 @@
 						<p>L’association, laïque comme l’Ecole publique, diffuse ses propositions pédagogiques en direction des écoles, collèges et lycées. Elle intervient, en particulier, dans la formation des délégués de classe et l’organisation de sorties et de classes découvertes autour de la thématique de l’éducation à l’environnement.</p>
 					</div>
 				</div>
+	</div>
 		<div class="nocontainer">
 			<div class="bar text-right" id="scoutisme">
 				<div id="textedroite">
@@ -243,7 +248,8 @@
 					<p>Les Eclaireuses Eclaireurs de France, en faisant le choix du scoutisme, proposent de faire vivre toutes leurs valeurs au quotidien dans de petites sociétés de jeunes adaptées à l’âge des uns et des autres et ouvertes sur le monde qui les entoure : en développant l’engagement volontaire et le sens du respect des règles librement acceptées ; en donnant le désir de participer plutôt que de regarder, comme celui d’agir pour apprendre ; en libérant chez chacun l’imaginaire pour stimuler sa capacité à créer, à inventer, à émerveiller ; en étant attentif aux progrès personnels accomplis par rapport au point de départ plutôt qu’à la comparaison ou à la compétition avec les autres ; en faisant l’expérience, au contact de la nature, de l’interdépendance des éléments naturels et de la nécessité de les respecter.</p>
 					<p>Ces propositions éducatives sont animées par des adultes qui ont en commun le respect des enfants et des adolescents qui leur sont confiés, l’adhésion aux valeurs et méthodes du scoutisme EEDF et un réel souci de formation et d’éducation permanente.</p>
 				</div>
-				<div class="bar" id="valeurs">
+			</div>
+			<div class="bar" id="valeurs">
 					<div id="textegauche">
 						<ul><h3 class="lobster">Nos valeurs</h3>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En affirmant le respect fondamental de l’homme dans sa diversité, lutter contre toute forme de discrimination et d’intolérance, c’est le choix de la laïcité.</li>
@@ -252,10 +258,9 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En étant ouvert au monde et à l’autre, en développant un état d’esprit, d’échange, de partage, d’écoute, de construction commune c’est faire vivre ouverture et solidarité.</li>
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 						</div>
-					</div>
+				</div>
 			</div>
 		</div>
-	</div>
 </div>
 
 <div class="divider"></div>
@@ -265,7 +270,7 @@
 <div class="divider" id="section6"></div>
 <div class="container" id="containercontact">
 	<div class="row">
-		<h1 class="text-center bar">Où nous trouver ?</h1>
+		<h1 class="text-center bar">Nous trouver</h1>
 	</div>
 	<div class="localisation">
 		<div class="col-md-6 bar" id="carte">
@@ -345,8 +350,13 @@
 						<div class="text-center"><h4 class="modal-title">Gestion des membres</h4></div>
 				</div>
 			<div class="modal-body">
+<<<<<<< HEAD
 				<div class="table-responsive">
 					<table class="table">
+=======
+				<div class="table-responsive">          
+					<table class="table" id="tablemember">
+>>>>>>> refs/remotes/origin/master
 						<thead>
 							<tr>
 								<th>Section</th>
@@ -356,6 +366,7 @@
 								<th>Enregister</th>
 							</tr>
 						</thead>
+<<<<<<< HEAD
 						<tbody>
 						<?php //var_dump($listsections[0]['rank']);
 						foreach ($usermembers as $key => $usermembers) {
@@ -370,11 +381,15 @@
 							<?php
 						}
 						?>
+=======
+						<tbody id="tbodymember">
+>>>>>>> refs/remotes/origin/master
 						</tbody>
 					</table>
 				</div>
+				<div id="alertinfo">
+				</div>
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
-				<div class="status"></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
 		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
 					    <div class="form-group">
