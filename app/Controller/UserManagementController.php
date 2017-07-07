@@ -140,7 +140,7 @@ class UserManagementController extends Controller {
       $url = $this->generateTokenUrl($user[0]['id'], $data['token'],'userManagement_reset_password');
       $content = "Clique ici pour changer votre mot de passe ".$url;
       $sent = $this->sendMail($_POST['email'], 'Reinitialiser votre mot de passe', $content);
-      $this->show('dev/output',['email'=>$_POST['email'],'result'=> $user[0]['id'],'data'=>$data, 'sent'=>$sent]);
+      
     }
   }
 
