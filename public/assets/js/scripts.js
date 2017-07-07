@@ -31,8 +31,8 @@ $('#nav .navbar-nav li>a').click(function(){
 function loadmember(){
   var registericon="";
    $.ajax({
-        url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-        //url: 'http://eedfannonay.fr/public/addUsermember',
+        //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+        url: 'http://eedfannonay.fr/public/addUsermember',
         type: "get",
         cache: false,
         success: function (data) {
@@ -96,8 +96,8 @@ $('#addUsermember').click(function () {
     console.log("id_section =".id_section);
     if(valid==0){
       $.ajax({
-          url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-          //url: 'http://eedfannonay.fr/public/addUsermember',
+          //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
+          url: 'http://eedfannonay.fr/public/addUsermember',
           data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
           type: "post",
           cache: false,
