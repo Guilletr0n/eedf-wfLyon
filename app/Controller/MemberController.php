@@ -116,7 +116,8 @@ class MemberController extends Controller {
 			$_POST['id_user'] = $user['id'];
 			$_POST['register'] =0;
 			$this->MembersModel->insert($_POST);
-			$this->showJson($_POST);
+			$usermembers = $this->MembersModel->userMembers($user['id']);
+			$this->showJson($usermembers);
 		}
 		//on redirige vers la route member_addMembers
 		//$this->redirectToRoute('default_accueil');

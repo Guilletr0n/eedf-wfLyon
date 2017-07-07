@@ -119,14 +119,53 @@ class UserManagementController extends Controller {
           $e->getMessage();
         }
         //$this->auth->logUserIn($newUser);
-        $isSentEmail = $this->sendEmail($_POST['email'], $newUser['id'], $_POST['token']);
+
+        $bodyContent = '<p>Verification</p><a href="'.$url.'">'.$_POST['token'].' '.$newUser['id'].'</a><p></p>';
+        $isSentEmail = $this->sendEmail($_POST['email'], 'Validation de compte', $bodyContent);
         $this->show('default/accueil');
       } else {
         $this->show('user/inscription',['message'=>'duplicate']);
       }
     }
   }
+  function askNewPassword(){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      $this->show('user/newPassword');
+    }else{
+      $data = ['email'=>$_POST['email']];
+      $user = $this->currentUser->search($data);
+      $user_id = $user[0]['id'];
+      $data = ['token'=>$this->utils->randomString()];
+      $this->currentUser->update($data,$user[0]['id']);
+      $url = $this->generateTokenUrl($user[0]['id'], $data['token'],'userManagement_reset_password');
+      $content = "Clique ici pour changer votre mot de passe ".$url;
+      $sent = $this->sendMail($_POST['email'], 'Reinitialiser votre mot de passe', $content);
+      $this->show('dev/output',['email'=>$_POST['email'],'result'=> $user[0]['id'],'data'=>$data, 'sent'=>$sent]);
+    }
+  }
 
+  function resetPassword(){
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+      $this->show('user/resetPassword',['id'=>$_GET['id'],'token'=>$_GET['token']]);
+    } else {
+      $data = ['password'=>$this->auth->hashPassword($_POST['password'])];
+      $user = $this->currentUser->find($_POST['id']);
+      if($user['token']==$_POST['token']){
+        $this->currentUser->update($data,$_POST['id']);
+      } else {
+        $this->show('user/resetPassword',['msg'=>'Erreur']);
+      }
+      $this->show('user/resetPassword',['msg'=>'ok!']);
+    }
+  }
+  function checkPassword(){
+    if($this->auth->isValidLoginInfo($_GET['email'], $_GET['password'])){
+      $msg='passwords is correct';
+    } else {
+      $msg='password is not correct';
+    }
+    $this->show('dev/output',['msg'=>$msg]);
+  }
   public function connexion(){
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
       $this->show('user/connexion');
@@ -182,14 +221,13 @@ class UserManagementController extends Controller {
     $address = $this->mailServer->getHost();
     $user = $this->mailServer->getUser();
     $password = $this->mailServer->getPassword();
-
-    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'email'=>$email,'sent'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com')]);
-//$this->sendEmail($_GET['email'])
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'email'=>$email,'sent'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com','hello','hello world')]);
+    //$this->sendEmail($_GET['email'])
   }
 
 // UTILITIES
 
-private function sendEmail($address = '', $userId = '',$token = '', $subject = ''){
+private function sendEmail($address = '', $subject = '', $content = ''){
   // set email server
   $mailAddress = $this->mailServer->getHost();
   $user = $this->mailServer->getUser();
@@ -207,9 +245,9 @@ private function sendEmail($address = '', $userId = '',$token = '', $subject = '
   $this->mail->addAddress($address);
   $this->mail->Subject = $subject;
   if(strlen($token)>1){
-    $url = $this->generateTokenUrl($userId,$token);
+    $url = $this->generateTokenUrl($userId,$token,'admin_confirmation');
   }
-  $url = $this->generateTokenUrl($userId,$token);
+  $url = $this->generateTokenUrl($userId,$token,'admin_confirmation');
   $bodyContent = '<p>Verification</p><a href="'.$url.'">'.$token.' '.$userId.'</a><p></p>';
   $this->mail->Body = $bodyContent;
 
@@ -223,34 +261,35 @@ private function sendEmail($address = '', $userId = '',$token = '', $subject = '
 
 }
 
-  private function sendEmailOld($address,$userId,$token){
-    $this->mail->isSMTP();
-    $this->mail->isHTML(true);
-    $this->mail->Host = "smtp.gmail.com";
-    $this->mail->Port = 465;
-    $this->mail->SMTPAuth = true;
-    $this->mail->SMTPSecure = 'ssl';
-    $this->mail->Username  = "wf3lyon@gmail.com";
-    $this->mail->Password = "Azerty1234";
-    $this->mail->SetFrom('wf3lyon@gmail.com','BioForce3 Lyon');
-    $this->mail->addAddress($address);
-    $this->mail->Subject = 'EEDF Validation d\'email';
-    $url = $this->generateTokenUrl($userId,$token);
-    $bodyContent = '<p>Verification</p><a href="'.$url.'">'.$token.' '.$userId.'</a><p></p>';
-    $this->mail->Body = $bodyContent;
-
-    // if (!$this->mail->send()) {
-    //     return "Mailer Error: " . $this->mail->ErrorInfo;
-    // } else {
-    //     return "Message sent!";
-    // }
-
-    return true;
-
+private function sendMail($address = '', $subject='', $content=''){
+  // set email server
+  $mailAddress = $this->mailServer->getHost();
+  $user = $this->mailServer->getUser();
+  $password = $this->mailServer->getPassword();
+  // Email Settings
+  $this->mail->isSMTP();
+  $this->mail->isHTML(true);
+  $this->mail->Host = $this->mailServer->getHost();
+  $this->mail->Port = 465;
+  $this->mail->SMTPAuth = true;
+  $this->mail->SMTPSecure = 'ssl';
+  $this->mail->Username  = $this->mailServer->getUser();
+  $this->mail->Password = $this->mailServer->getPassword();
+  $this->mail->SetFrom($this->mailServer->getUser(),'EEDF Annonay');
+  $this->mail->addAddress($address);
+  // content & subject
+  $this->mail->Subject = $subject;
+  $this->mail->Body = $content;
+  if (!$this->mail->send()) {
+       return "Mailer Error: " . $this->mail->ErrorInfo . ' ' .$mailAddress.' '.$address;
+  } else {
+     return "Message sent!";
   }
 
-  private function generateTokenUrl($userId, $token){
-    $url = 'http://localhost'.$this->generateUrl('admin_confirmation');
+}
+
+  private function generateTokenUrl($userId='', $token='', $route=''){
+    $url = 'http://localhost'.$this->generateUrl($route);
     $url .= '?id='   .$userId;
     $url .= '&token='.$token;
     return $url;

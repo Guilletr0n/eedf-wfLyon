@@ -72,7 +72,7 @@
 	</div>
 </section>
 <!-- FIN EVENEMENTS PROCHAINS -->
-<div class="divider"></div>
+
 
 <?php if($w_user != 0): ?> <!-- seulement vu par les adhérents -->
 
@@ -102,7 +102,7 @@
 						<p>Parc naturel</p>
 						<p></p>
 					</div>
-				</div><!--/panel--> 
+				</div><!--/panel-->
 			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
@@ -113,8 +113,8 @@
 						<p>Plongée sous marine</p>
 						<p></p>
 					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
+				</div><!--/panel-->
+			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -124,8 +124,8 @@
 						<p>New Construction</p>
 						<p></p>
 					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
+				</div><!--/panel-->
+			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -135,8 +135,8 @@
 						<p>Site Planning</p>
 						<p></p>
 					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
+				</div><!--/panel-->
+			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
@@ -146,13 +146,13 @@
 						<p>Churches</p>
 						<p></p>
 					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
+				</div><!--/panel-->
+			</div><!--/col-->
 		</div><!--/row-->
 	</div><!--/container-->
 </div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
-<div class="divider"></div>
+
 <?php endif ?>
 
 <!-- Documents -->
@@ -167,11 +167,11 @@
 					<?= '<a href="'. $this->assetUrl($document['docfile']).'" target="_blank"><i class="fa fa-file-pdf-o"></i></a>';
 					?>
 					<h4><?= $document['docname'].'<br />';?> </h4>
-					<h5><?= $document['docdescription'].'<br />';?></h5>	
+					<h5><?= $document['docdescription'].'<br />';?></h5>
 				</div>
 				<?php
 			}
-		} 
+		}
 		?>
 		</div>
 	</div>
@@ -188,13 +188,18 @@
 				</div>
 				<?php
 			}
-		} 
+		}
 		?>
 		</div>
 	</div>
 </div>
-<!-- Fin Documents -->	
+<<<<<<< HEAD
+
 <div class="divider"></div>
+<!-- Fin Documents -->
+=======
+<!-- Fin Documents -->	
+>>>>>>> refs/remotes/origin/master
 
 <!-- Qui sommes nous ? -->
 <div class="divider" id="section5"></div>
@@ -225,8 +230,8 @@
 					</aside>
 				</div>
 				<div class="bar">
-					<div id="textebas"> 
-						<h3 class="lobster">Présentation du mouvement EEDF</h3>		 
+					<div id="textebas">
+						<h3 class="lobster">Présentation du mouvement EEDF</h3>
 						<h4><strong>Les EEDF, un mouvement de scoutisme laïque</strong></h4>
 						<p>Les Eclaireuses et Eclaireurs de France sont un mouvement de scoutisme LAIQUE, fort de 31 000 adhérents, qui fait vivre et qui anime la proposition éducative du scoutisme : engagement personnel, prise en charge de son propre développement, possibilité de vivre la responsabilité et de conduire sa relation aux autres au travers de la vie en équipe, l’éducation par l’action et le jeu. Cette proposition est partagée par 35 millions de filles et de garçons, de femmes et d’hommes dans plus de 160 pays. </p>
 						<h4><strong>Les EEDF, association reconnue d’utilité publique et complémentaire de l’école publique</strong></h4>
@@ -254,6 +259,7 @@
 							<li><img src="<?= $this->assetUrl('img/feuille2.png')?>" alt=""> En apprenant à connaître et à comprendre le monde, en agissant pour protéger et faire respecter équilibre et harmonie, c’est notre engagement pour l’environnement.</li></ul>
 						</div>
 				</div>
+			</div>
 		</div>
 </div>
 
@@ -261,7 +267,7 @@
 <!-- Fin Qui sommes nous ? -->
 
 <!-- Contact -->
-<div class="divider" id="section6"></div>  
+<div class="divider" id="section6"></div>
 <div class="container" id="containercontact">
 	<div class="row">
 		<h1 class="text-center bar">Nous trouver</h1>
@@ -270,13 +276,13 @@
 		<div class="col-md-6 bar" id="carte">
 			<div class="adress">
 				<ul class="text-center">
-					<li><h2 class="text-center">Notre adresse</h2></li>	
+					<li><h2 class="text-center">Notre adresse</h2></li>
 					<li>Eclaireuses et Eclaireurs de France</li>
 					<li>Groupe Jean Maron</li>
 					<li>20, chemin de la Carrière</li>
 					<li>07100 ANNONAY</li>
 					<li><strong><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 06.95.42.63.48</strong></li>
-				</ul>					
+				</ul>
 			</div>
 			<div class="text-center">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.8714950085746!2d4.668762215457518!3d45.250391279099055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f513a54634ff03%3A0xfcc636aa6773d1e1!2s20+Chemin+de+la+Carri%C3%A8re%2C+07100+Annonay!5e0!3m2!1sfr!2sfr!4v1496587786295" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -344,18 +350,40 @@
 						<div class="text-center"><h4 class="modal-title">Gestion des membres</h4></div>
 				</div>
 			<div class="modal-body">
+<<<<<<< HEAD
+				<div class="table-responsive">
+					<table class="table">
+=======
 				<div class="table-responsive">          
 					<table class="table" id="tablemember">
+>>>>>>> refs/remotes/origin/master
 						<thead>
 							<tr>
 								<th>Section</th>
 								<th>Nom</th>
 								<th>Prénom</th>
 								<th>Totem</th>
-								<th>Validation</th>
+								<th>Enregister</th>
 							</tr>
 						</thead>
+<<<<<<< HEAD
+						<tbody>
+						<?php //var_dump($listsections[0]['rank']);
+						foreach ($usermembers as $key => $usermembers) {
+							?>
+								<tr>
+									<td><?= $listsections[$usermembers['id_section']-1]['rank']?></td>
+									<td><?= $usermembers['name'] ?></td>
+									<td><?= $usermembers['firstname'] ?></td>
+									<td><?= $usermembers['totem'] ?></td>
+									<td><input type="checkbox" <?= ($usermembers['register']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></td>
+								</tr>
+							<?php
+						}
+						?>
+=======
 						<tbody id="tbodymember">
+>>>>>>> refs/remotes/origin/master
 						</tbody>
 					</table>
 				</div>
@@ -374,10 +402,10 @@
 					    </div>
 					    <div class="form-group">
 					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
-                        	<?= '<select class="form-control" id="id_section" name="id_section"><option id="id_section" name="id_section" disabled selected required>-- Sélectionner votre section --</option>';
+                        	<?= '<select class="form-control" id="id_section" name="id_section">';
                         	foreach ($listsections as $id => $listsections) {
                             ?>
-                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? 'selected' : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
                             <?php
                         	}
                         	?>
@@ -403,5 +431,3 @@
 	</div>
 	<?php endif ?>
 <?php $this->stop('memberspacemodal') ?>
-
-
