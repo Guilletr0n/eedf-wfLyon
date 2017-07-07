@@ -364,34 +364,35 @@
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
 		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
-					    <div class="form-group">
+					    <div class="form-group" id="membername">
 					      <label for="name">Nom</label>
 					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">
 					    </div>
-					    <div class="form-group">
+					    <div class="form-group" id="memberfirstname">
 					      <label for="firstname">Prénom</label>
 					      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom" name="firstname">
 					    </div>
-					    <div class="form-group">
+					    <div class="form-group" id="membersection">
 					    	<label for="section" class="mr-sm-2">Selectionner votre section :</label>
                         	<?= '<select class="form-control" id="id_section" name="id_section"><option id="id_section" name="id_section" disabled selected required>-- Sélectionner votre section --</option>';
                         	foreach ($listsections as $id => $listsections) {
                             ?>
-                            <option id="id_section" name="id_section"<?= $listsections['id'] == $listsections['id'] ? : ''; ?>> <?= $listsections['id'].' : '.$listsections['rank']?></option>
+                            <option id="id_section" name="id_section" value=<?= $listsections['id']?>><?=$listsections['rank']?></option>
                             <?php
                         	}
                         	?>
                     		</select>
                     	</div>
 					    <div class="form-group">
-					      <label for="totem">Totem</label>
+					      <label for="totem">* Totem</label>
 					      <input type="text" class="form-control" id="totem" name="totem" placeholder="Votre Totem" name="pwd">
 					    </div>
 					    <div class="form-group">
-					    	 <label for="firstname">Informations supplémentaires</label>
+					    	 <label for="firstname">* Informations supplémentaires</label>
 	                        <textarea rows="4" cols="50" type="text" id="infosup" name="infosup" class="form-control mb-2 mr-sm-2 mb-sm-0" value="" placeholder= "ex: tel,mail etc ..."></textarea>
 	                    </div>
 					 </form>
+					 	<div class="text-left"><p>* Champ facultatif</p></div>
 					 		<div class="text-center"><button class="btn btn-info navbar-btn" id="addUsermember">Ajouter un membre</button></div>
 				</div>
 			</div>
