@@ -221,7 +221,7 @@ class UserManagementController extends Controller {
     $address = $this->mailServer->getHost();
     $user = $this->mailServer->getUser();
     $password = $this->mailServer->getPassword();
-    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'email'=>$email,'sent'=>$this->sendEmail('gonzalezdecastro.guillermo@gmail.com','hello','hello world')]);
+    $this->show('dev/output',['address'=>$address,'user'=>$user,'password'=>$password,'email'=>$email,'sent'=>$this->sendEmail('','hello','hello world')]);
     //$this->sendEmail($_GET['email'])
   }
 
