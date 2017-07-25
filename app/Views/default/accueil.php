@@ -371,7 +371,7 @@
 				</div>
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
-		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
+		            <form class="form-horizontal" id="FormMember" name= "FormMember" method="post" action="<?= $this->url('member_addUsermember')?>">
 					    <div class="form-group" id="membername">
 					      <label for="name">Nom</label>
 					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">

@@ -26,13 +26,24 @@ $('#nav .navbar-nav li>a').click(function(){
 
 /*       Modal      */
 
+/*
+function loadurlform(Formname){
+  var url = $('#'.Formname).attr('action');
+  return url;
+}
+*/
+
 /* Load modal content*/
 
 function loadmember(){
   var registericon="";
+  var urlloadUsermember = $('#FormMember').attr('action');
+  console.log('ajaxStart !');
+  console.log(urlloadUsermember);
    $.ajax({
         //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-        url: 'http://eedfannonay.fr/public/addUsermember',
+        //url: 'http://eedfannonay.fr/public/addUsermember',
+        url: urlloadUsermember,
         type: "get",
         cache: false,
         success: function (data) {
@@ -54,6 +65,8 @@ function loadmember(){
     });
 }
 
+
+
 /*  btnmember */
 $("#memberBtn").click(function(){
         loadmember();
@@ -67,7 +80,8 @@ $("#newmemberbtn").click(function(){
       });
 
 /* btnaddusermember */
-$('#addUsermember').click(function () {
+$('#addUsermember').click(function (e) {
+    e.preventDefault();
     var name = $('#name').val();
     var firstname = $('#firstname').val();
     var id_section = $('#id_section').val();
@@ -75,7 +89,9 @@ $('#addUsermember').click(function () {
     var infosup = $('#infosup').val();
     var registericon="";
     var valid = 0;
-    console.log('AjaxStart !');
+    var urladdUsermember = $('#FormMember').attr('action');
+    
+    console.log(urladdUsermember);
     $('#membername').removeClass("has-error has-feedback");
     $('#memberfirstname').removeClass("has-error has-feedback");
     $('#membersection').removeClass("has-error has-feedback");
@@ -97,7 +113,8 @@ $('#addUsermember').click(function () {
     if(valid==0){
       $.ajax({
           //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-          url: 'http://eedfannonay.fr/public/addUsermember',
+          //url: 'http://eedfannonay.fr/public/addUsermember',
+          url: urladdUsermember,
           data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
           type: "post",
           cache: false,
