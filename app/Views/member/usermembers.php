@@ -1,4 +1,4 @@
-<?php $this->layout('layout-user-page', ['title' => 'Adhérent']) ?>
+<?php $this->layout('layout-user-management', ['title' => 'Adhérent']) ?>
 
 <?php $this->start('main_content') ?>
 
