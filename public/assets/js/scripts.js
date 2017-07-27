@@ -108,8 +108,6 @@ $('#addUsermember').click(function (e) {
       $('#membersection').addClass("has-error has-feedback");
       valid=1;
     }
-    console.log("valid =".valid);
-    console.log("id_section =".id_section);
     if(valid==0){
       $.ajax({
           //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',

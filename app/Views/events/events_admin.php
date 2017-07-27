@@ -52,7 +52,7 @@
 							<th>Description</th>
 							<th>Matériel à emmener</th>
 							<th>Activités proposées</th>
-							<th>Liste des participants</th>
+							<th>Informations disverses</th>
 						</tr>
 					</thead>
 		<?php foreach ($events as $key => $events) {
@@ -63,9 +63,9 @@
 							<td><?= $events['startdate'] ?></td>
 							<td><?= $events['enddate'] ?></td>
 							<td><?= $events['description'] ?></td>
-							<td><?= $events['materiel'] ?></td>
-							<td><?= $events['activites'] ?></td>
-							<td><?= $events['id_member'] ?></td>
+							<td><?= $events['materials'] ?></td>
+							<td><?= $events['activity'] ?></td>
+							<td><?= $events['Infos'] ?></td>
 							<!-- <td><input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"></td> -->
 							<td><?= '
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'" class="btn btn-xs btn-success">Modifier</a>
