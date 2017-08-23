@@ -1,4 +1,4 @@
-<?php $this->layout('layout-admin',['title'=>'Modifier l\'article']); ?>
+<?php $this->layout('layout-user-management',['title'=>'Modifier l\'article']); ?>
 
 <?php $this->start('main_content') ?>
   <form class="form-horizontal" action="<?= $this->url('blog_EditArticle',['id'=>article['id']]) ?>" method="post">

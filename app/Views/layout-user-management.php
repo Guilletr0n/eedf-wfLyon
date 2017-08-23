@@ -38,7 +38,52 @@
 					<?= $this->section('sidenav_greetings') ?>
 				</div>
 			</header>
-			<?= $this->section('sidenav_content') ?>
+
+				<!-- Start NAV-->
+				<nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+				<ul id="menuvertical">
+					<li><a class="mdl-navigation__link" href="<?= $this->url('admin_dashboard'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">home</i>Accueil</a></li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Admins</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('userManagement_add_user_admin_form'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Ajout Admin</a></li>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('userManagement_list_admins'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">supervisor_account</i>Liste Admin</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">people</i>Utilisateurs</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('userManagement_list_users'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">people</i>Liste Utilisateurs</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">face</i>Adhérents</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('member_members'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Liste Adhérent</a></li>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('member_addMember'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Ajout Adhérent</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">event</i>Evénements</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('events_events_admin'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">event</i>Liste Evénement</a></li>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('events_add_event'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Ajout Evénement</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">photo_camera</i>Photos</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('photo_photos'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">photo_camera</i>Liste Photos</a></li>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('photo_add_photos'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Ajout Photos</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">insert_drive_file</i>Documents</a>
+						<ul>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('document_documents'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">insert_drive_file</i>Liste Documents</a></li>
+							<li><a class="mdl-navigation__link" href="<?= $this->url('document_add_documents'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">add</i>Ajout Document</a></li>
+						</ul>
+					</li>
+					<li><a class="mdl-navigation__link" href="<?= $this->url('userManagement_inscription'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Inscription</a></li>
+					<li><a class="mdl-navigation__link" href="<?= $this->url('admin_deconnexion'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">exit_to_app</i>Deconnexion</a></li>
+				</ul>
+				</nav>
+			<!-- END NAV -->
+
 		</div>
 		<main class="mdl-layout__content mdl-color--grey-100">
 			<?= $this->section('main_content') ?>

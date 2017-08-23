@@ -38,12 +38,20 @@ function loadurlform(Formname){
 function loadmember(){
   var registericon="";
   var urlloadUsermember = $('#FormMember').attr('action');
+  var tbodymember = $("#tbodymember");
+  var res = {
+    loader: $('<div />', {class:'loadermember'}),
+    container: $('.container')
+  }
   console.log('ajaxStart !');
   console.log(urlloadUsermember);
    $.ajax({
         //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
         //url: 'http://eedfannonay.fr/public/addUsermember',
         url: urlloadUsermember,
+        beforeSend: function() {
+          tbodymember.append(res.loader);
+        },
         type: "get",
         cache: false,
         success: function (data) {
@@ -57,6 +65,9 @@ function loadmember(){
                 }
                 tbodymember.append('<tr class="infomember"><td>'+v.rank+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+registericon+'</td></tr>');
               });
+              //tbodymember.html(data);
+              //res.container.find(res.loader).remove();
+
             console.log('ajaxsuccess !');
         },
         error: function (xhr, ajaxOptions, thrownError) {
