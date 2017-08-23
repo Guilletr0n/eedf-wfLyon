@@ -28,11 +28,11 @@
 		['GET','/ajouterAdmin','UserManagement#addAdminForm','userManagement_add_user_admin_form'],
 		['POST','/ajouterAdmin','UserManagement#addAdmin','userManagement_add_user_admin'],
 		['GET','/voirSession','UserManagement#getLoggedUser','userManagement_get_logged_user'],
-  	['GET|POST','/inscription','userManagement#inscription','admin_inscription'],
+  		['GET|POST','/inscription','userManagement#inscription','admin_inscription'],
 		['GET|POST','/connexion','userManagement#connexion','userManagement_connexion'],
 		['GET|POST','/deconnexion','userManagement#deconnexion','admin_deconnexion'],
 		['GET','/confirmation','userManagement#confirmation','admin_confirmation'],
-   	['POST','/login','userManagement#loginUser','userManagement_login'],
+   		['POST','/login','userManagement#loginUser','userManagement_login'],
 		['GET','/listUsers','userManagement#listUsers','guillermo_userManagement_list'],
 		['GET|POST','/pass','userManagement#askNewPassword','userManagement_ask_new_password'],
 		['GET|POST','/nouvelle-motdepasse','userManagement#resetPassword','userManagement_reset_password'],
@@ -60,7 +60,7 @@
 		['GET|POST', '/users-photos', 'photo#userPhotos', 'photo_users_photos'],
 
 
-    ['GET', '/accueil', 'Default#accueil', 'default_accueil'],
+    	['GET', '/accueil', 'Default#accueil', 'default_accueil'],
 		['GET', '/documents', 'Default#documents', 'default_documents'],
 		['GET', '/quisommesnous', 'Default#quisommesnous', 'default_quisommesnous'],
 		['GET', '/events', 'Default#events', 'default_events'],

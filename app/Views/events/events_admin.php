@@ -1,7 +1,7 @@
 <?php $this->layout('layout-user-management', ['title' => 'Evénements']) ?>
 
 <?php $this->start('sidenav_content') ?>
-
+<!--
 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
 	<ul id="menuvertical">
 		<li><a class="mdl-navigation__link" href="<?= $this->url('admin_dashboard'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">home</i>Accueil</a></li>
@@ -35,6 +35,7 @@
 		<li><a class="mdl-navigation__link" href="<?= $this->url('admin_deconnexion'); ?>"><i class="mdl-color-text--blue-grey-300 material-icons" role="presentation">exit_to_app</i>Deconnexion</a></li>
 	</ul>
 </nav>
+-->
 <?php $this->stop('sidenav_content') ?>
 
 <?php $this->start('main_content') ?>

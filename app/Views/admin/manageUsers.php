@@ -3,6 +3,7 @@
 
 <?php $this->stop('header_content') ?>
 <?php $this->start('sidenav_content') ?>
+<!--
 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
   <a class="mdl-navigation__link" href="<?= $this->url('admin_dashboard'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Accueil</a>
   <a class="mdl-navigation__link" href="<?= $this->url('userManagement_inscription'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Inscription</a>
@@ -11,6 +12,7 @@
   <a class="mdl-navigation__link" href="<?= $this->url('userManagement_add_user_admin_form'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Ajouter Admins</a>
   <a class="mdl-navigation__link" href="<?= $this->url('admin_deconnexion'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Deconnexion</a>
 </nav>
+-->
 <?php $this->stop('sidenav_content') ?>
 
 <?php $this->start('main_content') ?>
