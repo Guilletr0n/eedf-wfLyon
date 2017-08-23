@@ -1,4 +1,4 @@
-<?php $this->layout('EventsLayout', ['title' => 'Evénements']) ?>
+<?php $this->layout('layout-user-management', ['title' => 'Evénements']) ?>
 
 <?php $this->start('style') ?>
 <link rel="stylesheet" href="<?= $this->assetUrl('css/home.css') ?>">

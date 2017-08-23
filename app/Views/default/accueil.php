@@ -66,6 +66,14 @@
 					</a>
 				</div>
 			</div>
+			<div class="prochainevent">
+				<div>
+					<a href="#">
+					<h3>Sortie au parc - 02/04/2017</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur.</p>
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-6 col-sm-12 text-center" id="iframecal"><iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=800&amp;wkst=1&amp;hl=fr&amp;bgcolor=%23ffffff&amp;src=nordine.sebih%40gmail.com&amp;color=%23000000&amp;ctz=Europe%2FParis" style="border:none; border-radius:10px" width="550" height="550" frameborder="0" scrolling="no"></iframe>
 		</div>
@@ -363,7 +371,7 @@
 				</div>
 				<div class="text-center">Nouveau membre<a href="#" id="newmemberbtn">▼</a></div>
 				<div class="container-fluid" id="divaddUsermember" style="display: none;">
-		            <form class="form-horizontal" name= "addUsermember" method="post" action="#">
+		            <form class="form-horizontal" id="FormMember" name= "FormMember" method="post" action="<?= $this->url('member_addUsermember')?>">
 					    <div class="form-group" id="membername">
 					      <label for="name">Nom</label>
 					      <input type="text" class="form-control" id="name" name="name"  placeholder="Votre nom"  name="name">

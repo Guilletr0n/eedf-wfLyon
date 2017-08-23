@@ -26,13 +26,32 @@ $('#nav .navbar-nav li>a').click(function(){
 
 /*       Modal      */
 
+/*
+function loadurlform(Formname){
+  var url = $('#'.Formname).attr('action');
+  return url;
+}
+*/
+
 /* Load modal content*/
 
 function loadmember(){
   var registericon="";
+  var urlloadUsermember = $('#FormMember').attr('action');
+  var tbodymember = $("#tbodymember");
+  var res = {
+    loader: $('<div />', {class:'loadermember'}),
+    container: $('.container')
+  }
+  console.log('ajaxStart !');
+  console.log(urlloadUsermember);
    $.ajax({
         //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-        url: 'http://eedfannonay.fr/public/addUsermember',
+        //url: 'http://eedfannonay.fr/public/addUsermember',
+        url: urlloadUsermember,
+        beforeSend: function() {
+          tbodymember.append(res.loader);
+        },
         type: "get",
         cache: false,
         success: function (data) {
@@ -46,6 +65,9 @@ function loadmember(){
                 }
                 tbodymember.append('<tr class="infomember"><td>'+v.rank+'</td><td>'+v.name+'</td><td>'+v.firstname+'</td><td>'+v.totem+'</td><td>'+registericon+'</td></tr>');
               });
+              //tbodymember.html(data);
+              //res.container.find(res.loader).remove();
+
             console.log('ajaxsuccess !');
         },
         error: function (xhr, ajaxOptions, thrownError) {
@@ -53,6 +75,8 @@ function loadmember(){
         }
     });
 }
+
+
 
 /*  btnmember */
 $("#memberBtn").click(function(){
@@ -67,7 +91,8 @@ $("#newmemberbtn").click(function(){
       });
 
 /* btnaddusermember */
-$('#addUsermember').click(function () {
+$('#addUsermember').click(function (e) {
+    e.preventDefault();
     var name = $('#name').val();
     var firstname = $('#firstname').val();
     var id_section = $('#id_section').val();
@@ -75,7 +100,9 @@ $('#addUsermember').click(function () {
     var infosup = $('#infosup').val();
     var registericon="";
     var valid = 0;
-    console.log('AjaxStart !');
+    var urladdUsermember = $('#FormMember').attr('action');
+    
+    console.log(urladdUsermember);
     $('#membername').removeClass("has-error has-feedback");
     $('#memberfirstname').removeClass("has-error has-feedback");
     $('#membersection').removeClass("has-error has-feedback");
@@ -92,12 +119,11 @@ $('#addUsermember').click(function () {
       $('#membersection').addClass("has-error has-feedback");
       valid=1;
     }
-    console.log("valid =".valid);
-    console.log("id_section =".id_section);
     if(valid==0){
       $.ajax({
           //url: 'http://127.0.0.1/eedf-wfLyon/public/addUsermember',
-          url: 'http://eedfannonay.fr/public/addUsermember',
+          //url: 'http://eedfannonay.fr/public/addUsermember',
+          url: urladdUsermember,
           data: { 'name' : name, 'firstname' : firstname,'id_section' : id_section, 'totem' : totem, 'infosup' : infosup},
           type: "post",
           cache: false,
