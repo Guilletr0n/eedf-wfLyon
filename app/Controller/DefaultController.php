@@ -107,17 +107,19 @@ class DefaultController extends Controller{
 	public function contact2()
 	{
 		$safe = array_map('strip_tags', $_POST);
+		//print_r($_POST);
 		$mail = new PHPmailer;
+		$mail->SMTPDebug = 2;
 		$mail->isSMTP(); // connexion directe au serveur SMTP
 		$mail->isHTML(true); //utilisation du format HTML
-		$mail->Host = "smtp.mail.yahoo.com"; // le serveur de messagerie
-		$mail->Port = 465; //le port utilisé sur le serveur
+		$mail->Host = "eedfannonay.fr"; // le serveur de messagerie
+		$mail->Port = 587; //le port utilisé sur le serveur [normalement 465 + secure]
 		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
-		$mail->SMTPSecure = 'ssl'; //Certificat SSL
-		$mail->Username = 'c.digon@yahoo.com'; //mon login pour le SMTP
-		$mail->Password = 'strikeapose06'; // le mot de passe SMTP
-		$mail->SetFrom('eedfanno@gmail.com', 'EEDF Annonay'); // Expéditeur
-		$mail->addAddress('c.digon@yahoo.com'); // le destinataire
+		$mail->SMTPSecure = 'SSL'; //Certificat SSL
+		$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
+		$mail->Password = 'Ovak5&53'; // le mot de passe SMTP
+		$mail->SetFrom('contact@eedfannonay.fr', 'EEDF Annonay'); // Expéditeur
+		$mail->addAddress('contact@eedfannonay.fr'); // le destinataire
 		$mail->Subject = 'message de '.$safe['mail']; // le sujet
 		$mail->Body = '<html>
 						<head>
@@ -132,9 +134,9 @@ class DefaultController extends Controller{
 							</html>'; // le contenu du mail en HTML
 		if(!$mail->send()) //si l'envoi ne marche pas...
 		{
-			echo 'Erreur envoi:'.$mail->ErrorInfo;
+			//echo 'Erreur envoi:'.$mail->ErrorInfo;
 		}
 		// si mail envoyé dire merci et retour page accueil
-		$this->redirectToRoute('default_contact',['message' => 'Message envoyé']);
+		// $this->redirectToRoute('default_contact',['message' => 'Message envoyé']);
 	}
 }

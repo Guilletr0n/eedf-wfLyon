@@ -1,6 +1,8 @@
 <?php $this->layout('layout-user', ['title' => 'contact']) ?>
 <?php $this->start('main_content') ?>
-<?php if(isset($message)){
+<?php 
+echo $message;
+if(isset($message)){
 	echo $message;
 }?>
 <div class="container" id="containercontact">

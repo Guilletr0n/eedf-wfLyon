@@ -5,19 +5,20 @@ session_start();
 // enquete + connexion
 require_once "includes/phpmailer/PHPMailerAutoload.php";
 // Mr Propre
+echo 'mailStart';
 $safe = array_map('strip_tags', $_POST);
 // création d'un objet mail
 $mail = new PHPmailer;
 $mail->isSMTP(); // connexion directe au serveur SMTP
 $mail->isHTML(true); //utilisation du format HTML
-$mail->Host = "smtp.yahoo.com"; // le serveur de messagerie
+$mail->Host = "ssl0.ovh.net"; // le serveur de messagerie
 $mail->Port = 465; //le port utilisé sur le serveur
 $mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
 $mail->SMTPSecure = 'ssl'; //Certificat SSL
-$mail->Username = 'eedfanno@gmail.com'; //mon login pour le SMTP
-$mail->Password = 'Azerty1234'; // le mot de passe SMTP
-$mail->SetFrom('eedfanno@gmail.com', 'EEDF Annonay'); // Expéditeur
-$mail->addAddress('c.digon@yahoo.com'); // le destinataire
+$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
+$mail->Password = 'dVx7b34%'; // le mot de passe SMTP
+$mail->SetFrom('contact@eedfannonay.fr', 'EEDF Annonay'); // Expéditeur
+$mail->addAddress('contact@eedfannonay.fr'); // le destinataire
 $mail->Subject = 'message de '.$safe['email']; // le sujet
 $mail->Body = '<html>
 				<head>
