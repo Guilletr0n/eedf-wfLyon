@@ -88,6 +88,78 @@
 <div class="divider" id="section3"></div>
 
 <div class="bg-4">
+
+	<div class="container">
+		<h3 class="text-center">Galerie photo</h3>  
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" title="Patinoire42" alt="Patinoire42" class="img-responsive">
+					<div class="carousel-caption">
+          				<h3>Patinoire42</h3>
+          				<p>Patinoire42 is fun!</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" title="Patinoire34" alt="Patinoire34">
+					<div class="carousel-caption">
+          				<h3>Patinoire34</h3>
+          				<p>Patinoire34 is fun!</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" title="Patinoire05" alt="Patinoire05" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Patinoire05</h3>
+          				<p>Patinoire05 is fun!</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" title="Patinoire33" alt="Patinoire33" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Patinoire33</h3>
+          				<p>Patinoire33 is fun!</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" title="Patinoire15" alt="Patinoire15" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Patinoire15</h3>
+          				<p>Patinoire15 is fun!</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" title="Patinoire37" alt="Patinoire37" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Patinoire37</h3>
+          				<p>Patinoire37 is fun!</p>
+        			</div>
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+
 	<div class="container">
 		<h3 class="text-center">Galerie photo</h3>
 		<div class="row">
@@ -158,6 +230,7 @@
 			</div><!--/col--> 
 		</div><!--/row-->
 	</div><!--/container-->
+
 </div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
 <div class="divider"></div>

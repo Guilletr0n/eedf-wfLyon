@@ -16,3 +16,6 @@ RewriteRule .? - [L]
 
 # Réécrit tout le reste à public/index.php.
 RewriteRule .? %{ENV:W_BASE}/index.php [L]
+# RewriteBase /
+
+# Redirect 301 /public/ http://localhost/eedf-wfLyon/public/accueil/
