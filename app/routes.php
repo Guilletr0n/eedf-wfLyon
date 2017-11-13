@@ -36,7 +36,7 @@
 
 		//events
 		['GET', '/events', 'Events#events', 'events_events'],
-		['GET', '/events_admin', 'Events#events_admin', 'events_events_admin'],
+		['GET', '/admin/events_admin', 'Events#events_admin', 'events_events_admin'],
 		['GET|POST', '/add_event', 'Events#add_event', 'events_add_event'],
 		['GET|POST', '/edit_event/[:id]', 'Events#edit_event', 'events_edit_event'],
 		
