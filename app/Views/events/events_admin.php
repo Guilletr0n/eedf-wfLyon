@@ -48,12 +48,14 @@
 					<thead>
 						<tr class="info">
 							<th>Titre</th>
+							<th>Sous titre</th>
 							<th>Du</th>
 							<th>Au</th>
 							<th>Description</th>
 							<th>Matériel à emmener</th>
 							<th>Activités proposées</th>
 							<th>Informations disverses</th>
+							<th>Actions</th>
 						</tr>
 					</thead>
 		<?php foreach ($events as $key => $events) {
@@ -61,12 +63,13 @@
 					<tbody>
 						<tr class="active">
 							<td><?= $events['title'] ?></td>
+							<td><?= $events['subtitle'] ?></td>
 							<td><?= $events['startdate'] ?></td>
 							<td><?= $events['enddate'] ?></td>
 							<td><?= $events['description'] ?></td>
 							<td><?= $events['materials'] ?></td>
 							<td><?= $events['activity'] ?></td>
-							<td><?= $events['Infos'] ?></td>
+							<td><?= $events['infos'] ?></td>
 							<!-- <td><input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"></td> -->
 							<td><?= '
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'" class="btn btn-xs btn-success">Modifier</a>

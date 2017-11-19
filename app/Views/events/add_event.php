@@ -48,7 +48,10 @@
           <label for="title" class="control-label text-center">Titre de l'événement</label>
           <input type="text" class="form-control" name="title" id="title" value="" required>
       </div>
-
+      <div class="form-group text-center" id="formElem2">
+          <label for="title" class="control-label text-center">Sous titre</label>
+          <input type="text" class="form-control" name="subtitle" id="subtitle" value="" required>
+      </div>
       <div class="form-group text-center" id="startdate">
           <label for="startdate" class="control-label text-center">Date de début</label>
           <input type="date" class="form-control" name="startdate" name="startdate" value="" required>
@@ -65,22 +68,15 @@
 
       <div class="form-group text-center">
           <label for="materiel" class="control-label">Matériel à emmener</label>
-          <textarea id="materiel" class="form-control" name="materiel"></textarea>
+          <textarea id="materiel" class="form-control" name="materials"></textarea>
       </div>
-
       <div class="form-group text-center">
           <label for="activites" class="control-label">Activitées proposées</label>
-          <textarea id="activites" class="form-control" name="activites"></textarea>
+          <textarea id="activites" class="form-control" name="activity"></textarea>
       </div>
-
-      <div class="form-group text-center">
-        <label for="id_member" class="control-label text-center">Participants</label>
-        <input type="text" class="form-control" name="id_member" id="id_member" value="0" required>
-      </div>
-
-      <div class="form-group text-center">
-        <label for="galleryname" class="control-label text-center">Nom de la gallerie associée</label>
-        <input type="text" class="form-control" name="galleryname" id="galleryname"required>
+     <div class="form-group text-center">
+          <label for="activites" class="control-label">Informations</label>
+          <textarea id="activites" class="form-control" name="infos"></textarea>
       </div>
 
       <div class="form-group text-center">
