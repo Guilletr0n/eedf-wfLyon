@@ -4,16 +4,16 @@ namespace Controller;
 
 use \W\Controller\Controller;
 
-use \Model\eventsModel as events;
+use \Model\EventsModel as events;
 use \Model\galleryModel as gallery;
 
 class EventsController extends Controller
 {
-	private $eventsModel;
+	private $EventsModel;
 	private $galleryModel;
 
 	public function __construct(){
-		$this->eventsModel = new events;
+		$this->EventsModel = new events;
 		$this->galleryModel = new gallery;
 	}
 
@@ -21,7 +21,7 @@ class EventsController extends Controller
 	 * Page des événements
 	 */
 	public function events(){
-		$data = $this->eventsModel->findAll();
+		$data = $this->EventsModel->findAll();
 
 		$this->show('events/events', ['events' => $data]);
 	}
@@ -30,7 +30,7 @@ class EventsController extends Controller
 	 * Page des événements sur interface admin
 	 */
 	public function events_admin(){
-		$data = $this->eventsModel->findAll();
+		$data = $this->EventsModel->findAll();
 		//$data2 = $this->galleryModel->findAll();
 
 		$this->show('events/events_admin', ['events' => $data]);  // , 'gallery' => $data2
@@ -42,10 +42,10 @@ class EventsController extends Controller
 	public function edit_event($id){
 		//$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			$events = $this->eventsModel->find($id);
+			$events = $this->EventsModel->find($id);
 			$this->show('events/edit_event', ['events' => $events]);
 		}else{
-			$this->eventsModel->update($_POST, $id);
+			$this->EventsModel->update($_POST, $id);
 			$this->redirectToRoute('events_events_admin');
 		}
 	}
@@ -58,7 +58,7 @@ class EventsController extends Controller
 		//Si method POST envoyer les données à la bdd
 		$galleryname = $_POST['galleryname'];
 		unset($_POST['galleryname']);
-		$event = $this->eventsModel->insert($_POST);
+		$event = $this->EventsModel->insert($_POST);
 		$gallery = [
 			'id_event' => $event['id'],
 			'galleryname' => $galleryname
@@ -70,8 +70,8 @@ class EventsController extends Controller
 	}
 
 	public function delete_event($id){
-		$events = $this->eventsModel->find($id);
-		$this->eventsModel->delete($id);
+		$events = $this->EventsModel->find($id);
+		$this->EventsModel->delete($id);
 		$this->redirectToRoute('events_events_admin');
 	}
 
