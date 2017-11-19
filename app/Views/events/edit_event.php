@@ -42,12 +42,15 @@
 <h3 id="titreElem" class="text-center">Modification de l'événement</h3>
 <div id="formulaireElem">
   <div class="col-md-3"></div>
-  <form class="col-md-6 jumbotron" action="<?= $this->url('events_edit_event', ['id' => $events['id']]) ?>" method="post" enctype="multipart/form-data" id="ajoutElemForm">
+  <form class="col-md-6 jumbotron" action="<?= $this->url('events_edit_event', ['id' => $events['id']]) ?>" method="POST" enctype="multipart/form-data" id="ajoutElemForm">
       <div class="form-group text-center" id="formElem2">
           <label for="title" class="control-label text-center">Titre de l'événement</label>
           <input type="text" class="form-control" name="title" id="title" value="<?php echo $events['title'] ?>" required>
       </div>
-
+      <div class="form-group text-center" id="formElem2">
+          <label for="title" class="control-label text-center">Sous titre</label>
+          <input type="text" class="form-control" name="subtitle" id="subtitle" value="<?php echo $events['subtitle'] ?>" required>
+      </div>
       <div class="form-group text-center" id="startdate">
           <label for="startdate" class="control-label text-center">Date de début</label>
           <input type="date" class="form-control" name="startdate" name="startdate" value="<?php echo $events['startdate'] ?>" required>
@@ -64,19 +67,16 @@
 
       <div class="form-group text-center">
           <label for="materiel" class="control-label">Matériel à emmener</label>
-          <textarea id="materiel" class="form-control" name="materiel"><?php echo $events['materiel'] ?></textarea>
+          <textarea id="materiel" class="form-control" name="materials"><?php echo $events['materials'] ?></textarea>
       </div>
-
       <div class="form-group text-center">
           <label for="activites" class="control-label">Activitées proposées</label>
-          <textarea id="activites" class="form-control" name="activites"><?php echo $events['activites'] ?></textarea>
+          <textarea id="activites" class="form-control" name="activity"><?php echo $events['activity'] ?></textarea>
       </div>
-
-      <div class="form-group text-center">
-        <label for="id_member" class="control-label text-center">Participants</label>
-        <input type="text" class="form-control" name="id_member" id="id_member" value="<?php echo $events['id_member'] ?>" required>
+     <div class="form-group text-center">
+          <label for="activites" class="control-label">Informations</label>
+          <textarea id="activites" class="form-control" name="infos"><?php echo $events['infos'] ?></textarea>
       </div>
-
       <div class="form-group text-center">
           <div class="">
               <button type="submit" class="btn btn-success">Modifier l'événement</button>
