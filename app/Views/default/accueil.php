@@ -100,50 +100,81 @@
 				<li data-target="#myCarousel" data-slide-to="3"></li>
 				<li data-target="#myCarousel" data-slide-to="4"></li>
 				<li data-target="#myCarousel" data-slide-to="5"></li>
+				<li data-target="#myCarousel" data-slide-to="6"></li>
+				<li data-target="#myCarousel" data-slide-to="7"></li>
+				<li data-target="#myCarousel" data-slide-to="8"></li>
+				<li data-target="#myCarousel" data-slide-to="9"></li>
 			</ol>
-
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" title="Patinoire42" alt="Patinoire42" class="img-responsive">
+					<img src="<?= $this->assetUrl('images/Carousel/landart.jpg')?>" title="landart" alt="landart" class="img-responsive">
 					<div class="carousel-caption">
-          				<h3>Patinoire42</h3>
-          				<p>Patinoire42 is fun!</p>
+          				<h3>Landart</h3>
+          				<p></p>
         			</div>
 				</div>
 				<div class="item">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" title="Patinoire34" alt="Patinoire34">
+					<img src="<?= $this->assetUrl('images/Carousel/Olympiade.jpg')?>" title="Olympiade" alt="Olympiade">
 					<div class="carousel-caption">
-          				<h3>Patinoire34</h3>
-          				<p>Patinoire34 is fun!</p>
+          				<h3>Olympiade</h3>
+          				<p>Le jeux de la couverture</p>
         			</div>
 				</div>
 				<div class="item">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" title="Patinoire05" alt="Patinoire05" style="width:100%;">
+					<img src="<?= $this->assetUrl('images/Carousel/atelier_cuisine.jpg')?>" title="atelier_cuisine" alt="atelier cuisine" style="width:100%;">
 					<div class="carousel-caption">
-          				<h3>Patinoire05</h3>
-          				<p>Patinoire05 is fun!</p>
+          				<h3>Atelier cuisine</h3>
+          				<p>Avec les ainées</p>
         			</div>
 				</div>
 				<div class="item">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" title="Patinoire33" alt="Patinoire33" style="width:100%;">
+					<img src="<?= $this->assetUrl('images/Carousel/la_peche_au_thon.JPG')?>" title="peche" alt="la pêche au thon.JPG" style="width:100%;">
 					<div class="carousel-caption">
-          				<h3>Patinoire33</h3>
-          				<p>Patinoire33 is fun!</p>
+          				<h3>la pêche au thon</h3>
+          				<p></p>
         			</div>
 				</div>
 				<div class="item">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" title="Patinoire15" alt="Patinoire15" style="width:100%;">
+					<img src="<?= $this->assetUrl('images/Carousel/plage.JPG')?>" title="plage" alt="plage" style="width:100%;">
 					<div class="carousel-caption">
-          				<h3>Patinoire15</h3>
-          				<p>Patinoire15 is fun!</p>
+          				<h3>Jeux à la plage</h3>
+          				<p></p>
         			</div>
 				</div>
 				<div class="item">
-					<img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" title="Patinoire37" alt="Patinoire37" style="width:100%;">
+					<img src="<?= $this->assetUrl('images/Carousel/atelier_gateaux.JPG')?>" title="atelier_gateaux" alt="atelier gateaux" style="width:100%;">
 					<div class="carousel-caption">
-          				<h3>Patinoire37</h3>
-          				<p>Patinoire37 is fun!</p>
+          				<h3>Atelier gateaux</h3>
+          				<p></p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/Carousel/visite_musee.JPG')?>" title="visite_musee" alt="visite du musée des civilisations de l'Europe et de la Méditerranée " style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Musée</h3>
+          				<p>Musée des civilisations de l'Europe et de la Méditerranée</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/Carousel/gourmandise.JPG')?>" title="gourmandise" alt="gourmandise d'ardèche" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Gourmandise d'ardèche</h3>
+          				<p>Jus de pômme BIO</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/Carousel/noel.JPG')?>" title="noel" alt="Week end noël" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Week end noël</h3>
+          				<p>échange des cadeaux</p>
+        			</div>
+				</div>
+				<div class="item">
+					<img src="<?= $this->assetUrl('images/Carousel/patinoire.jpg')?>" title="patinoire" alt="sortie à la patinoire" style="width:100%;">
+					<div class="carousel-caption">
+          				<h3>Sortie à la patinoire</h3>
+          				<p></p>
         			</div>
 				</div>
 			</div>
@@ -163,16 +194,6 @@
 	<div class="container">
 		<h3 class="text-center">Galerie photo</h3>
 		<div class="row">
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Renovations"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire42.jpg')?>" class="img-responsive" alt="sortie 1"></a></div>
-					<div class="panel-body">
-						<p>Patinoire</p>
-						<p></p>
-					</div>
-				</div><!--/panel-->
-			</div><!--/col-->
 
 			<div class="col-md-4 col-sm-6 col-xs-6">
 
