@@ -19,6 +19,7 @@ class MemberController extends Controller {
 	}
 
  	public function members(){
+ 		$this->allowTo('admin');
  		//récupération de toute la table members
  		$member = $this->MembersModel->findAll('id_section');
  		$listsections = $this->SectionsModel->findAll('id');
@@ -65,7 +66,7 @@ class MemberController extends Controller {
 	}
 */
 	public function editMember($id){
-		//$this->allowTo('admin');
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			//récupération des informations du membre correspondant à l'id dans la table members
 			$member = $this->MembersModel->find($id);
@@ -91,6 +92,7 @@ class MemberController extends Controller {
 	}
 
 	public function addMember(){
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$listsections = $this->SectionsModel->findAll('id');
 		//Si method GET afficher le formulaire
@@ -104,6 +106,7 @@ class MemberController extends Controller {
 	}
 
 	public function addUsermember(){
+		$this->allowTo('admin');
 		//récupération des informations de l'utilisateur connecté						 
 		$user = $this->AuthentificationModel->getLoggedUser();
 
@@ -123,6 +126,7 @@ class MemberController extends Controller {
 	}
 
 	public function deleteMembers($id){
+		$this->allowTo('admin');
 		// on efface le membre correspondant à l'id de la table members
 		$this->MembersModel->delete($id);
 		//on redirige vers la route member_addMembers

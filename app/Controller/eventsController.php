@@ -30,6 +30,7 @@ class EventsController extends Controller
 	 * Page des événements sur interface admin
 	 */
 	public function events_admin(){
+		$this->allowTo('admin');
 		$data = $this->EventsModel->findAll();
 		//$data2 = $this->galleryModel->findAll();
 
@@ -40,7 +41,7 @@ class EventsController extends Controller
 	 * Fonctions admin
 	 */
 	public function edit_event($id){
-		//$this->allowTo('admin');
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$events = $this->EventsModel->find($id);
 			$this->show('events/edit_event', ['events' => $events]);
@@ -51,6 +52,7 @@ class EventsController extends Controller
 	}
 
 	public function add_event(){
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 		//Si method GET afficher le formulaire
 			$this->show('events/add_event');
@@ -70,6 +72,7 @@ class EventsController extends Controller
 	}
 
 	public function delete_event($id){
+		$this->allowTo('admin');
 		$events = $this->EventsModel->find($id);
 		$this->EventsModel->delete($id);
 		$this->redirectToRoute('events_events_admin');

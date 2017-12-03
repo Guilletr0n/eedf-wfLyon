@@ -14,12 +14,14 @@ class PhotoController extends Controller {
 
 
 	public function showPhotos(){
+		$this->allowTo('admin');
  		$data = $this->photosModel->findAll();
  		//$this->allowTo('admin'); // seulement visible par l'admin
 		$this->show('photo/photos', ['photos' => $data]);
 	}	
 		
 	public function userPhotos(){	
+		$this->allowTo('admin');
 		//$this->allowTo('user'); // seulement visible par user
 		$this->show('photo/users_photos', ['photos' => $data]);
 	}
@@ -44,6 +46,7 @@ class PhotoController extends Controller {
 
 
 	public function addPhotos(){
+		$this->allowTo('admin');
 		//$this->allowTo('admin'); // seulement visible par l'admin
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$this->show('photo/add_photos');
@@ -57,7 +60,7 @@ class PhotoController extends Controller {
 	}
 
 	public function editPhotos($id){
-		//$this->allowTo('admin');
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$photo = $this->photosModel->find($id);
 			$this->show('photo/edit_photos', ['photos' => $photo]);
@@ -68,6 +71,7 @@ class PhotoController extends Controller {
 	}
 
 	public function deletePhotos($id){
+		$this->allowTo('admin');
 		$photo = $this->photosModel->find($id);
 		$this->photosModel->delete($id);
 		$chemindoc = '../public/assets/'.$document['photofile'];

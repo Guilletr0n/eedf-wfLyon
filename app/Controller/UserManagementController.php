@@ -38,30 +38,36 @@ class UserManagementController extends Controller {
   }
 
   public function listAdmins(){
+    $this->allowTo('admin');
     $data = array('role'=>Globals::ADMIN);
     $usersList = $this->currentUser->search($data);
     $this->show('admin/manageUsers',['usersList'=>$usersList,'loggedUser'=>$this->auth->getLoggedUser()]);
   }
   public function listUsers(){
+    $this->allowTo('admin');
     $data = array('role'=>Globals::ADHERENT);
     $usersList = $this->currentUser->search($data);
     $this->show('admin/manageUsers',['usersList'=>$usersList,'loggedUser'=>$this->auth->getLoggedUser()]);
 
   }
   public function deleteUser($id){
+    $this->allowTo('admin');
     $this->currentUser->delete($id);
     $this->redirectToRoute('userManagement_list_users');
   }
   public function detailsUser($id){
+    $this->allowTo('admin');
     $user = $this->currentUser->find($id);
     $this->show('admin/manageUsers',['user'=>$user,'loggedUser'=>$this->auth->getLoggedUser()]);
   }
   public function editDetailsUser(){
+    $this->allowTo('admin');
     $this->currentUser->update($_POST,$_POST['id']);
     $user = $this->currentUser->find($_POST['id']);
     $this->show('admin/manageUsers',['user'=>$user,'loggedUser'=>$this->auth->getLoggedUser(),'w_current_route'=>'userManagement_details_user']);
   }
   public function editDetailsUserForm($id){
+    $this->allowTo('admin');
     $user = $this->currentUser->find($id);
     $this->show('admin/manageUsers',['user'=>$user,'loggedUser'=>$this->auth->getLoggedUser()]);
   }
@@ -196,9 +202,11 @@ class UserManagementController extends Controller {
     $this->show('admin/manageUsers', ['loggedUser'=>$this->auth->getLoggedUser()]);
   }
   public function addAdminForm(){
+    $this->allowTo('admin');
     $this->show('admin/manageUsers');
   }
   public function addAdmin(){
+    $this->allowTo('admin');
     $_POST['role'] = Globals::ADMIN;
     $_POST['password'] = $this->auth->hashPassword($_POST['password']);
     if($newAdmin = $this->adminUser->insertAdmin($_POST)){
