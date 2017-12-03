@@ -13,6 +13,7 @@ class DocumentController extends Controller {
 	}
 
  	public function documents(){
+ 		$this->allowTo('admin');
  		$data = $this->documentsModel->findAll();
  		//$this->allowTo('admin'); // seulement visible par l'admin
 		$this->show('document/documents', ['documents' => $data]);
@@ -31,7 +32,7 @@ class DocumentController extends Controller {
 
 
 	public function add_documents(){
-		//$this->allowTo('admin'); // seulement visible par l'admin
+		$this->allowTo('admin'); // seulement visible par l'admin
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$this->show('document/add_documents');
 		}else{
@@ -44,7 +45,7 @@ class DocumentController extends Controller {
 	}
 
 	public function edit_documents($id){
-		//$this->allowTo('admin');
+		$this->allowTo('admin');
 		if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$document = $this->documentsModel->find($id);
 			$this->show('document/edit_documents', ['documents' => $document]);
@@ -55,6 +56,7 @@ class DocumentController extends Controller {
 	}
 
 	public function delete_documents($id){
+		$this->allowTo('admin');
 		$document = $this->documentsModel->find($id);
 		$this->documentsModel->delete($id);
 		$chemindoc = '../public/assets/'.$document['docfile'];

@@ -111,13 +111,14 @@ class DefaultController extends Controller{
 		$mail = new PHPmailer;
 		$mail->SMTPDebug = 2;
 		$mail->isSMTP(); // connexion directe au serveur SMTP
-		$mail->SMTPAuth = false; // on va fournir un login et un mdp au serveur
+		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
 		$mail->isHTML(true); //utilisation du format HTML
-		$mail->Host = "smtp.eedfannonay.fr"; // le serveur de messagerie
-		$mail->Port = 25; //le port utilisé sur le serveur [normalement 465 + secure]
-		//$mail->SMTPSecure = 'SSL'; //Certificat SSL
-		//$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
-		//$mail->Password = 'Ovak5&53'; // le mot de passe SMTP
+		$mail->Host = "mail.eedfannonay.fr"; // le serveur de messagerie
+		$mail->Port = 587; //le port utilisé sur le serveur
+		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
+		$mail->SMTPSecure = 'ssl'; //Certificat SSL
+		$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
+		$mail->Password = 'acgE55@6'; // le mot de passe SMTP
 		$mail->SetFrom('contact@eedfannonay.fr', 'EEDF Annonay'); // Expéditeur
 		$mail->addAddress('Nordine.sebih@gmail.com'); // le destinataire
 		$mail->Subject = 'message de '.$safe['mail']; // le sujet
@@ -137,6 +138,6 @@ class DefaultController extends Controller{
 			//echo 'Erreur envoi:'.$mail->ErrorInfo;
 		}
 		// si mail envoyé dire merci et retour page accueil
-		// $this->redirectToRoute('default_contact',['message' => 'Message envoyé']);
+		//$this->redirectToRoute('default_accueil',['message' => 'Message envoyé']);
 	}
 }
