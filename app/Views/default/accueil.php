@@ -90,7 +90,7 @@
 <div class="bg-4">
 
 	<div class="container">
-		<h3 class="text-center">Galerie photo</h3>  
+		<h3 class="text-center">Photo souvenir</h3>  
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -174,67 +174,6 @@
 			</a>
 		</div>
 	</div>
-
-	<div class="container">
-		<h3 class="text-center">Galerie photo</h3>
-		<div class="row">
-
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Academic Institutions"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire34.jpg')?>" class="img-responsive" alt="sortie 2"></a></div>
-					<div class="panel-body">
-						<p>Parc naturel</p>
-						<p></p>
-					</div>
-				</div><!--/panel--> 
-			</div><!--/col-->
-
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Interiors"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire05.jpg')?>" class="img-responsive" alt="sortie 3"></a></div>
-					<div class="panel-body">
-						<p>Plongée sous marine</p>
-						<p></p>
-					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
-
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="New Construction"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire33.jpg')?>" class="img-responsive" alt="sortie 4"></a></div>
-					<div class="panel-body">
-						<p>New Construction</p>
-						<p></p>
-					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
-
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Site Planning"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire15.jpg')?>" class="img-responsive" alt="sortie 5"></a></div>
-					<div class="panel-body">
-						<p>Site Planning</p>
-						<p></p>
-					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
-
-			<div class="col-md-4 col-sm-6 col-xs-6">
-
-				<div class="panel panel-default">
-					<div class="panel-thumbnail"><a href="#" title="Churches"><img src="<?= $this->assetUrl('images/2016-01_EEDF_Patinoire37.jpg')?>" class="img-responsive" alt="sortie 6"></a></div>
-					<div class="panel-body">
-						<p>Churches</p>
-						<p></p>
-					</div>
-				</div><!--/panel--> 
-			</div><!--/col--> 
-		</div><!--/row-->
-	</div><!--/container-->
 
 </div><!--/Div bg-4-->
 <!-- Fin Gallerie -->
