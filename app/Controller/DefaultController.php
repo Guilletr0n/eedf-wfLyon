@@ -110,7 +110,7 @@ class DefaultController extends Controller{
 		//print_r($_POST);
 		$mail = new PHPmailer;
 		$mail->isSMTP(); // connexion directe au serveur SMTP
-		$mail->SMTPDebug = 1;
+		$mail->SMTPDebug = 2;
 		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
 		$mail->SMTPSecure = 'ssl'; //Certificat SSL
 		$mail->isHTML(true); //utilisation du format HTML
@@ -119,7 +119,7 @@ class DefaultController extends Controller{
 		$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
 		$mail->Password = 'acgE55@6'; // le mot de passe SMTP
 		$mail->SetFrom('contact@eedfannonay.fr', 'EEDF Annonay'); // Expéditeur
-		$mail->addAddress('Nordine.sebih@gmail.com'); // le destinataire
+		$mail->addAddress('contact@eedfannonay.fr'); // le destinataire
 		$mail->Subject = 'message de '.$safe['mail']; // le sujet
 		$mail->Body = '<html>
 						<head>
