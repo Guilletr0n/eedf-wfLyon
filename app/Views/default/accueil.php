@@ -102,8 +102,6 @@
 				<li data-target="#myCarousel" data-slide-to="5"></li>
 				<li data-target="#myCarousel" data-slide-to="6"></li>
 				<li data-target="#myCarousel" data-slide-to="7"></li>
-				<li data-target="#myCarousel" data-slide-to="8"></li>
-				<li data-target="#myCarousel" data-slide-to="9"></li>
 			</ol>
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
@@ -112,13 +110,6 @@
 					<div class="carousel-caption">
           				<h3>Landart</h3>
           				<p></p>
-        			</div>
-				</div>
-				<div class="item">
-					<img src="<?= $this->assetUrl('images/Carousel/Olympiade.jpg')?>" title="Olympiade" alt="Olympiade">
-					<div class="carousel-caption">
-          				<h3>Olympiade</h3>
-          				<p>Le jeux de la couverture</p>
         			</div>
 				</div>
 				<div class="item">
@@ -139,13 +130,6 @@
 					<img src="<?= $this->assetUrl('images/Carousel/plage.JPG')?>" title="plage" alt="plage" style="width:100%;">
 					<div class="carousel-caption">
           				<h3>Jeux à la plage</h3>
-          				<p></p>
-        			</div>
-				</div>
-				<div class="item">
-					<img src="<?= $this->assetUrl('images/Carousel/atelier_gateaux.JPG')?>" title="atelier_gateaux" alt="atelier gateaux" style="width:100%;">
-					<div class="carousel-caption">
-          				<h3>Atelier gateaux</h3>
           				<p></p>
         			</div>
 				</div>
