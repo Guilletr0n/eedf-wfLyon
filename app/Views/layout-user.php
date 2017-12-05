@@ -93,7 +93,7 @@
 				</div>
 				<div class="col-sm-2 col-xs-1">
 					<div id="retourhaut">
-					 	<a href="#logohaut"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					 	<a href="#section1"><span class="glyphicon glyphicon-chevron-up"></span></a>
 					</div>
 				</div>
 				<div class="col-sm-5 col-xs-4">

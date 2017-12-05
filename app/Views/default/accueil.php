@@ -90,7 +90,7 @@
 <div class="bg-4">
 
 	<div class="container">
-		<h3 class="text-center">Photo souvenir</h3>  
+		<h3 class="text-center">Photos souvenir</h3>  
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
