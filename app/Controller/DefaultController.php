@@ -109,14 +109,13 @@ class DefaultController extends Controller{
 		$safe = array_map('strip_tags', $_POST);
 		//print_r($_POST);
 		$mail = new PHPmailer;
-		$mail->SMTPDebug = 2;
 		$mail->isSMTP(); // connexion directe au serveur SMTP
+		$mail->SMTPDebug = 1;
 		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
+		$mail->SMTPSecure = 'ssl'; //Certificat SSL
 		$mail->isHTML(true); //utilisation du format HTML
 		$mail->Host = "mail.eedfannonay.fr"; // le serveur de messagerie
 		$mail->Port = 587; //le port utilisé sur le serveur
-		$mail->SMTPAuth = true; // on va fournir un login et un mdp au serveur
-		$mail->SMTPSecure = 'ssl'; //Certificat SSL
 		$mail->Username = 'contact@eedfannonay.fr'; //mon login pour le SMTP
 		$mail->Password = 'acgE55@6'; // le mot de passe SMTP
 		$mail->SetFrom('contact@eedfannonay.fr', 'EEDF Annonay'); // Expéditeur
