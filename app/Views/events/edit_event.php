@@ -78,6 +78,10 @@
           <textarea id="activites" class="form-control" name="infos"><?php echo $events['infos'] ?></textarea>
       </div>
       <div class="form-group text-center">
+                <label for="online" class="mr-sm-2">Online</label>
+                <input id="online" name="online" type="checkbox" <?= ($events['online']==1) ? 'checked' : ''; ?>>
+            </div>
+      <div class="form-group text-center">
           <div class="">
               <button type="submit" class="btn btn-success">Modifier l'événement</button>
           </div>

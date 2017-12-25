@@ -78,7 +78,10 @@
           <label for="activites" class="control-label">Informations</label>
           <textarea id="activites" class="form-control" name="infos"></textarea>
       </div>
-
+      <div class="form-group text-center">
+                        <label for="online" class="mr-sm-2">Online</label>
+                        <input type="checkbox" name="online" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+                    </div>
       <div class="form-group text-center">
           <div class="">
               <button type="submit" class="btn btn-success" id="AddEvent">Ajouter</button>

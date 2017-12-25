@@ -55,6 +55,7 @@
 							<th>Matériel à emmener</th>
 							<th>Activités proposées</th>
 							<th>Informations disverses</th>
+							<th>Online</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -70,7 +71,7 @@
 							<td><?= $events['materials'] ?></td>
 							<td><?= $events['activity'] ?></td>
 							<td><?= $events['infos'] ?></td>
-							<!-- <td><input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0"></td> -->
+							<td><input type="checkbox" <?= ($events['online']==1) ? 'checked' : ''; ?> data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" value="0" disabled="disabled"></td>
 							<td><?= '
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'" class="btn btn-xs btn-success">Modifier</a>
 					<a href="'. $this->url('events_edit_event', ['id' => $events['id']]).'"  onclick="return confirm(\'Voulez-vous vraiment supprimer le fichier ?\');" class="btn btn-xs btn-danger">Supprimer</a>';
