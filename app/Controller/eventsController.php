@@ -46,6 +46,13 @@ class EventsController extends Controller
 			$events = $this->EventsModel->find($id);
 			$this->show('events/edit_event', ['events' => $events]);
 		}else{
+			 if (isset($_POST['online'])) {
+                // Checkbox is selected
+                $_POST['online']=1;
+                } else {
+                // Alternate code
+                $_POST['online']=0;
+               }
 			$this->EventsModel->update($_POST, $id);
 			$this->redirectToRoute('events_events_admin');
 		}
@@ -58,14 +65,24 @@ class EventsController extends Controller
 			$this->show('events/add_event');
 	}else{
 		//Si method POST envoyer les données à la bdd
-		$galleryname = $_POST['galleryname'];
-		unset($_POST['galleryname']);
+		//$galleryname = $_POST['galleryname'];
+		//unset($_POST['galleryname']);
+		 if (isset($_POST['online'])) {
+                // Checkbox is selected
+                $_POST['online']=1;
+                } else {
+                // Alternate code
+                $_POST['online']=0;
+               }
 		$event = $this->EventsModel->insert($_POST);
+		
+		/*
 		$gallery = [
 			'id_event' => $event['id'],
 			'galleryname' => $galleryname
 		];
 		$this->galleryModel->insert($gallery);
+		*/
 		$this->redirectToRoute('events_add_event');
 
 		}
