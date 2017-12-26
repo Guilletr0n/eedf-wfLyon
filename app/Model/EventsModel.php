@@ -31,6 +31,20 @@ class EventsModel extends \W\Model\Model{
     return $text;
   }
 
+ //Retourne la liste Events en ligne
+    public function onlineEvents(){
+        if (!is_numeric($id_event)){
+                return false;
+        }
+        //$sql = 'SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user';
+        $sql = 'SELECT `title`, `startdate`, `enddate`, `description` FROM ' . $this->table . ' WHERE online = 1';
+        $sth = $this->dbh->prepare($sql);
+  
+        $sth->execute();
+        $result = $sth->fetchAll();
+        return  $result;
+        //$sql = 'SELECT m.id_section, m.name, m.firstname, m.totem, m.infosup, m.register, s.rank FROM members m INNER JOIN sections s ON m.id_section = s.id WHERE id_user = :id_user'
+    }
 
 
 
