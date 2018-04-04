@@ -50,6 +50,7 @@
 					</a>
 				</div>
 			</div>
+<!--
 			<div class="prochainevent">
 				<div>
 					<a href="#">
@@ -74,6 +75,7 @@
 					</a>
 				</div>
 			</div>
+-->
 		</div>
 		<div class="col-md-6 col-sm-12 text-center" id="iframecal"><iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=eedf.annonay%40gmail.com&amp;color=%23853104&amp;ctz=Europe%2FParis" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 		</div>
@@ -323,7 +325,7 @@
 					<textarea id="commentaire" class="form-control well-lg" name="commentaire" placeholder="Commentaire" required></textarea>
 				</div>
 				<div class="form-group text-center">
-					<button type="submit" class="btn btn-success" id="btnsend">Envoyer</button>
+					<!--<button type="submit" class="btn btn-success" id="btnsend">Envoyer</button>-->
 				</div>
 			</form>
 		</div> <!-- class="contact"-->
