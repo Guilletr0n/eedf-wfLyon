@@ -698,6 +698,14 @@ section#evenements .prochainevent p{
   border-radius: 0px;
 }
 
+span.glyphicon.glyphicon-ok{
+  color:#3c763d;
+}
+
+span.glyphicon glyphicon-remove{
+  color:#d80000;
+}
+
   #quisommesnous #textebas p,
   .nocontainer #textedroite p,
   .nocontainer #textegauche li{
