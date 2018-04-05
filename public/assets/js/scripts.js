@@ -59,7 +59,7 @@ function loadmember(){
             var tbodymember = $("#tbodymember");
               $.each(data, function(k,v){
                 if(v.register==1){
-                  registericon="<span class='glyphicon glyphicon-ok' data-toggle='tooltip' data-placement='right' title='Confirmer, vous pouvez participer aux évènements'></span>";
+                  registericon="<span class='glyphicon glyphicon-ok' data-toggle='tooltip' data-placement='right' title='Confirmer, vous pouvez participer aux évènements' style='font-size:color:green'></span>";
                 }else{
                   registericon="<span class='glyphicon glyphicon-remove'data-toggle='tooltip' data-placement='right' title='En attende de confirmation, vous ne pouvez pas encore participer aux évènements'></span>";
                 }
